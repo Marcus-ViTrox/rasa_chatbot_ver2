@@ -204,6 +204,9 @@ nlu:
     - When restart V4, software crash
     - general_crash
     - software not responding
+    - software freeze
+    - v4 cannot move
+    - v4 not working
 
 - intent: cycle_time
   examples: |
@@ -316,6 +319,10 @@ nlu:
 - intent: unsure
   examples: |
     - simulate_unsure
+    - I don't know how to simulate
+    - how simulate
+    - I don't know whether it is simulatable
+    - not sure simulatable mah
 
 - synonym: crash
   examples: |

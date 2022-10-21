@@ -4793,3 +4793,37 @@ stories:
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000289 (Greet -> Software Issue -> General -> Crash -> Unsure -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: unsure
+  - action: utter_simulate_unsure
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000290 (Greet -> Software Issue -> General -> Crash -> Unsure -> Unsolved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: unsure
+  - action: utter_simulate_unsure
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no

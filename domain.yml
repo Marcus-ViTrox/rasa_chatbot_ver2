@@ -19,6 +19,7 @@ intents:
 - out_of_scope
 - affirm
 - deny
+- unsure
 
 responses:
   utter_greet:
