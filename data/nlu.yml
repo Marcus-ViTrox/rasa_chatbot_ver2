@@ -289,12 +289,6 @@ nlu:
     - correct
     - ok
     - solution_yes
-    - simulate_yes
-    - yes I can simulate
-    - can simulate
-    - simulatable
-    - able to simulate
-    - ya
     - solved
 
 - intent: deny
