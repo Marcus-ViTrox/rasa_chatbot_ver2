@@ -1,0 +1,142 @@
+version: "3.1"
+
+intents:
+- greet
+- goodbye
+- bot_challenge
+- software_issue
+- hardware_issue
+- feature
+- general_issue
+- vision_issue
+- platform_issue
+- crash
+- cycle_time
+- overkill
+- underkill
+- recipe_cant_load
+- solution_prompt_issue
+- out_of_scope
+- affirm
+- deny
+
+responses:
+  utter_greet:
+  - text: Hi there!  😊
+  - text: Heyyy! 😊
+  - text: Hiii! 😊
+  - text: Hello! 😁
+  
+  utter_goodbye:
+  - text: Okay thanks, bye~  😊
+  - text: Alright. See ya! 😁
+  - text: Okay great, Goodbye! 😆
+  - text: Okay nice , have a great one! 🤣
+  - text: Thank you! Bye bye ~ 😁
+  
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa. 
+  
+  utter_issueType:
+  - buttons:
+    - payload: issue_software
+      title: Software
+    - payload: issue_hardware
+      title: Hardware (Currently Unavailable)
+    - payload: software_featrure
+      title: Feature (Currently Unavailable)
+    text: What would you like to know about?
+
+  utter_software_issue:
+  - buttons:
+    - payload: software_general
+      title: General
+    - payload: software_vision
+      title: Vision Engine
+    - payload: software_platform
+      title: Platform
+    text: What type of software issue are you facing?
+
+  utter_software_general:
+  - buttons:
+    - payload: general_crash
+      title: Software Crash
+    - payload: general_cycle_time
+      title: Cycle Time High
+    - payload: general_overkill
+      title: Overkill
+    - payload: general_underkill
+      title: Underkill
+    - payload: general_recipe_cant_load
+      title: Recipe not able to load
+    text: Which general issues are you facing?
+  
+  utter_general_crash:
+  - buttons:
+    - payload: simulate_yes
+      title: Simulatable
+    - payload: simulate_no
+      title: Not simulatable
+    text: Are you able to simulate the software crash?
+
+  utter_simulate_yes:
+  - text: -Insert Server Link- (Simulatable Crash)
+
+  utter_simulate_no:
+  - text: -Insert Server Link- (Not Simulatable Crash)
+
+  utter_general_cycle_time:
+  - text: -Insert Server Link- (Cycle Time High)
+
+  utter_general_overkill:
+  - text: -Insert Server Link- (Overkill)
+
+  utter_general_underkill:
+  - text: -Insert Server Link- (Underkill)
+
+  utter_general_recipe_cant_load:
+  - text: -Insert Server Link- (Recipe Can't Load)
+
+  utter_feedback:
+  - buttons:
+    - payload: solution_yes
+      title: Yes
+    - payload: solution_no
+      title: No
+    - payload: solution_prompt_issue
+      title: No, I meant something else!
+    text: Is this solution correct? 😆
+  - buttons:
+    - payload: solution_yes
+      title: Yes
+    - payload: solution_no
+      title: No
+    - payload: solution_prompt_issue
+      title: No, I meant something else!
+    text: Did it helps? 😃
+  - buttons:
+    - payload: solution_yes
+      title: Yes
+    - payload: solution_no
+      title: No
+    - payload: solution_prompt_issue
+      title: No, I meant something else!
+    text: Does this guideline solve your problem? 😊
+
+  utter_solution_prompt_issue:
+  - text: Please describe the issue/problem you are facing. 😃
+
+  utter_solution_yes:
+  - text: great! 😊
+  - text: Nice!! 😁
+  - text: Glad we could help!! 😃
+
+  utter_solution_no:
+  - text: We are terribly sorry 😢. We will improve our system. Please contact JIRA Owner for further assistance. 
+
+  utter_out_of_scope:
+  - text: Sorry, I don't understand this.😢
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

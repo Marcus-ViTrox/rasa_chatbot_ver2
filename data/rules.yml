@@ -1,0 +1,68 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Greet and list all type of issue that user might face
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+
+- rule: List all the possible software issues
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+
+- rule: List all the general software issues
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+
+- rule: Check whether the crash is simulatable and give solution
+  steps: 
+  - intent: crash
+  - action: utter_general_crash
+
+- rule: Give solution for cycle time issue
+  steps:
+  - intent: cycle_time
+  - action: utter_general_cycle_time
+  - action: utter_feedback
+
+- rule: Give solution for overkill issue
+  steps:
+  - intent: overkill
+  - action: utter_general_overkill
+  - action: utter_feedback
+
+- rule: Give solution for cycle time issue
+  steps:
+  - intent: underkill
+  - action: utter_general_underkill
+  - action: utter_feedback
+
+- rule: Give solution for recipe can't load
+  steps:
+  - intent: recipe_cant_load
+  - action: utter_general_recipe_cant_load
+  - action: utter_feedback
+
+- rule: Have more issue
+  steps:
+  - intent: solution_prompt_issue
+  - action: utter_solution_prompt_issue
+
+- rule: Not included/unwanted intents
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope

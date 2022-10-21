@@ -1,0 +1,47 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"recipe_cant_load\"}}]": "utter_general_recipe_cant_load",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"recipe_cant_load\"}}, {\"prev_action\": {\"action_name\": \"utter_general_recipe_cant_load\"}, \"user\": {\"intent\": \"recipe_cant_load\"}}]": "utter_feedback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"recipe_cant_load\"}}, {\"prev_action\": {\"action_name\": \"utter_general_recipe_cant_load\"}, \"user\": {\"intent\": \"recipe_cant_load\"}}, {\"prev_action\": {\"action_name\": \"utter_feedback\"}, \"user\": {\"intent\": \"recipe_cant_load\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"crash\"}}]": "utter_general_crash",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"crash\"}}, {\"prev_action\": {\"action_name\": \"utter_general_crash\"}, \"user\": {\"intent\": \"crash\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"general_issue\"}}]": "utter_software_general",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"general_issue\"}}, {\"prev_action\": {\"action_name\": \"utter_software_general\"}, \"user\": {\"intent\": \"general_issue\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"underkill\"}}]": "utter_general_underkill",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"underkill\"}}, {\"prev_action\": {\"action_name\": \"utter_general_underkill\"}, \"user\": {\"intent\": \"underkill\"}}]": "utter_feedback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"underkill\"}}, {\"prev_action\": {\"action_name\": \"utter_general_underkill\"}, \"user\": {\"intent\": \"underkill\"}}, {\"prev_action\": {\"action_name\": \"utter_feedback\"}, \"user\": {\"intent\": \"underkill\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"software_issue\"}}]": "utter_software_issue",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"software_issue\"}}, {\"prev_action\": {\"action_name\": \"utter_software_issue\"}, \"user\": {\"intent\": \"software_issue\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_issueType",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_issueType\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"overkill\"}}]": "utter_general_overkill",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"overkill\"}}, {\"prev_action\": {\"action_name\": \"utter_general_overkill\"}, \"user\": {\"intent\": \"overkill\"}}]": "utter_feedback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"overkill\"}}, {\"prev_action\": {\"action_name\": \"utter_general_overkill\"}, \"user\": {\"intent\": \"overkill\"}}, {\"prev_action\": {\"action_name\": \"utter_feedback\"}, \"user\": {\"intent\": \"overkill\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"random\"}}]": "utter_random",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"random\"}}, {\"prev_action\": {\"action_name\": \"utter_random\"}, \"user\": {\"intent\": \"random\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cycle_time\"}}]": "utter_general_cycle_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cycle_time\"}}, {\"prev_action\": {\"action_name\": \"utter_general_cycle_time\"}, \"user\": {\"intent\": \"cycle_time\"}}]": "utter_feedback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cycle_time\"}}, {\"prev_action\": {\"action_name\": \"utter_general_cycle_time\"}, \"user\": {\"intent\": \"cycle_time\"}}, {\"prev_action\": {\"action_name\": \"utter_feedback\"}, \"user\": {\"intent\": \"cycle_time\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"random\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"random\"}}, {\"prev_action\": {\"action_name\": \"utter_random\"}, \"user\": {\"intent\": \"random\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]"
+    ]
+  }
+}

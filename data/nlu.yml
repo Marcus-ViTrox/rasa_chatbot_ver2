@@ -1,0 +1,333 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - yoo
+    - hiii
+    - helu
+    - yooo
+    - helloo
+    - heyyy
+    - heyy
+    - morning
+    - hihi
+    - yoyo
+    - heluu
+    - helo
+    - hii
+    - hiiii
+    - Hi
+    - happy deepavali
+    - rasa
+    - oi
+    - ehh
+    - heyyyy
+    - heyyo
+    - heyo
+    - nihao
+    - ni hao
+    - wuiii
+    - zao an
+    - hihihi
+    - hiiiii
+    - woi
+    - woiii
+    - heyoo
+    - afternoon
+    - wuii
+    - zaoan
+    - heeee
+    - hey yo
+    - hellu
+    - bello
+    - annyeonghasaeyo
+    - hi bossing
+    - bossing
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see ya
+    - tata
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - How long does it take before you get frustrated?
+    - Apa tu Rasa
+    - do u have name?
+    - How old are you?
+    - How old are you
+    - u how old
+    - 你几岁
+    - u umur berapa
+    - age
+    - how old are you
+    - how old re you
+    - how old u
+    - 几岁
+    - umur berapa
+    - how old are u
+
+- intent: software_issue
+  examples: |
+    - software bug
+    - my software has issue
+    - software issue
+    - software has issue
+    - software got problem
+    - software not responding
+    - issue_software
+    - my software is buggy
+    - my software got problem
+    - software
+    - soft
+    - softs
+    - softwar
+    - softwares
+    - Software problem
+    - I met some problems in my software
+
+- intent: hardware_issue
+  examples: |
+    - hardware
+    - hard
+    - hardwares
+    - hardware problem
+    - hardware issue
+    - hardware got problem
+    - hardware has issue
+    - I am facing hardware issue
+    - I think my hardware has problem
+    - hardware have some problem
+    - my hardware got issue
+    - the hardware is faulty
+    - hardware spoilt
+
+- intent: feature
+  examples: |
+    - feature
+    - features
+    - software_feature
+    - I would like to know about some features
+    - I would like to know about some software features
+    - I don't understand how this feature works
+    - Idk about this feature
+    - can you help me with this feature
+    - I want to know about this software feature
+
+- intent: general_issue
+  examples: |
+    - software_general
+    - I have met some general software issue
+    - general issue
+    - general software issue
+    - software have some general issue
+
+- intent: vision_issue
+  examples: |
+    - software_vision
+    - vision have some issuue
+    - vision got problem
+    - I have problem with vision
+    - the vision got problem
+    - vision not working
+    - vision got issue 
+    - the vision is not working
+
+- intent: platform_issue
+  examples: |
+    - software_platform
+    - issue related to platform
+    - platform got problem
+    - platform issue
+    - platform problem
+    - platform have some problem
+
+- intent: crash
+  examples: |
+    - last night electric got cut off, software crash after reopen
+    - pc crash suddenly
+    - when opening software, laptop crashes
+    - software suddenly crashes
+    - app crash
+    - computer suddenly crash
+    - laptop crash
+    - crash
+    - computer crash
+    - hi my laptop crash
+    - hi laptop crash
+    - When I press learn mark, V4 crash
+    - When I increase mark template count, V4 crash
+    - v4 crash
+    - V4 crash
+    - software crash
+    - system crash
+    - running production suddenly software crash
+    - v4 crash when generating report
+    - software hang when pressed 3dli advance setting
+    - v4 crash while generating report
+    - crash v4
+    - v4 crash liao la
+    - software_crash
+    - software crash when new lot
+    - v4 software crash
+    - Software crash when finding dark lead tip
+    - v4 crash la
+    - When restart V4, software crash
+    - general_crash
+
+- intent: cycle_time
+  examples: |
+    - general_cycle_time
+    - cycle time high
+    - why is the cycle time high
+    - why does it take so long for the machine to take inspect
+    - Machine so slow
+    - The inspection take so long 
+    - cycle time too high
+    - test time high
+    - grab time high
+    - high test time
+    - high grab time 
+    - high storage time 
+    - cycle time
+
+- intent: overkill
+  examples: |
+    - general_overkill
+    - overkill
+    - the vision will overkill 
+    - the vision will detect unwanted noise
+    - the vision detect unwanted defects
+    - overkill leh
+
+- intent: underkill
+  examples: |
+    - general_underkill
+    - underkill
+    - underkill leh
+    - unable to detect the defects
+    - cannot detect the defects
+    - cannot catch the defects
+    - vision underkill 
+
+- intent: recipe_cant_load
+  examples: |
+    - general_recipe_cant_load
+    - I cannot load the recipe
+    - I failed to load the recipe
+    - recipe failed to load
+    - recipe unable to load
+    - recipe load fail
+    - I cannot use the recipe
+
+- intent: solution_prompt_issue
+  examples: |
+    - solution_prompt_issue
+    - No, I meant something else!
+
+- intent: out_of_scope
+  examples: |
+    - bd
+    - g
+    - test
+    - gg
+    - tesggg
+    - tg
+    - tetet
+    - testtetts
+    - abc
+    - You
+    - not in the list
+    - ghfggh
+    - unknown
+    - I am angry
+    - I don't know
+    - what is your gender
+    - are you girl or bot
+    - customer scolded me
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - solution_yes
+    - simulate_yes
+    - yes I can simulate
+    - can simulate
+    - simulatable
+    - able to simulate
+    - ya
+    - solved
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - the solution not working
+    - solution_no
+    - simulate_no
+    - cannot simulate
+    - cannot leh
+    - can't 
+    - not simulatable
+    - not yet solve
+    - not solved
+
+- synonym: crash
+  examples: |
+    - hang
+    - shut down
+    - closes
+    - stuck
+    - freeze
+
+- synonym: issue
+  examples: |
+    - problem
+    - bug
+
+- synonym: V4
+  examples: |
+    - software
+    - system
+    - vision system
+    - V5
