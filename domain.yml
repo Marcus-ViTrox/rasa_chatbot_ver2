@@ -77,6 +77,8 @@ responses:
       title: Simulatable
     - payload: simulate_no
       title: Not simulatable
+    - payload: simulate_unsure
+      title: I don't know
     text: Are you able to simulate the software crash?
 
   utter_simulate_yes:
@@ -84,6 +86,9 @@ responses:
 
   utter_simulate_no:
   - text: -Insert Server Link- (Not Simulatable Crash)
+
+  utter_simulate_unsure:
+  - text: -Insert Server Link- (Not sure can simulate or not)
 
   utter_general_cycle_time:
   - text: -Insert Server Link- (Cycle Time High)
@@ -127,8 +132,8 @@ responses:
   - text: Please describe the issue/problem you are facing. 😃
 
   utter_solution_yes:
-  - text: great! 😊
-  - text: Nice!! 😁
+  - text: Great! Have a nice day😊
+  - text: Nice!! Come again when you have problem~ 😁
   - text: Glad we could help!! 😃
 
   utter_solution_no:
