@@ -23,6 +23,8 @@ rules:
   - intent: software_issue
   - action: utter_software_issue
 
+# ------------------General------------------ #
+
 - rule: List all the general software issues
   steps:
   - intent: general_issue
@@ -33,29 +35,186 @@ rules:
   - intent: crash
   - action: utter_general_crash
 
-- rule: Give solution for cycle time issue
-  steps:
-  - intent: cycle_time
-  - action: utter_general_cycle_time
-  - action: utter_feedback
-
-- rule: Give solution for overkill issue
-  steps:
-  - intent: overkill
-  - action: utter_general_overkill
-  - action: utter_feedback
-
-- rule: Give solution for cycle time issue
-  steps:
-  - intent: underkill
-  - action: utter_general_underkill
-  - action: utter_feedback
-
 - rule: Give solution for recipe can't load
   steps:
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
+
+- rule: Give solution for report issue
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - action: utter_feedback
+
+- rule: Give solution for UI/Display issue
+  steps:
+  - intent: ui_display
+  - action: utter_general_ui_display
+  - action: utter_feedback
+
+- rule: Give solution for Handshake issue
+  steps:
+  - intent: handshake
+  - action: utter_general_handshake
+  - action: utter_feedback
+
+- rule: Give solution for Counter issue
+  steps:
+  - intent: counter
+  - action: utter_general_counter
+  - action: utter_feedback
+
+# ------------------Vision------------------ #
+
+- rule: List all the different categories of vision issues
+  steps:
+  - intent: vision_issue
+  - action: utter_software_vision
+
+- rule: List all the engine in 2D vision
+  steps:
+  - intent: 2d_vision
+  - action: utter_vision_2D
+
+- rule: Give solution for 2D lead issue
+  steps:
+  - intent: lead_2d
+  - action: utter_2d_lead
+  - action: utter_feedback
+
+- rule: Give solution for 2D mark issue
+  steps:
+  - intent: mark_2d
+  - action: utter_2d_mark
+  - action: utter_feedback
+
+- rule: Give solution for 2D package issue
+  steps:
+  - intent: package_2d
+  - action: utter_2d_package
+  - action: utter_feedback
+
+- rule: Give solution for 2D lens issue
+  steps:
+  - intent: lens_2d
+  - action: utter_2d_lens
+  - action: utter_feedback
+
+- rule: Give solution for 2D package edge issue
+  steps:
+  - intent: package_edge_2d
+  - action: utter_2d_package_edge
+  - action: utter_feedback
+
+- rule: Give solution for 2D OCR issue
+  steps:
+  - intent: ocr_2d
+  - action: utter_2d_ocr
+  - action: utter_feedback
+
+- rule: Give solution for 2D matrix code issue
+  steps:
+  - intent: matrix_code_2d
+  - action: utter_2d_matrix_code
+  - action: utter_feedback
+
+- rule: Give solution for 2D pin 1 issue
+  steps:
+  - intent: pin_1_2d
+  - action: utter_2d_pin_1
+  - action: utter_feedback
+
+- rule: Give solution for 2D orient issue
+  steps:
+  - intent: orient_2d
+  - action: utter_2d_orient
+  - action: utter_feedback
+
+- rule: Give solution for 2D measure issue
+  steps:
+  - intent: measure_2d
+  - action: utter_2d_measure
+  - action: utter_feedback
+
+- rule: Give solution for 2D unit alignment issue
+  steps:
+  - intent: unit_alignment_2d
+  - action: utter_2d_unit_alignment
+  - action: utter_feedback
+
+- rule: List all the engine in 3D vision
+  steps:
+  - intent: 3d_vision
+  - action: utter_vision_3D
+
+- rule: Give solution for 3D pad issue
+  steps:
+  - intent: pad_3d
+  - action: utter_3d_pad
+  - action: utter_feedback
+
+- rule: Give solution for 3D lead issue
+  steps:
+  - intent: lead_3d
+  - action: utter_3d_lead
+  - action: utter_feedback
+
+- rule: Give solution for 3D package issue
+  steps:
+  - intent: package_3d
+  - action: utter_3d_package
+  - action: utter_feedback
+
+- rule: Give solution for 3D package edge issue
+  steps:
+  - intent: package_edge_3d
+  - action: utter_3d_package_edge
+  - action: utter_feedback
+
+- rule: Give solution for 3D BGA issue
+  steps:
+  - intent: bga_3d
+  - action: utter_3d_bga
+  - action: utter_feedback
+
+- rule: Give solution for 3D Measure issue
+  steps:
+  - intent: measure_3d
+  - action: utter_3d_measure
+  - action: utter_feedback
+
+- rule: Give solution for 3D unit alignment issue
+  steps:
+  - intent: unit_alignment_3d
+  - action: utter_3d_unit_alignment
+  - action: utter_feedback
+
+- rule: Give solution for 3D pickup head issue
+  steps:
+  - intent: pickup_head_3d
+  - action: utter_3d_pickup_head
+  - action: utter_feedback
+
+- rule: Give solution for overkill issue
+  steps:
+  - intent: overkill
+  - action: utter_vision_overkill
+  - action: utter_feedback
+
+- rule: Give solution for cycle time issue
+  steps:
+  - intent: underkill
+  - action: utter_vision_underkill
+  - action: utter_feedback
+
+- rule: Give solution for cycle time issue
+  steps:
+  - intent: cycle_time
+  - action: utter_vision_cycle_time
+  - action: utter_feedback
+
+# ------------------Other------------------ #
 
 - rule: Have more issue
   steps:

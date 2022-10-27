@@ -1,6 +1,8 @@
 version: "3.1"
 
 nlu:
+
+# ------------------Greeting/Bot Challenge------------------ #
 - intent: greet
   examples: |
     - hey
@@ -83,18 +85,8 @@ nlu:
     - How long does it take before you get frustrated?
     - Apa tu Rasa
     - do u have name?
-    - How old are you?
-    - How old are you
-    - u how old
-    - 你几岁
-    - u umur berapa
-    - age
-    - how old are you
-    - how old re you
-    - how old u
-    - 几岁
-    - umur berapa
-    - how old are u
+
+# ------------------Type of Issue------------------ #
 
 - intent: software_issue
   examples: |
@@ -114,6 +106,7 @@ nlu:
     - softwares
     - Software problem
     - I met some problems in my software
+    - platform
 
 - intent: hardware_issue
   examples: |
@@ -143,6 +136,8 @@ nlu:
     - can you help me with this feature
     - I want to know about this software feature
 
+# ------------------Type of Software Issue------------------ #
+
 - intent: general_issue
   examples: |
     - software_general
@@ -154,22 +149,21 @@ nlu:
 - intent: vision_issue
   examples: |
     - software_vision
-    - vision have some issuue
+    - vision have some issue
     - vision got problem
-    - I have problem with vision
+    - I have problem with the vision
     - the vision got problem
     - vision not working
     - vision got issue 
     - the vision is not working
+    - vision
+    - vision unable to detect the defects
+    - vision cannot detect the defects
+    - vision cannot catch the defects
+    - the vision will detect unwanted noise
+    - the vision detect unwanted defects
 
-- intent: platform_issue
-  examples: |
-    - software_platform
-    - issue related to platform
-    - platform got problem
-    - platform issue
-    - platform problem
-    - platform have some problem
+# ------------------General Issue Branches------------------ #
 
 - intent: crash
   examples: |
@@ -208,9 +202,99 @@ nlu:
     - v4 cannot move
     - v4 not working
 
+- intent: recipe_cant_load
+  examples: |
+    - general_recipe_cant_load
+    - I cannot load the recipe
+    - I failed to load the recipe
+    - recipe failed to load
+    - recipe unable to load
+    - recipe load fail
+    - I cannot use the recipe
+
+- intent: report
+  examples: |
+    - general_report
+    - report can't generate
+    - report
+    - Report
+    - postgres
+    - database
+    - the report data not tally
+    - crash during report generate
+
+- intent: ui_display
+  examples: |
+    - general_ui_display
+    - UI have problem
+    - Display got problem
+    - Not displaying correctly
+
+- intent: handshake
+  examples: |
+    - general_handshake
+    - Handshake
+    - handler communication error
+
+- intent: counter
+  examples: |
+    - general_counter
+    - Counter not match
+    - count wrongly
+    - count incorrectly
+    - the count is weird
+
+# ------------------Vision Issue Branches------------------ #
+
+- intent: 2d_vision 
+  examples: |
+    - vision_2D
+    - 2D
+    - 2d
+    - 2D vision
+    - VsMP
+    - VsMOP
+    - VsMLOP
+    - 2D view
+    - 2d vision issue
+    - 2d vision got problem
+    - 2d vision buggy
+    - 2d vision have issue
+
+- intent: 3d_vision
+  examples: |
+    - vision_3D
+    - 3D
+    - 3d
+    - 3D vision
+    - 5S
+    - 5S vision
+    - 5SPP 
+    - Vs3D5S
+    - Vs5SPP
+    - 3D view
+    - 3d vision issue
+    - 3d vision got problem
+    - 3d vision buggy
+    - 3d vision have issue
+
+- intent: overkill
+  examples: |
+    - vision_overkill
+    - overkill
+    - the vision will overkill 
+    - overkill leh
+
+- intent: underkill
+  examples: |
+    - vision_underkill
+    - underkill
+    - underkill leh
+    - vision underkill 
+
 - intent: cycle_time
   examples: |
-    - general_cycle_time
+    - vision_cycle_time
     - cycle time high
     - why is the cycle time high
     - why does it take so long for the machine to take inspect
@@ -224,39 +308,216 @@ nlu:
     - high storage time 
     - cycle time
 
-- intent: overkill
-  examples: |
-    - general_overkill
-    - overkill
-    - the vision will overkill 
-    - the vision will detect unwanted noise
-    - the vision detect unwanted defects
-    - overkill leh
+# ------------------2D Engine Branches------------------ #
 
-- intent: underkill
+- intent: lead_2d
   examples: |
-    - general_underkill
-    - underkill
-    - underkill leh
-    - unable to detect the defects
-    - cannot detect the defects
-    - cannot catch the defects
-    - vision underkill 
+    - 2d_lead
+    - 2D Lead
+    - Lead 2D
+    - 2d lead
+    - lead 2d
+    - 2d lead has issue 
+    - lead
 
-- intent: recipe_cant_load
+- intent: mark_2d
   examples: |
-    - general_recipe_cant_load
-    - I cannot load the recipe
-    - I failed to load the recipe
-    - recipe failed to load
-    - recipe unable to load
-    - recipe load fail
-    - I cannot use the recipe
+    - 2d_mark
+    - 2D Mark
+    - Mark 2D
+    - 2d mark
+    - mark 2d
 
-- intent: solution_prompt_issue
+- intent: package_2d
   examples: |
-    - solution_prompt_issue
-    - No, I meant something else!
+    - 2d_package
+    - 2D Package
+    - Package 2D
+    - 2d pkg
+    - pkg 2d
+    - 2d package
+    - package 2d
+
+- intent: lens_2d
+  examples: |
+    - 2d_lens
+    - 2D Lens
+    - Lens 2D
+    - Lens
+    - lens
+    - 2d lens
+    - lens 2d
+
+- intent: package_edge_2d
+  examples: |
+    - 2d_package_edge
+    - 2D Package Edge
+    - Package Edge 2D
+    - 2d edge
+    - edge 2d
+    - 2D Edge
+    - 2d Edge
+    - 2d package edge
+    - 2dpackageedge
+    - packageedge 2d
+    - package edge 2d
+
+- intent: ocr_2d
+  examples: |
+    - 2d_ocr
+    - 2D OCR
+    - OCR 2D
+    - OCR
+    - ocr
+    - 2d ocr
+    - ocr 2d
+
+- intent: matrix_code_2d
+  examples: |
+    - 2d_matrix_code
+    - 2D Matrix Code
+    - Matrix Code 2D
+    - Matrix Code
+    - matrixcode
+    - matrix code 2d
+    - 2d matrix code
+
+- intent: pin_1_2d
+  examples: |
+    - 2d_pin_1
+    - 2D Pin 1
+    - Pin 1 2D
+    - Pin
+    - Pin1
+    - Pin 1
+    - pin 1
+    - pin1
+    - 2d pin1
+    - 2d pin 1
+
+- intent: orient_2d
+  examples: |
+    - 2d_orient
+    - 2D Orient
+    - Orient 2D
+    - Orient
+    - Orientation
+    - orientation
+    - orient
+    - 2d orient
+    - orient 2d
+
+- intent: measure_2d
+  examples: |
+    - 2d_measure
+    - 2D Measure
+    - Measure 2D
+    - measure 2d
+    - 2d measure
+
+- intent: unit_alignment_2d
+  examples: |
+    - 2d_unit_alignment
+    - 2D Unit Alignment
+    - Unit Alignment 2D
+    - 2d unit alignment
+    - 2d unitalignment
+    - 2d unitalignment
+    - 2dunitalignment
+    - unit alignment
+
+# ------------------3D Engine Branches------------------ #
+
+- intent: pad_3d
+  examples: |
+    - 3d_pad
+    - 3D Pad
+    - Pad 3D
+    - Pad
+    - pad
+    - 3d pad
+    - pad 3d
+
+- intent: lead_3d
+  examples: |
+    - 3d_lead
+    - 3D Lead
+    - Lead 3D
+    - 3DLi
+    - 3dli
+    - lead 3d
+    - 3d lead
+    - the 3d lead cannot find
+    - 3d lead got bug
+
+- intent: package_3d
+  examples: |
+    - 3d_package
+    - 3D Package
+    - Package 3D
+    - 3d pkg
+    - pkg 3d
+    - 3d package
+    - package 3d
+    - eh 3d package got issue
+
+- intent: package_edge_3d
+  examples: |
+    - 3d_package_edge
+    - 3D Package Edge
+    - Package Edge 3D
+    - 3D edge
+    - edge 3d
+    - 3d package edge
+    - 3dpackageedge
+    - 3dpackage edge
+    - packageedge 3d
+    - packageedge3d
+    - package edge 3d
+    - package edge3d
+
+- intent: bga_3d
+  examples: |
+    - 3d_bga
+    - 3D BGA
+    - BGA 3D
+    - BGA
+    - Ball Grid Array
+    - Ball
+    - bga
+    - 3d bga
+    - bga 3d
+
+- intent: measure_3d
+  examples: |
+    - 3d_measure
+    - 3D Measure
+    - Measure 3D
+    - 3d measure
+    - measure 3d
+
+- intent: unit_alignment_3d
+  examples: |
+    - 3d_unit_alignment
+    - 3D Unit Alignment
+    - Unit Alignment 3D
+    - 3d unit alignment
+    - 3d unitalignment
+    - 3d unitalignment
+    - 3dunitalignment
+
+- intent: pickup_head_3d
+  examples: |
+    - 3d_pickup_head
+    - Pick up head
+    - Pickup head
+    - pickup head
+    - pickuphead
+    - 3d pickup head
+    - 3D pick up head
+    - pickup head 3d
+
+# ------------------Other------------------ #
 
 - intent: out_of_scope
   examples: |
@@ -276,8 +537,30 @@ nlu:
     - I am angry
     - I don't know
     - what is your gender
-    - are you girl or bot
+    - are you girl or boy
     - customer scolded me
+    - How old are you?
+    - How old are you
+    - u how old
+    - 你几岁
+    - u umur berapa
+    - age
+    - how old are you
+    - how old re you
+    - how old u
+    - 几岁
+    - umur berapa
+    - how old are u
+    - not sure
+    - what
+    - errr
+    - ehhh
+    - lp;mkdaeglmgadlmkpgda 
+    - dkgjajgda
+    - zi en 
+    - Chun Yuan
+    - Suck
+    - hehe
 
 - intent: affirm
   examples: |
@@ -289,7 +572,15 @@ nlu:
     - correct
     - ok
     - solution_yes
+    - simulate_yes
+    - can simulate
+    - able to simulate
+    - simulatable
     - solved
+    - ya I can simulate
+    - ya
+    - yep
+
 
 - intent: deny
   examples: |
@@ -310,6 +601,11 @@ nlu:
     - not yet solve
     - not solved
 
+- intent: solution_prompt_issue
+  examples: |
+    - solution_prompt_issue
+    - No, I meant something else!
+
 - intent: unsure
   examples: |
     - simulate_unsure
@@ -317,6 +613,8 @@ nlu:
     - how simulate
     - I don't know whether it is simulatable
     - not sure simulatable mah
+
+# ------------------Synonym------------------ #
 
 - synonym: crash
   examples: |

@@ -9,25 +9,47 @@ intents:
 - feature
 - general_issue
 - vision_issue
-- platform_issue
 - crash
-- cycle_time
+- recipe_cant_load
+- report
+- ui_display
+- handshake
+- counter
+- 2d_vision
+- 3d_vision
 - overkill
 - underkill
-- recipe_cant_load
-- solution_prompt_issue
+- cycle_time
+- lead_2d
+- mark_2d
+- package_2d
+- lens_2d
+- package_edge_2d
+- ocr_2d
+- matrix_code_2d
+- pin_1_2d
+- orient_2d
+- measure_2d
+- pad_3d
+- lead_3d
+- package_3d
+- package_edge_3d
+- bga_3d
+- measure_3d
 - out_of_scope
 - affirm
 - deny
+- solution_prompt_issue
 - unsure
 
 responses:
+
+# ------------------Greeting/Bot Challenge------------------ #
   utter_greet:
-  - text: Hi there!  😊
-  - text: Heyyy! 😊
-  - text: Hiii! 😊
-  - text: Hello! 😁
-  
+  - text: Hi there! 😊 I am JIRA bot and Im here to rescue the day!
+  - text: Ola, JIRA bot here to solve your doubts!
+  - text: BbiBbi....Bii.. Hi, I am JIRA bot.
+
   utter_goodbye:
   - text: Okay thanks, bye~  😊
   - text: Alright. See ya! 😁
@@ -36,7 +58,10 @@ responses:
   - text: Thank you! Bye bye ~ 😁
   
   utter_iamabot:
-  - text: I am a bot, powered by Rasa. 
+  - text: I am JIRA bot, powered by Rasa, and I'm here to assist you!
+  - text: I am just a bot for JIRA system. 
+
+# ------------------Type of Issue------------------ #
   
   utter_issueType:
   - buttons:
@@ -46,7 +71,9 @@ responses:
       title: Hardware (Currently Unavailable)
     - payload: software_featrure
       title: Feature (Currently Unavailable)
-    text: What would you like to know about?
+    text: So, what would you like to know about?
+
+# ------------------Type of Software Issue------------------ #
 
   utter_software_issue:
   - buttons:
@@ -54,24 +81,40 @@ responses:
       title: General
     - payload: software_vision
       title: Vision Engine
-    - payload: software_platform
-      title: Platform
     text: What type of software issue are you facing?
 
   utter_software_general:
   - buttons:
     - payload: general_crash
       title: Software Crash
-    - payload: general_cycle_time
-      title: Cycle Time High
-    - payload: general_overkill
-      title: Overkill
-    - payload: general_underkill
-      title: Underkill
     - payload: general_recipe_cant_load
       title: Recipe not able to load
+    - payload: general_report
+      title: Report
+    - payload: general_ui_display
+      title: UI/Display
+    - payload: general_handshake
+      title: Handshake
+    - payload: general_counter
+      title: Counter
     text: Which general issues are you facing?
+
+  utter_software_vision:
+  - buttons:
+    - payload: vision_2D
+      title: 2D Vision
+    - payload: vision_3D
+      title: 3D Vision
+    - payload: vision_overkill
+      title: Overkill
+    - payload: vision_underkill
+      title: Underkill
+    - payload: vision_cycle_time
+      title: Cycle Time High
+    text: Which vision issues are you facing?
   
+# ------------------Solution for General Issue------------------ #
+
   utter_general_crash:
   - buttons:
     - payload: simulate_yes
@@ -91,17 +134,133 @@ responses:
   utter_simulate_unsure:
   - text: -Insert Server Link- (Not sure can simulate or not)
 
-  utter_general_cycle_time:
-  - text: -Insert Server Link- (Cycle Time High)
-
-  utter_general_overkill:
-  - text: -Insert Server Link- (Overkill)
-
-  utter_general_underkill:
-  - text: -Insert Server Link- (Underkill)
-
   utter_general_recipe_cant_load:
   - text: -Insert Server Link- (Recipe Can't Load)
+
+  utter_general_report:
+  - text: -Insert Server Link- (Report)
+
+  utter_general_ui_display:
+  - text: -Insert Server Link- (UI/Display)
+
+  utter_general_handshake:
+  - text: -Insert Server Link- (Handshake)
+
+  utter_general_counter:
+  - text: -Insert Server Link- (Counter)
+
+# ------------------Solution for Vision Issue------------------ #
+  utter_vision_2D:
+  - buttons:
+    - payload: 2d_lead
+      title: Lead
+    - payload: 2d_mark
+      title: Mark
+    - payload: 2d_package
+      title: Package
+    - payload: 2d_lens
+      title: Lens
+    - payload: 2d_pacakage_edge
+      title: Package Edge
+    - payload: 2d_ocr
+      title: OCR
+    - payload: 2d_matrix_code
+      title: Matrix Code
+    - payload: 2d_pin_1
+      title: Pin 1
+    - payload: 2d_orient
+      title: Orient
+    - payload: 2d_measure
+      title: Measure
+    text: Which 2D engine are you facing problem in?
+
+  utter_2d_lead:
+  - text: -Insert Server Link- (2D Lead Issue)
+
+  utter_2d_mark:
+  - text: -Insert Server Link- (2D Mark Issue)
+
+  utter_2d_package:
+  - text: -Insert Server Link- (2D Package Issue)
+
+  utter_2d_lens:
+  - text: -Insert Server Link- (2D Lens Issue)
+
+  utter_2d_package_edge:
+  - text: -Insert Server Link- (2D Package Edge Issue)
+
+  utter_2d_ocr:
+  - text: -Insert Server Link- (2D OCR Issue)
+
+  utter_2d_matrix_code:
+  - text: -Insert Server Link- (2D Matrix Code Issue)
+
+  utter_2d_pin_1:
+  - text: -Insert Server Link- (2D Pin 1 Issue)
+
+  utter_2d_orient:
+  - text: -Insert Server Link- (2D Orient Issue)
+
+  utter_2d_measure:
+  - text: -Insert Server Link- (2D Measure Issue)
+
+  utter_2d_unit_alignment:
+  - text: -Insert Server Link- (2D Unit Alignment Issue)
+
+  utter_vision_3D:
+  - buttons:
+    - payload: 3d_pad
+      title: Pad
+    - payload: 3d_lead
+      title: 3DLi
+    - payload: 3d_package
+      title: Package
+    - payload: 3d_edge
+      title: Package Edge
+    - payload: 3d_bga
+      title: BGA
+    - payload: 3d_measure
+      title: Measure
+    - payload: 3d_unit_alignment
+      title: Unit Alignment
+    - payload: 3d_pickup_head
+      title: Pickup Head
+    text: Which 3D engine are you facing problem in?
+
+  utter_3d_pad:
+  - text: -Insert Server Link- (3D Pad Issue)
+
+  utter_3d_lead:
+  - text: -Insert Server Link- (3D Lead Issue)
+
+  utter_3d_package:
+  - text: -Insert Server Link- (3D Package Issue)
+
+  utter_3d_package_edge:
+  - text: -Insert Server Link- (3D Package Edge Issue)
+
+  utter_3d_bga:
+  - text: -Insert Server Link- (3D BGA Issue)
+
+  utter_3d_measure:
+  - text: -Insert Server Link- (3D Measure Issue)
+
+  utter_3d_unit_alignment:
+  - text: -Insert Server Link- (3D Unit Alignment Issue)
+
+  utter_3d_pickup_head:
+  - text: -Insert Server Link- (3D Pickup Head Issue)
+  
+  utter_vision_overkill:
+  - text: -Insert Server Link- (Overkill)
+
+  utter_vision_underkill:
+  - text: -Insert Server Link- (Underkill)
+
+  utter_vision_cycle_time:
+  - text: -Insert Server Link- (Cycle Time High)
+
+# ------------------Other------------------ #
 
   utter_feedback:
   - buttons:
@@ -130,7 +289,9 @@ responses:
     text: Does this guideline solve your problem? 😊
 
   utter_solution_prompt_issue:
-  - text: Please describe the issue/problem you are facing. 😃
+  - text: "Please describe the issue/problem you are facing. 😃\
+           \nSoftware:\n General (Software Crash/Recipe Can't Load/Report/UI/Handshake/Counter)\
+           \n Vision (2D [2D Lead/2D Mark/2D Package/"
 
   utter_solution_yes:
   - text: Great! Have a nice day😊
@@ -141,7 +302,7 @@ responses:
   - text: We are terribly sorry 😢. We will improve our system. Please contact JIRA Owner for further assistance. 
 
   utter_out_of_scope:
-  - text: Sorry, I don't understand this.😢
+  - text: Sorry, I can't handle this.😢
 
 session_config:
   session_expiration_time: 60
