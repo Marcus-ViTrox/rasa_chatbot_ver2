@@ -30,12 +30,15 @@ intents:
 - pin_1_2d
 - orient_2d
 - measure_2d
+- unit_alignment_2d
 - pad_3d
 - lead_3d
 - package_3d
 - package_edge_3d
 - bga_3d
 - measure_3d
+- unit_alignment_3d
+- pickup_head_3d
 - out_of_scope
 - affirm
 - deny
@@ -293,8 +296,8 @@ responses:
   utter_solution_prompt_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
            \nSoftware:\n General (Software Crash/Recipe Can't Load/Report/UI/Handshake/Counter)\
-           \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment],\
-           \n 3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head])"
+           \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment]/\
+           \n         3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head]/Overkill/Underkill/Cycle Time High)"
 
   utter_solution_yes:
   - text: Great! Have a nice day😊

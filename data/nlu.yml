@@ -107,6 +107,7 @@ nlu:
     - Software problem
     - I met some problems in my software
     - platform
+    - I have some software issue 
 
 - intent: hardware_issue
   examples: |
