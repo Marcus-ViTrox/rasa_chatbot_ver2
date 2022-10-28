@@ -222,6 +222,7 @@ nlu:
     - database
     - the report data not tally
     - crash during report generate
+    - software crash when generating the report
 
 - intent: ui_display
   examples: |
@@ -260,6 +261,9 @@ nlu:
     - 2d vision got problem
     - 2d vision buggy
     - 2d vision have issue
+    - I think is 2D
+    - 2D???
+    - err 2D
 
 - intent: 3d_vision
   examples: |
@@ -277,6 +281,9 @@ nlu:
     - 3d vision got problem
     - 3d vision buggy
     - 3d vision have issue
+    - I think is 3D
+    - 3D???
+    - err 3D
 
 - intent: overkill
   examples: |
@@ -561,6 +568,10 @@ nlu:
     - Chun Yuan
     - Suck
     - hehe
+    - sdajk
+    - asdsagh
+    - rterb
+    - dfhdgh
 
 - intent: affirm
   examples: |

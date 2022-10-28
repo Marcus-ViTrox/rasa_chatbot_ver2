@@ -172,6 +172,8 @@ responses:
       title: Orient
     - payload: 2d_measure
       title: Measure
+    - payload: 2d_unit_alignment
+      title: Unit Alignment
     text: Which 2D engine are you facing problem in?
 
   utter_2d_lead:
@@ -291,7 +293,8 @@ responses:
   utter_solution_prompt_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
            \nSoftware:\n General (Software Crash/Recipe Can't Load/Report/UI/Handshake/Counter)\
-           \n Vision (2D [2D Lead/2D Mark/2D Package/"
+           \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment],\
+           \n 3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head])"
 
   utter_solution_yes:
   - text: Great! Have a nice day😊
