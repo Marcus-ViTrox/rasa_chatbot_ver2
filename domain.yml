@@ -42,8 +42,7 @@ intents:
 - out_of_scope
 - affirm
 - deny
-- solution_prompt_issue
-- unsure
+- solution_another_issue
 
 responses:
 
@@ -120,22 +119,68 @@ responses:
 
   utter_general_crash:
   - buttons:
+    - payload: similar_yes
+      title: Yes, There is.
+    - payload: similar_no
+      title: No, Don't Have
+    text: Are there any similar good machine onsite?
+
+  utter_similar_yes:
+  - buttons:
+    - payload: new_version_yes
+      title: Yes, it's newer
+    - payload: new_version_no
+      title: No, version is the same
+    text: Are the software version of the similar good machine newer?
+
+  utter_new_version_yes:
+  - buttons:
+    - payload: still_crash_yes
+      title: Yes, still crash.
+    - payload: still_crash_no
+      title: No, it does not crash.
+    text: "Kindly patch the issue machine with the similar good machine DLL and monitor the machine.\nDoes it still crash?"
+
+  utter_simulate_crash:
+  - buttons:
     - payload: simulate_yes
       title: Simulatable
     - payload: simulate_no
-      title: Not simulatable
-    - payload: simulate_unsure
-      title: I don't know
-    text: Are you able to simulate the software crash?
+      title: Not Simulatable
+    text: Can you simulate the crash?
 
   utter_simulate_yes:
-  - text: -Insert Server Link- (Simulatable Crash)
+  - text: "Kindly provide JIRA owner with the following info by email.\
+          \n\nInfo to Collect:\
+          \n- Does the software crash happened after software update? (Y/N)\
+          \n- Is the crash happened during production? (Y/N)\
+          \n- Verify whether it's caused by any possible hard disk issue. (Y/N)\
+          \n- Any action done before crash? (If Yes, please describe.)\
+          \n- Simulation step. (Important)\
+          \n\nItem to Collect:\
+          \n- Crash dump\
+          \n- Backup Software\
+          \n- Export Info/Lot Image"
 
   utter_simulate_no:
-  - text: -Insert Server Link- (Not Simulatable Crash)
-
-  utter_simulate_unsure:
-  - text: -Insert Server Link- (Not sure can simulate or not)
+  - text: "Please follow the steps below:\
+          \n1. Check if there is memory leak using Process Explorer\
+          \nGuideline: -Insert Link- (Guide to check memory leak)\
+          \n2. Verify whether it's caused by any possible hard disk issue.\
+          \n3. Prompt customer for simulation step.\
+          \n(Optional) Record customer action with Automatic Screenshotter.\
+          \nGuideline: -Insert Link- (Guide to use Automatic Screenshotter)\
+          \nAfter you have done the steps above, kindly provide JIRA owner with the following info by email.\
+          \n\nInfo to Collect:\
+          \n- Memory Leak? (Y/N)
+          \n- Does the software crash happened after software update? (Y/N)\
+          \n- Is it hard disk issue? (Y/N)\
+          \n- Is the crash happened during production? (Y/N)\
+          \n- Any action done before crash? (If Yes, please describe.)\
+          \n\nItem to Collect:\
+          \n- Crash dump\
+          \n- Backup Software\
+          \n- Export Info/Lot Image"
 
   utter_general_recipe_cant_load:
   - text: -Insert Server Link- (Recipe Can't Load)
@@ -293,7 +338,7 @@ responses:
       title: No, I meant something else!
     text: Does this guideline solve your problem? 😊
 
-  utter_solution_prompt_issue:
+  utter_solution_another_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
            \nSoftware:\n General (Software Crash/Recipe Can't Load/Report/UI/Handshake/Counter)\
            \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment]/\

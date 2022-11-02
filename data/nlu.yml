@@ -592,7 +592,14 @@ nlu:
     - ya I can simulate
     - ya
     - yep
-
+    - similar_yes
+    - got similar good machine
+    - got
+    - new_version_yes
+    - ya the version newer
+    - software version newer
+    - it has new version
+    - still_crash_yes
 
 - intent: deny
   examples: |
@@ -612,19 +619,23 @@ nlu:
     - not simulatable
     - not yet solve
     - not solved
+    - similar_no
+    - dont have similar good machine
+    - tak de
+    - xde
+    - new_version_no
+    - no, version same
+    - no eh
+    - still_crash_no
+    - oh no crash le
+    - no le
 
-- intent: solution_prompt_issue
+- intent: solution_another_issue
   examples: |
     - solution_prompt_issue
     - No, I meant something else!
-
-- intent: unsure
-  examples: |
-    - simulate_unsure
-    - I don't know how to simulate
-    - how simulate
-    - I don't know whether it is simulatable
-    - not sure simulatable mah
+    - I have other issue
+    - I have something else to ask
 
 # ------------------Synonym------------------ #
 

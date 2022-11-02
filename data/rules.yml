@@ -2,224 +2,266 @@ version: "3.1"
 
 rules:
 
+# Goodbye
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
+# Bot Challenge
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
 
+# Greet
 - rule: Greet and list all type of issue that user might face
   steps:
   - intent: greet
   - action: utter_greet
   - action: utter_issueType
 
+# Software Issues List
 - rule: List all the possible software issues
   steps:
   - intent: software_issue
   - action: utter_software_issue
 
-# ------------------General------------------ #
+## ------------------General------------------ ##
 
+# List all general issues
 - rule: List all the general software issues
   steps:
   - intent: general_issue
   - action: utter_software_general
 
-- rule: Check whether the crash is simulatable and give solution
+# Software crash, similar good machine existance
+- rule: Check whether there is similar good machine onsite
   steps: 
   - intent: crash
   - action: utter_general_crash
 
+# Recipe can't load
 - rule: Give solution for recipe can't load
   steps:
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
 
+# Report 
 - rule: Give solution for report issue
   steps:
   - intent: report
   - action: utter_general_report
   - action: utter_feedback
 
+# UI/Display
 - rule: Give solution for UI/Display issue
   steps:
   - intent: ui_display
   - action: utter_general_ui_display
   - action: utter_feedback
 
+# Handshake
 - rule: Give solution for Handshake issue
   steps:
   - intent: handshake
   - action: utter_general_handshake
   - action: utter_feedback
 
+#Counter
 - rule: Give solution for Counter issue
   steps:
   - intent: counter
   - action: utter_general_counter
   - action: utter_feedback
 
-# ------------------Vision------------------ #
+## ------------------Vision------------------ ##
 
+# List all vision issues
 - rule: List all the different categories of vision issues
   steps:
   - intent: vision_issue
   - action: utter_software_vision
 
+# ------------------2D------------------ #
+
+# 2D Engine List
 - rule: List all the engine in 2D vision
   steps:
   - intent: 2d_vision
   - action: utter_vision_2D
 
+# 2D Lead
 - rule: Give solution for 2D lead issue
   steps:
   - intent: lead_2d
   - action: utter_2d_lead
   - action: utter_feedback
 
+# 2D Mark
 - rule: Give solution for 2D mark issue
   steps:
   - intent: mark_2d
   - action: utter_2d_mark
   - action: utter_feedback
 
+# 2D Package
 - rule: Give solution for 2D package issue
   steps:
   - intent: package_2d
   - action: utter_2d_package
   - action: utter_feedback
 
+# 2D Lens
 - rule: Give solution for 2D lens issue
   steps:
   - intent: lens_2d
   - action: utter_2d_lens
   - action: utter_feedback
 
+# 2D Package Edge
 - rule: Give solution for 2D package edge issue
   steps:
   - intent: package_edge_2d
   - action: utter_2d_package_edge
   - action: utter_feedback
 
+# 2D OCR
 - rule: Give solution for 2D OCR issue
   steps:
   - intent: ocr_2d
   - action: utter_2d_ocr
   - action: utter_feedback
 
+# 2D Matrix Code
 - rule: Give solution for 2D matrix code issue
   steps:
   - intent: matrix_code_2d
   - action: utter_2d_matrix_code
   - action: utter_feedback
 
+# 2D Pin 1
 - rule: Give solution for 2D pin 1 issue
   steps:
   - intent: pin_1_2d
   - action: utter_2d_pin_1
   - action: utter_feedback
 
+# 2D Orient
 - rule: Give solution for 2D orient issue
   steps:
   - intent: orient_2d
   - action: utter_2d_orient
   - action: utter_feedback
 
+# 2D Measure
 - rule: Give solution for 2D measure issue
   steps:
   - intent: measure_2d
   - action: utter_2d_measure
   - action: utter_feedback
 
+# 2D Unit Alignment
 - rule: Give solution for 2D unit alignment issue
   steps:
   - intent: unit_alignment_2d
   - action: utter_2d_unit_alignment
   - action: utter_feedback
 
+# ------------------3D------------------ #
+
+# 3D Engine List
 - rule: List all the engine in 3D vision
   steps:
   - intent: 3d_vision
   - action: utter_vision_3D
 
+# 3D Pad
 - rule: Give solution for 3D pad issue
   steps:
   - intent: pad_3d
   - action: utter_3d_pad
   - action: utter_feedback
 
+# 3D Lead
 - rule: Give solution for 3D lead issue
   steps:
   - intent: lead_3d
   - action: utter_3d_lead
   - action: utter_feedback
 
+# 3D Package
 - rule: Give solution for 3D package issue
   steps:
   - intent: package_3d
   - action: utter_3d_package
   - action: utter_feedback
 
+# 3D Package Edge
 - rule: Give solution for 3D package edge issue
   steps:
   - intent: package_edge_3d
   - action: utter_3d_package_edge
   - action: utter_feedback
 
+# 3D BGA
 - rule: Give solution for 3D BGA issue
   steps:
   - intent: bga_3d
   - action: utter_3d_bga
   - action: utter_feedback
 
+# 3D Measure
 - rule: Give solution for 3D Measure issue
   steps:
   - intent: measure_3d
   - action: utter_3d_measure
   - action: utter_feedback
 
+# 3D Unit Alignment
 - rule: Give solution for 3D unit alignment issue
   steps:
   - intent: unit_alignment_3d
   - action: utter_3d_unit_alignment
   - action: utter_feedback
 
+# 3D Pickup Head
 - rule: Give solution for 3D pickup head issue
   steps:
   - intent: pickup_head_3d
   - action: utter_3d_pickup_head
   - action: utter_feedback
 
+# ------------------Other Vision Issues------------------ #
+
+# Overkill
 - rule: Give solution for overkill issue
   steps:
   - intent: overkill
   - action: utter_vision_overkill
   - action: utter_feedback
 
-- rule: Give solution for cycle time issue
+# Underkill
+- rule: Give solution for underkill issue
   steps:
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
 
+# Cycle Time
 - rule: Give solution for cycle time issue
   steps:
   - intent: cycle_time
   - action: utter_vision_cycle_time
   - action: utter_feedback
 
-# ------------------Other------------------ #
+## ------------------Other------------------ ##
 
 - rule: Have more issue
   steps:
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
 
 - rule: Not included/unwanted intents
   steps:

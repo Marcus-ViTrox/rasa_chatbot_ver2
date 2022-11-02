@@ -1,8 +1,11 @@
 version: "3.1"
 
 stories:
+# ------------------Conversation flow with only 1 issue (Full conversation flow)------------------ #
+# Full conversation flow = start from greeting
 
-- story: Story from Trainer Conversation T000001 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Solved)
+# Crash(Simulatable) -> Solved
+- story: Story from Trainer Conversation T000001 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -13,13 +16,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000002 (Greet -> Software Issue -> General -> Crash -> Not simulatable -> Solved)
+# Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000002 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -30,13 +40,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000003 (Greet -> Software Issue -> General -> Crash -> Not simulatable -> Unsolved)
+# Crash(Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000003 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -47,13 +64,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000004 (Greet -> Software Issue -> General -> Crash -> Not simulatable -> Unsolved)
+# Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000004 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -64,47 +88,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000005 (Greet -> Software Issue -> General -> Crash -> Not sure how to simulate -> Solved)
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_issueType
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation T000006 (Greet -> Software Issue -> General -> Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_issueType
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000007 (Greet -> Software Issue -> General -> Report -> Solved)
+# Report Issue -> Solved
+- story: Story from Trainer Conversation T000005 (Greet -> Software Issue -> General -> Report -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -119,7 +116,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000008 (Greet -> Software Issue -> General -> Report -> Unsolved)
+# Report Issue -> Unsolved
+- story: Story from Trainer Conversation T000006 (Greet -> Software Issue -> General -> Report -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -134,7 +132,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000009 (Greet -> Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
+# 2D Lead -> Solved
+- story: Story from Trainer Conversation T000007 (Greet -> Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -151,7 +150,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000010 (Greet -> Software Issue -> Vision -> 2D -> 2D Lead -> Unsolved)
+# 2D Lead -> Unsolved
+- story: Story from Trainer Conversation T000008 (Greet -> Software Issue -> Vision -> 2D -> 2D Lead -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -168,7 +168,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000011 (Greet -> Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
+# 3D Pad -> Solved
+- story: Story from Trainer Conversation T000009 (Greet -> Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -185,7 +186,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000012 (Greet -> Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
+# 3D Pad -> Unsolved
+- story: Story from Trainer Conversation T000010 (Greet -> Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -202,7 +204,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000013 (Greet -> Software Issue -> Vision -> Overkill -> Solved)
+# Overkill -> Solved
+- story: Story from Trainer Conversation T000011 (Greet -> Software Issue -> Vision -> Overkill -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -217,7 +220,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000014 (Greet -> Software Issue -> Vision -> Overkill -> Unsolved)
+# Overkill -> Unsolved
+- story: Story from Trainer Conversation T000012 (Greet -> Software Issue -> Vision -> Overkill -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -232,7 +236,10 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000015 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Solved)
+# ------------------Conversation flow with 2 issues (Full conversation flow)------------------ #
+
+# Crash(Simulatable) -> Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000013 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -244,19 +251,32 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000016 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Unsolved)
+# Crash(Simulatable) -> Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000014 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -268,19 +288,32 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000017 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Solved)
+# Crash(Simulatable) -> Recipe Can't Load -> Solved
+- story: Story from Trainer Conversation T000015 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -292,65 +325,24 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
+  - action: utter_similar_yes
   - intent: affirm
-  - action: utter_solution_yes
-  
-- story: Story from Trainer Conversation T000018 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_issueType
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000019 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_issueType
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000020 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
+# Crash(Simulatable) -> Recipe Can't Load -> Unsolved
+- story: Story from Trainer Conversation T000016 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -362,17 +354,24 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000021 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+# Crash(Simulatable) -> UI/Display -> Solved
+- story: Story from Trainer Conversation T000017 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -384,10 +383,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -396,7 +401,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000022 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
+# Crash(Simulatable) -> UI/Display -> Unsolved
+- story: Story from Trainer Conversation T000018 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -408,10 +414,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -420,7 +432,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000023 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+# Crash(Simulatable) -> Handshake -> Solved
+- story: Story from Trainer Conversation T000019 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -432,10 +445,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -446,7 +465,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000024 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
+# Crash(Simulatable) -> Handshake -> Unsolved
+- story: Story from Trainer Conversation T000020 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -458,10 +478,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -472,7 +498,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000025 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+# Crash(Simulatable) -> 2D Package -> Solved
+- story: Story from Trainer Conversation T000021 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -484,10 +511,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -500,7 +533,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000026 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
+# Crash(Simulatable) -> 2D Package -> Unsolved
+- story: Story from Trainer Conversation T000022 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -512,10 +546,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -528,7 +568,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000027 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# Crash(Simulatable) -> 2D Mark -> Solved
+- story: Story from Trainer Conversation T000023 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -540,10 +581,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -554,7 +601,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000028 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# Crash(Simulatable) -> 2D Mark -> Unsolved
+- story: Story from Trainer Conversation T000024 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -566,10 +614,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -580,7 +634,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000029 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# Crash(Simulatable) -> 3D Lead -> Solved
+- story: Story from Trainer Conversation T000025 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -592,10 +647,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -604,7 +665,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000030 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# Crash(Simulatable) -> 3D Lead -> Unsolved
+- story: Story from Trainer Conversation T000026 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -616,10 +678,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -628,7 +696,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000031 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+# Crash(Simulatable) -> Underkill -> Solved
+- story: Story from Trainer Conversation T000027 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -640,17 +709,24 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000032 (Greet -> Software Issue -> General -> Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
+# Crash(Simulatable) -> Underkill -> Unsolved
+- story: Story from Trainer Conversation T000028 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -662,17 +738,26 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000033 (Software Issue -> General -> Crash -> Simulatable -> Solved)
+# ------------------Conversation flow with only 1 issue (No greeting)------------------ #
+
+# *Direct enter software issue* Crash(Simulatable) -> Solved
+- story: Story from Trainer Conversation T000029 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -680,13 +765,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000034 (Software Issue -> General -> Crash -> Not simulatable -> Solved)
+# *Direct enter software issue* Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000030 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -694,13 +786,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000035 (Software Issue -> General -> Crash -> Not simulatable -> Unsolved)
+# *Direct enter software issue* Crash(Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000031 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -708,13 +807,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000036 (Software Issue -> General -> Crash -> Not simulatable -> Unsolved)
+# *Direct enter software issue* Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000032 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -722,41 +828,20 @@ stories:
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000037 (Software Issue -> General -> Crash -> Not sure how to simulate -> Solved)
-  steps:
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation T000038 (Software Issue -> General -> Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000039 (Software Issue -> General -> Report -> Solved)
+# *Direct enter software issue* Report Issue -> Solved
+- story: Story from Trainer Conversation T000033 (Software Issue -> General -> Report -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -768,7 +853,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000040 (Software Issue -> General -> Report -> Unsolved)
+# *Direct enter software issue* Report Issue -> Unsolved
+- story: Story from Trainer Conversation T000034 (Software Issue -> General -> Report -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -780,7 +866,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000041 (Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
+# *Direct enter software issue* 2D Lead -> Solved
+- story: Story from Trainer Conversation T000035 (Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -794,7 +881,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000042 (Software Issue -> Vision -> 2D -> 2D Lead -> Unsolved)
+# *Direct enter software issue* 2D Lead -> Unsolved
+- story: Story from Trainer Conversation T000036 (Software Issue -> Vision -> 2D -> 2D Lead -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -808,7 +896,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000043 (Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
+# *Direct enter software issue* 3D Pad -> Solved
+- story: Story from Trainer Conversation T000037 (Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -822,7 +911,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000044 (Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
+# *Direct enter software issue* 3D Pad -> Unsolved
+- story: Story from Trainer Conversation T000038 (Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -836,7 +926,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000045 (Software Issue -> Vision -> Overkill -> Solved)
+# *Direct enter software issue* Overkill -> Solved
+- story: Story from Trainer Conversation T000039 (Software Issue -> Vision -> Overkill -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -848,7 +939,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000046 (Software Issue -> Vision -> Overkill -> Unsolved)
+# *Direct enter software issue* Overkill -> Unsolved
+- story: Story from Trainer Conversation T000040 (Software Issue -> Vision -> Overkill -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -860,7 +952,10 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000047 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Solved)
+# ------------------Conversation flow with 2 issues (No greeting)------------------ #
+
+# *Direct enter software issue* Crash(Simulatable) -> Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000041 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -869,19 +964,32 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000048 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Unsolved)
+# *Direct enter software issue* Crash(Simulatable) -> Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000042 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -890,19 +998,32 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000049 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> Recipe Can't Load -> Solved
+- story: Story from Trainer Conversation T000043 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -911,59 +1032,24 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
+  - action: utter_similar_yes
   - intent: affirm
-  - action: utter_solution_yes
-  
-- story: Story from Trainer Conversation T000050 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000051 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
-  steps:
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000052 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
+# *Direct enter software issue* Crash(Simulatable) -> Recipe Can't Load -> Unsolved
+- story: Story from Trainer Conversation T000044 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -972,17 +1058,24 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000053 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> UI/Display -> Solved
+- story: Story from Trainer Conversation T000045 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -991,10 +1084,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -1003,7 +1102,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000054 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
+# *Direct enter software issue* Crash(Simulatable) -> UI/Display -> Unsolved
+- story: Story from Trainer Conversation T000046 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1012,10 +1112,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -1024,7 +1130,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000055 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> Handshake -> Solved
+- story: Story from Trainer Conversation T000047 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1033,10 +1140,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -1047,7 +1160,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000056 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
+# *Direct enter software issue* Crash(Simulatable) -> Handshake -> Unsolved
+- story: Story from Trainer Conversation T000048 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1056,10 +1170,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -1070,7 +1190,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000057 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> 2D Package -> Solved
+- story: Story from Trainer Conversation T000049 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1079,10 +1200,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -1095,7 +1222,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000058 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
+# *Direct enter software issue* Crash(Simulatable) -> 2D Package -> Unsolved
+- story: Story from Trainer Conversation T000050 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1104,10 +1232,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -1120,7 +1254,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000059 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> 2D Mark -> Solved
+- story: Story from Trainer Conversation T000051 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1129,10 +1264,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -1143,7 +1284,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000060 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> 2D Mark -> Unsolved
+- story: Story from Trainer Conversation T000052 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1152,10 +1294,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -1166,7 +1314,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000061 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> 3D Lead -> Solved
+- story: Story from Trainer Conversation T000053 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1175,10 +1324,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -1187,7 +1342,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000062 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> 3D Lead -> Unsolved
+- story: Story from Trainer Conversation T000054 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1196,10 +1352,16 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -1208,7 +1370,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000063 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+# *Direct enter software issue* Crash(Simulatable) -> Underkill -> Solved
+- story: Story from Trainer Conversation T000055 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1217,17 +1380,24 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000064 (Software Issue -> General -> Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
+# *Direct enter software issue* Crash(Simulatable) -> Underkill -> Unsolved
+- story: Story from Trainer Conversation T000056 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1236,89 +1406,101 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000065 (General -> Crash -> Simulatable -> Solved)
+# ------------------Conversation flow with only 1 issue (Directly enter General Issue)------------------ #
+# *Direct enter general issue* Crash(Simulatable) -> Solved
+- story: Story from Trainer Conversation T000057 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000066 (General -> Crash -> Not simulatable -> Solved)
+# *Direct enter general issue* Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000058 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000067 (General -> Crash -> Not simulatable -> Unsolved)
+# *Direct enter general issue* Crash(Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000059 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000068 (General -> Crash -> Not simulatable -> Unsolved)
+# *Direct enter general issue* Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000060 (General -> Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000069 (General -> Crash -> Not sure how to simulate -> Solved)
-  steps:
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation T000070 (General -> Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000071 (General -> Report -> Solved)
+# *Direct enter general issue* Report Issue -> Solved
+- story: Story from Trainer Conversation T000061 (General -> Report -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1328,7 +1510,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000072 (General -> Report -> Unsolved)
+# *Direct enter general issue* Report Issue -> Unsolved
+- story: Story from Trainer Conversation T000062 (General -> Report -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1338,7 +1521,9 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000073 (Vision -> 2D -> 2D Lead -> Solved)
+# ------------------Conversation flow with only 1 issue (Directly enter Vision Issue)------------------ #
+# *Direct enter vision issue* 2D Lead -> Solved
+- story: Story from Trainer Conversation T000063 (Vision -> 2D -> 2D Lead -> Solved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -1350,7 +1535,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000074 (Vision -> 2D -> 2D Lead -> Unsolved)
+# *Direct enter vision issue* 2D Lead -> Unsolved
+- story: Story from Trainer Conversation T000064 (Vision -> 2D -> 2D Lead -> Unsolved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -1362,7 +1548,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000075 (Vision -> 3D -> 3D Pad -> Unsolved)
+# *Direct enter vision issue* 3D Pad -> Solved
+- story: Story from Trainer Conversation T000065 (Vision -> 3D -> 3D Pad -> Unsolved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -1374,7 +1561,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000076 (Vision -> 3D -> 3D Pad -> Unsolved)
+# *Direct enter vision issue* 3D Pad -> Unsolved
+- story: Story from Trainer Conversation T000066 (Vision -> 3D -> 3D Pad -> Unsolved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -1386,7 +1574,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000077 (Vision -> Overkill -> Solved)
+# *Direct enter vision issue* Overkill -> Solved
+- story: Story from Trainer Conversation T000067 (Vision -> Overkill -> Solved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -1396,7 +1585,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000078 (Vision -> Overkill -> Unsolved)
+# *Direct enter vision issue* Overkill -> Unsolved
+- story: Story from Trainer Conversation T000068 (Vision -> Overkill -> Unsolved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -1406,127 +1596,137 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000079 (General -> Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Solved)
+# ------------------Conversation flow with 2 issues (Directly enter General Issue)------------------ #
+# *Direct enter general issue* Crash(Simulatable) -> Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000069 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000080 (General -> Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Unsolved)
+# *Direct enter general issue* Crash(Simulatable) -> Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000070 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000081 (General -> Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> Recipe Can't Load -> Solved
+- story: Story from Trainer Conversation T000071 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
+  - action: utter_similar_yes
   - intent: affirm
-  - action: utter_solution_yes
-  
-- story: Story from Trainer Conversation T000082 (General -> Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000083 (General -> Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
-  steps:
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000084 (General -> Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
+# *Direct enter general issue* Crash(Simulatable) -> Recipe Can't Load -> Unsolved
+- story: Story from Trainer Conversation T000072 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000085 (General -> Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> UI/Display -> Solved
+- story: Story from Trainer Conversation T000073 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -1535,17 +1735,24 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000086 (General -> Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
+# *Direct enter general issue* Crash(Simulatable) -> UI/Display -> Unsolved
+- story: Story from Trainer Conversation T000074 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -1554,17 +1761,24 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000087 (General -> Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> Handshake -> Solved
+- story: Story from Trainer Conversation T000075 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -1575,17 +1789,24 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000088 (General -> Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
+# *Direct enter general issue* Crash(Simulatable) -> Handshake -> Unsolved
+- story: Story from Trainer Conversation T000076 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -1596,17 +1817,24 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000089 (General -> Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> 2D Package -> Solved
+- story: Story from Trainer Conversation T000077 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -1619,17 +1847,24 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000090 (General -> Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
+# *Direct enter general issue* Crash(Simulatable) -> 2D Package -> Unsolved
+- story: Story from Trainer Conversation T000078 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -1642,17 +1877,24 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000091 (General -> Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> 2D Mark -> Solved
+- story: Story from Trainer Conversation T000079 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -1663,17 +1905,24 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000092 (General -> Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> 2D Mark -> Unsolved
+- story: Story from Trainer Conversation T000080 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -1684,17 +1933,24 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000093 (General -> Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> 3D Lead -> Solved
+- story: Story from Trainer Conversation T000081 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -1703,17 +1959,24 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000094 (General -> Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> 3D Lead -> Unsolved
+- story: Story from Trainer Conversation T000082 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -1722,101 +1985,125 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000095 (General -> Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+# *Direct enter general issue* Crash(Simulatable) -> Underkill -> Solved
+- story: Story from Trainer Conversation T000083 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000096 (General -> Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
+# *Direct enter general issue* Crash(Simulatable) -> Underkill -> Unsolved
+- story: Story from Trainer Conversation T000084 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
   steps:
   - intent: general_issue
   - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000097 (Crash -> Simulatable -> Solved)
+# ------------------Conversation flow with only 1 issue (Directly enter specific issue(general))------------------ #
+# *Direct enter the specific issue* Crash(Simulatable) -> Solved
+- story: Story from Trainer Conversation T000085 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000098 (Crash -> Not simulatable -> Solved)
+# *Direct enter the specific issue* Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000086 (Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000099 (Crash -> Not simulatable -> Unsolved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000087 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000100 (Crash -> Not simulatable -> Unsolved)
+# *Direct enter the specific issue* Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000088 (Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000101 (Crash -> Not sure how to simulate -> Solved)
-  steps:
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation T000102 (Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000103 (Report -> Solved)
+# *Direct enter the specific issue* Report Issue -> Solved
+- story: Story from Trainer Conversation T000089 (Report -> Solved)
   steps:
   - intent: report
   - action: utter_general_report
@@ -1824,7 +2111,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000104 (Report -> Unsolved)
+# *Direct enter the specific issue* Report Issue -> Unsolved
+- story: Story from Trainer Conversation T000090 (Report -> Unsolved)
   steps:
   - intent: report
   - action: utter_general_report
@@ -1832,7 +2120,9 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000105 (2D -> 2D Lead -> Solved)
+# ------------------Conversation flow with only 1 issue (Directly enter 2D/3D)------------------ #
+# *Direct enter the 2D* 2D Lead -> Solved
+- story: Story from Trainer Conversation T000091 (2D -> 2D Lead -> Solved)
   steps:
   - intent: 2d_vision
   - action: utter_vision_2D
@@ -1842,7 +2132,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000106 (2D -> 2D Lead -> Unsolved)
+# *Direct enter the 2D* 2D Lead -> Unsolved
+- story: Story from Trainer Conversation T000092 (2D -> 2D Lead -> Unsolved)
   steps:
   - intent: 2d_vision
   - action: utter_vision_2D
@@ -1852,7 +2143,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000107 (3D -> 3D Pad -> Unsolved)
+# *Direct enter the 3D* 3D Pad -> Solved
+- story: Story from Trainer Conversation T000093 (3D -> 3D Pad -> Unsolved)
   steps:
   - intent: 3d_vision
   - action: utter_vision_3D
@@ -1862,7 +2154,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000108 (3D -> 3D Pad -> Unsolved)
+# *Direct enter the 3D* 3D Pad -> Unsolved
+- story: Story from Trainer Conversation T000094 (3D -> 3D Pad -> Unsolved)
   steps:
   - intent: 3d_vision
   - action: utter_vision_3D
@@ -1872,7 +2165,9 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000109 (Overkill -> Solved)
+# ------------------Conversation flow with only 1 issue (Directly enter specific issue(vision))------------------ #
+# *Direct enter the specific issue* Overkill -> Solved
+- story: Story from Trainer Conversation T000095 (Overkill -> Solved)
   steps:
   - intent: overkill
   - action: utter_vision_overkill
@@ -1880,7 +2175,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000110 (Overkill -> Unsolved)
+# *Direct enter the specific issue* Overkill -> Unsolved
+- story: Story from Trainer Conversation T000096 (Overkill -> Unsolved)
   steps:
   - intent: overkill
   - action: utter_vision_overkill
@@ -1888,113 +2184,127 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000111 (Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Solved)
+# ------------------Conversation flow with 2 issues (Directly enter specific issue)------------------ #
+# *Direct enter the specific issue* Crash(Simulatable) -> Crash(Not Simulatable) -> Solved
+- story: Story from Trainer Conversation T000097 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000112 (Crash -> Simulatable -> Next issue -> Crash -> Not Simulatable -> Unsolved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Crash(Not Simulatable) -> Unsolved
+- story: Story from Trainer Conversation T000098 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: deny
   - action: utter_simulate_no
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000113 (Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Recipe Can't Load -> Solved
+- story: Story from Trainer Conversation T000099 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
+  - action: utter_similar_yes
   - intent: affirm
-  - action: utter_solution_yes
-  
-- story: Story from Trainer Conversation T000114 (Crash -> Simulatable -> Next issue -> Crash -> Not sure how to simulate -> Unsolved)
-  steps:
-  - intent: crash
-  - action: utter_general_crash
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
-  - intent: crash
-  - action: utter_general_crash
-  - intent: unsure
-  - action: utter_simulate_unsure
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no
-
-- story: Story from Trainer Conversation T000115 (Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
-  steps:
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000116 (Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Recipe Can't Load -> Unsolved
+- story: Story from Trainer Conversation T000100 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: recipe_cant_load
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000117 (Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> UI/Display -> Solved
+- story: Story from Trainer Conversation T000101 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -2003,15 +2313,22 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000118 (Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
+# *Direct enter the specific issue* Crash(Simulatable) -> UI/Display -> Unsolved
+- story: Story from Trainer Conversation T000102 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: general_issue
   - action: utter_software_general
   - intent: ui_display
@@ -2020,15 +2337,22 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000119 (Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Handshake -> Solved
+- story: Story from Trainer Conversation T000103 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -2039,15 +2363,22 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000120 (Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Handshake -> Unsolved
+- story: Story from Trainer Conversation T000104 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: general_issue
@@ -2058,15 +2389,22 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000121 (Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> 2D Package -> Solved
+- story: Story from Trainer Conversation T000105 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -2079,15 +2417,22 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000122 (Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
+# *Direct enter the specific issue* Crash(Simulatable) -> 2D Package -> Unsolved
+- story: Story from Trainer Conversation T000106 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: software_issue
   - action: utter_software_issue
   - intent: vision_issue
@@ -2100,15 +2445,22 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000123 (Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> 2D Mark -> Solved
+- story: Story from Trainer Conversation T000107 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -2119,15 +2471,22 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000124 (Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> 2D Mark -> Unsolved
+- story: Story from Trainer Conversation T000108 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 2d_vision
@@ -2138,15 +2497,22 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000125 (Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> 3D Lead -> Solved
+- story: Story from Trainer Conversation T000109 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -2155,15 +2521,22 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000126 (Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> 3D Lead -> Unsolved
+- story: Story from Trainer Conversation T000110 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: 3d_vision
   - action: utter_vision_3D
   - intent: lead_3d
@@ -2172,37 +2545,53 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000127 (Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Underkill -> Solved
+- story: Story from Trainer Conversation T000111 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000128 (Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
+# *Direct enter the specific issue* Crash(Simulatable) -> Underkill -> Unsolved
+- story: Story from Trainer Conversation T000112 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Unsolved)
   steps:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
-  - intent: solution_prompt_issue
-  - action: utter_solution_prompt_issue
+  - intent: solution_another_issue
+  - action: utter_solution_another_issue
   - intent: underkill
   - action: utter_vision_underkill
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000129 (2D Lead -> Solved)
+# ------------------Conversation flow with only 1 issue (Directly enter specific issue for 2D/3D)------------------ #
+# *Direct enter the specific issue* 2D Lead -> Solved
+- story: Story from Trainer Conversation T000113 (2D Lead -> Solved)
   steps:
   - intent: lead_2d
   - action: utter_2d_lead
@@ -2210,7 +2599,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000130 (2D Lead -> Unsolved)
+# *Direct enter the specific issue* 2D Lead -> Unsolved
+- story: Story from Trainer Conversation T000114 (2D Lead -> Unsolved)
   steps:
   - intent: lead_2d
   - action: utter_2d_lead
@@ -2218,7 +2608,8 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-- story: Story from Trainer Conversation T000131 (3D Pad -> Unsolved)
+# *Direct enter the specific issue* 3D Pad -> Solved
+- story: Story from Trainer Conversation T000115 (3D Pad -> Unsolved)
   steps:
   - intent: pad_3d
   - action: utter_3d_pad
@@ -2226,7 +2617,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation T000132 (3D Pad -> Unsolved)
+# *Direct enter the specific issue* 3D Pad -> Unsolved
+- story: Story from Trainer Conversation T000116 (3D Pad -> Unsolved)
   steps:
   - intent: pad_3d
   - action: utter_3d_pad
@@ -2234,9 +2626,665 @@ stories:
   - intent: deny
   - action: utter_solution_no
 
-# Different out-of-scope situation #
+# ------------------Conversation flow for software crash (Full different conversation flow)------------------ #
+- story: Story from Trainer Conversation T000117 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000001 (Out of scope -> Greet -> Software Issue -> General -> Crash -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000118 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Unsolved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000119 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000120 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Unsolved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000121 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000122 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000123 (Greet -> Software Issue -> General -> Crash -> No Similar -> Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000124 (Greet -> Software Issue -> General -> Crash -> No Similar -> Simulatable -> Unsolved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000125 (Greet -> Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000126 (Greet -> Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+# ------------------Conversation flow for software crash (Enter software issue)------------------ #
+- story: Story from Trainer Conversation T000127 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000128 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Unsolved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000129 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000130 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Unsolved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000131 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000132 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000133 (Software Issue -> General -> Crash -> No Similar -> Simulatable -> Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000134 (Software Issue -> General -> Crash -> No Similar -> Simulatable -> Unsolved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000135 (Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000136 (Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+# ------------------Conversation flow for software crash (Enter general issue)------------------ #
+- story: Story from Trainer Conversation T000137 (General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000138 (General -> Crash -> Have Similar -> Version Newer -> No Crash -> Unsolved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000139 (General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000140 (General -> Crash -> Have Similar -> Version Same -> Simulatable -> Unsolved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000141 (General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000142 (General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000143 (General -> Crash -> No Similar -> Simulatable -> Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000144 (General -> Crash -> No Similar -> Simulatable -> Unsolved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000145 (General -> Crash -> No Similar -> Not Simulatable -> Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000146 (General -> Crash -> No Similar -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+# ------------------Conversation flow for software crash (Direct enter crash)------------------ #
+- story: Story from Trainer Conversation T000147 (Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000148 (Crash -> Have Similar -> Version Newer -> No Crash -> Unsolved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000149 (Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000150 (Crash -> Have Similar -> Version Same -> Simulatable -> Unsolved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000151 (Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000152 (Crash -> Have Similar -> Version Same -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000153 (Crash -> No Similar -> Simulatable -> Solved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000154 (Crash -> No Similar -> Simulatable -> Unsolved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+- story: Story from Trainer Conversation T000155 (Crash -> No Similar -> Not Simulatable -> Solved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+- story: Story from Trainer Conversation T000156 (Crash -> No Similar -> Not Simulatable -> Unsolved)
+  steps:
+  - intent: crash
+  - action: utter_general_crash
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: deny
+  - action: utter_simulate_no
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no
+
+## ------------------Out-of-scope situation------------------ ##
+
+# ------------------Out-of-scope situation for full conversation flow------------------ #
+# Out-of-scope before greet (Crash(Simulatable))
+- story: Story from Trainer Conversation O000001 (Out of scope -> Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
@@ -2250,12 +3298,19 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000002 (Greet -> Out of scope -> Software Issue -> General -> Crash -> Simulatable -> Solved)
+# Out-of-scope before software issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000002 (Greet -> Out of scope -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2269,12 +3324,19 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000003 (Greet -> Software Issue -> Out of scope -> General -> Crash -> Simulatable -> Solved)
+# Out-of-scope before general issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000003 (Greet -> Software Issue -> Out of scope -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2288,12 +3350,19 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000004 (Greet -> Software Issue -> General -> Out of scope -> Crash -> Simulatable -> Solved)
+# Out-of-scope before specific issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000004 (Greet -> Software Issue -> General -> Out of scope -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2307,11 +3376,18 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
+# Out-of-scope before 2D vision (2D Lens)
 - story: Story from Trainer Conversation O000005 (Greet -> Software Issue -> Vision -> Out of scope -> 2D -> Lens -> Solved)
   steps:
   - intent: greet
@@ -2331,6 +3407,7 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
+# Out-of-scope before specific vision (2D Lens)
 - story: Story from Trainer Conversation O000006 (Greet -> Software Issue -> Vision -> 2D -> Out of scope -> Lens -> Solved)
   steps:
   - intent: greet
@@ -2350,7 +3427,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000007 (Greet -> Software Issue -> Vision -> 2D -> Out of scope -> Lens -> Solved)
+# Out-of-scope before specific vision (3D Unit Alignment)
+- story: Story from Trainer Conversation O000007 (Greet -> Software Issue -> Vision -> 3D -> Out of scope -> Unit Alignment -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2369,7 +3447,9 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000008 (Out of scope -> Software Issue -> General -> Crash -> Simulatable -> Solved)
+# ------------------Out-of-scope situation without greeting------------------ #
+# Out-of-scope before software issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000008 (Out of scope -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
@@ -2380,28 +3460,19 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
+  - action: utter_similar_yes
   - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000009 (Out of scope -> Software Issue -> General -> Crash -> Simulatable -> Solved)
-  steps:
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000010 (Software Issue -> Out of scope -> General -> Crash -> Simulatable -> Solved)
+# Out-of-scope before general issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000009 (Software Issue -> Out of scope -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2412,12 +3483,19 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000011 (Software Issue -> General -> Out of scope -> Crash -> Simulatable -> Solved)
+# Out-of-scope before specific issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000010 (Software Issue -> General -> Out of scope -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2428,12 +3506,19 @@ stories:
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000012 (Software Issue -> Vision -> Out of scope -> 2D -> Lens -> Solved)
+# Out-of-scope before 2D vision (2D Lens)
+- story: Story from Trainer Conversation O000011 (Software Issue -> Vision -> Out of scope -> 2D -> Lens -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2449,7 +3534,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000013 (Software Issue -> Vision -> 2D -> Out of scope -> Lens -> Solved)
+# Out-of-scope before specific vision (2D Lens)
+- story: Story from Trainer Conversation O000012 (Software Issue -> Vision -> 2D -> Out of scope -> Lens -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2465,108 +3551,11 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000014 (Software Issue -> Vision -> 2D -> Out of scope -> Lens -> Solved)
+# Out-of-scope before specific vision (3D Unit Alignment)
+- story: Story from Trainer Conversation O000013 (Software Issue -> Vision -> 3D -> Out of scope -> Unit Alignment -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
-  - intent: vision_issue
-  - action: utter_software_vision
-  - intent: 3d_vision
-  - action: utter_vision_3D
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: unit_alignment_3d
-  - action: utter_3d_unit_alignment
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000015 (Out of scope -> General -> Crash -> Simulatable -> Solved)
-  steps:
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000016 (Out of scope -> General -> Crash -> Simulatable -> Solved)
-  steps:
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000017 (Out of scope -> General -> Crash -> Simulatable -> Solved)
-  steps:
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000018 (General -> Out of scope -> Crash -> Simulatable -> Solved)
-  steps:
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: crash
-  - action: utter_general_crash
-  - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000019 (Vision -> Out of scope -> 2D -> Lens -> Solved)
-  steps:
-  - intent: vision_issue
-  - action: utter_software_vision
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: 2d_vision
-  - action: utter_vision_2D
-  - intent: lens_2d
-  - action: utter_2d_lens
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000020 (Vision -> 2D -> Out of scope -> Lens -> Solved)
-  steps:
-  - intent: vision_issue
-  - action: utter_software_vision
-  - intent: 2d_vision
-  - action: utter_vision_2D
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: lens_2d
-  - action: utter_2d_lens
-  - action: utter_feedback
-  - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000021 (Vision -> 2D -> Out of scope -> Lens -> Solved)
-  steps:
   - intent: vision_issue
   - action: utter_software_vision
   - intent: 3d_vision
@@ -2579,55 +3568,116 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000022 (Out of scope -> Crash -> Simulatable -> Solved)
+# ------------------Out-of-scope situation without greeting & software issue------------------ #
+# Out-of-scope before general issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000014(Out of scope -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
+  - intent: general_issue
+  - action: utter_software_general
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000023 (Out of scope -> Crash -> Simulatable -> Solved)
+# Out-of-scope before specific issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000015 (General -> Out of scope -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
+  - intent: general_issue
+  - action: utter_software_general
   - intent: out_of_scope
   - action: utter_out_of_scope
   - intent: crash
   - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000024 (Out of scope -> Crash -> Simulatable -> Solved)
+# Out-of-scope before specific 2D vision (2D Lens)
+- story: Story from Trainer Conversation O000016 (Vision -> Out of scope -> 2D -> Lens -> Solved)
+  steps:
+  - intent: vision_issue
+  - action: utter_software_vision
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: 2d_vision
+  - action: utter_vision_2D
+  - intent: lens_2d
+  - action: utter_2d_lens
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+# Out-of-scope before specific vision (2D Lens)
+- story: Story from Trainer Conversation O000017 (Vision -> 2D -> Out of scope -> Lens -> Solved)
+  steps:
+  - intent: vision_issue
+  - action: utter_software_vision
+  - intent: 2d_vision
+  - action: utter_vision_2D
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: lens_2d
+  - action: utter_2d_lens
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+# Out-of-scope before specific vision (3D Unit Alignment)
+- story: Story from Trainer Conversation O000018 (Vision -> 3D -> Out of scope -> Unit Alignment -> Solved)
+  steps:
+  - intent: vision_issue
+  - action: utter_software_vision
+  - intent: 3d_vision
+  - action: utter_vision_3D
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: unit_alignment_3d
+  - action: utter_3d_unit_alignment
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+# ------------------Out-of-scope situation without greeting & software issue & general issue------------------ #
+# Out-of-scope before specific issue (Crash(Simulatable))
+- story: Story from Trainer Conversation O000019 (Out of scope -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
   - intent: crash
   - action: utter_general_crash
   - intent: affirm
-  - action: utter_simulate_yes
-  - action: utter_feedback
+  - action: utter_similar_yes
   - intent: affirm
-  - action: utter_solution_yes
-
-- story: Story from Trainer Conversation O000025 (Out of scope -> Crash -> Simulatable -> Solved)
-  steps:
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - intent: crash
-  - action: utter_general_crash
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
   - intent: affirm
   - action: utter_simulate_yes
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000026 (Out of scope -> 2D -> Lens -> Solved)
+# Out-of-scope before 2D vision (2D Lens)
+- story: Story from Trainer Conversation O000020 (Out of scope -> 2D -> Lens -> Solved)
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
@@ -2639,7 +3689,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000027 (2D -> Out of scope -> Lens -> Solved)
+# Out-of-scope before specific vision (2D Lens)
+- story: Story from Trainer Conversation O000021 (2D -> Out of scope -> Lens -> Solved)
   steps:
   - intent: 2d_vision
   - action: utter_vision_2D
@@ -2651,7 +3702,8 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-- story: Story from Trainer Conversation O000028 (2D -> Out of scope -> Lens -> Solved)
+# Out-of-scope before specific vision (Unit Alignment)
+- story: Story from Trainer Conversation O000022 (3D -> Out of scope -> Unit Alignment -> Solved)
   steps:
   - intent: 3d_vision
   - action: utter_vision_3D
@@ -2663,4 +3715,82 @@ stories:
   - intent: affirm
   - action: utter_solution_yes
 
-# Work in Progress
+# ------------------Out-of-scope situation for software crash solution------------------ #
+
+# Out-of-scope after asking existance of similar good machine (Crash(Simulatable))
+- story: Story from Trainer Conversation O000023 (Greet -> Software Issue -> General -> Crash -> Out of scope -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+# Out-of-scope after asking the difference in the version (Crash(Simulatable))
+- story: Story from Trainer Conversation O000024 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Out of scope -> Version Newer -> Still Crash -> Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+# Out-of-scope after asking whether the software still crash after patch (Crash(Simulatable))
+- story: Story from Trainer Conversation O000025 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Out of scope -> Still Crash -> Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: affirm
+  - action: utter_new_version_yes
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: affirm
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
