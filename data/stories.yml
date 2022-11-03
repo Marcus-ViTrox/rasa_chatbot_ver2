@@ -3794,3 +3794,49 @@ stories:
   - action: utter_feedback
   - intent: affirm
   - action: utter_solution_yes
+
+# Out-of-scope after asking the difference in version [Similar Version](Crash(Simulatable))
+- story: Story from Trainer Conversation O000026 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Out of scope -> Version Same -> Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: affirm
+  - action: utter_similar_yes
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes
+
+# Out-of-scope after asking the existance of similar good machine [No Similar Good Machine](Crash(Simulatable))
+- story: Story from Trainer Conversation O000027 (Greet -> Software Issue -> General -> Crash -> Out of scope -> No Similar -> Simulatable -> Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: crash
+  - action: utter_general_crash
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - intent: deny
+  - action: utter_simulate_crash
+  - intent: affirm
+  - action: utter_simulate_yes
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_yes

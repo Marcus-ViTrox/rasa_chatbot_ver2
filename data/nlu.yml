@@ -85,6 +85,8 @@ nlu:
     - How long does it take before you get frustrated?
     - Apa tu Rasa
     - do u have name?
+    - can you speak?
+    - are you alive?
 
 # ------------------Type of Issue------------------ #
 
@@ -108,22 +110,6 @@ nlu:
     - I met some problems in my software
     - platform
     - I have some software issue 
-
-- intent: hardware_issue
-  examples: |
-    - hardware
-    - hard
-    - hardwares
-    - hardware problem
-    - hardware issue
-    - hardware got problem
-    - hardware has issue
-    - I am facing hardware issue
-    - I think my hardware has problem
-    - hardware have some problem
-    - my hardware got issue
-    - the hardware is faulty
-    - hardware spoilt
 
 - intent: feature
   examples: |

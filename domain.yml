@@ -5,7 +5,6 @@ intents:
 - goodbye
 - bot_challenge
 - software_issue
-- hardware_issue
 - feature
 - general_issue
 - vision_issue
@@ -69,8 +68,6 @@ responses:
   - buttons:
     - payload: issue_software
       title: Software
-    - payload: issue_hardware
-      title: Hardware (Currently Unavailable)
     - payload: software_featrure
       title: Feature (Currently Unavailable)
     text: So, what would you like to know about?
