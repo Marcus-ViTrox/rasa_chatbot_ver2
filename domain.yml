@@ -41,7 +41,10 @@ intents:
 - out_of_scope
 - affirm
 - deny
-- solution_another_issue
+- cycle_time_issue_intent
+- cycle_time_improvement_intent
+- test_time
+- storage_time
 
 responses:
 
@@ -63,17 +66,17 @@ responses:
   - text: I am just a bot for JIRA system. 
 
 # ------------------Type of Issue------------------ #
-  
+# Ask user which type of issues(software/feature)he/she wants to know
   utter_issueType:
   - buttons:
     - payload: issue_software
       title: Software
-    - payload: software_featrure
+    - payload: software_feature
       title: Feature (Currently Unavailable)
     text: So, what would you like to know about?
 
 # ------------------Type of Software Issue------------------ #
-
+# Ask user what kind of software issues(general/vision) he/she facing
   utter_software_issue:
   - buttons:
     - payload: software_general
@@ -82,6 +85,7 @@ responses:
       title: Vision Engine
     text: What type of software issue are you facing?
 
+# List all the general software issues(Crash/Recipe Can't Load/Report/UI/Handshake/Counter)
   utter_software_general:
   - buttons:
     - payload: general_crash
@@ -98,6 +102,7 @@ responses:
       title: Counter
     text: Which general issues are you facing?
 
+# Ask the type of vision issues(2D/3D/Overkill/Underkill/Cycle Time)
   utter_software_vision:
   - buttons:
     - payload: vision_2D
@@ -113,15 +118,7 @@ responses:
     text: Which vision issues are you facing?
   
 # ------------------Solution for General Issue------------------ #
-
-  utter_general_crash:
-  - buttons:
-    - payload: similar_yes
-      title: Yes, There is.
-    - payload: similar_no
-      title: No, Don't Have
-    text: Are there any similar good machine onsite?
-
+# If there is similar good machine, ask whether the VERSION is newer
   utter_similar_yes:
   - buttons:
     - payload: new_version_yes
@@ -130,6 +127,7 @@ responses:
       title: No, version is the same
     text: Are the software version of the similar good machine newer?
 
+# If the version is newer, ask the user to patch the file and check whether it STILL CRASH or not
   utter_new_version_yes:
   - buttons:
     - payload: still_crash_yes
@@ -138,6 +136,7 @@ responses:
       title: No, it does not crash.
     text: "Kindly patch the issue machine with the similar good machine DLL and monitor the machine.\nDoes it still crash?"
 
+# Ask if the crash is SIMULATABLE
   utter_simulate_crash:
   - buttons:
     - payload: simulate_yes
@@ -146,6 +145,7 @@ responses:
       title: Not Simulatable
     text: Can you simulate the crash?
 
+# Provide ACTIONS for SIMULATABLE CRASH
   utter_simulate_yes:
   - text: "Kindly provide JIRA owner with the following info by email.\
           \n\nInfo to Collect:\
@@ -159,6 +159,7 @@ responses:
           \n- Backup Software\
           \n- Export Info/Lot Image"
 
+# Provide ACTIONS for NOT SIMULATABLE CRASH
   utter_simulate_no:
   - text: "Please follow the steps below:\
           \n1. Check if there is memory leak using Process Explorer\
@@ -195,6 +196,7 @@ responses:
   - text: -Insert Server Link- (Counter)
 
 # ------------------Solution for Vision Issue------------------ #
+# List all 2D vision(Lead/Mark/Package/Lens/Package Edge/OCR/Matrix Code/Pin 1/Orient/Measure/Unit Alignment)
   utter_vision_2D:
   - buttons:
     - payload: 2d_lead
@@ -254,6 +256,7 @@ responses:
   utter_2d_unit_alignment:
   - text: -Insert Server Link- (2D Unit Alignment Issue)
 
+# List all 3D vision(Pad/Lead/Package/Package Edge/BGA/Measure/Unit Alignment/Pickup Head)
   utter_vision_3D:
   - buttons:
     - payload: 3d_pad
@@ -304,36 +307,178 @@ responses:
   utter_vision_underkill:
   - text: -Insert Server Link- (Underkill)
 
+# Ask if the customer is facing ISSUE or want an IMPROVEMENT on CYCLE TIME
   utter_vision_cycle_time:
-  - text: -Insert Server Link- (Cycle Time High)
+  - buttons:
+    - payload: cycle_time_issue
+      title: Issue
+    - payload: cycle_time_improvement
+      title: Improvement
+    text: "Is it an issue or improvement?\
+          \nNote:\
+          \nIssue - Current machine cycle time did not achieve what committed to customer\
+          \nImprovement - Current machine cycle time achieve what committed to customer but customer wanted further improvement"
+
+# ------------------Cycle Time Solution------------------ #
+# Ask which time is too high(Test/Storage)
+  utter_cycle_time_issue:
+  - buttons:
+    - payload: test_time
+      title: Test Time
+    - payload: storage_time
+      title: Storage Time
+    text: Test Time or Storage Time High?
+
+# *****Cycle Time Issue Path***** #
+
+# ~~~~Test Time~~~~ #
+# Tell the user to TURN OFF all the DEBUG INI key, and ask does it SOLVE the problem.
+  utter_issue_test_time:
+  - text: "Make sure all the Debug INI is turn OFF\
+          \n-> Go to Vision INI File\
+          \n[Debug]\
+          \n*Turn off every INI key in this section*\
+          \n[Any Other Section]\
+          \n*Turn off any INI key with 'debug' or 'logtime' word in it*"
+
+  utter_cycle_time_similar_machine_yes:
+  - text: "Use the good machine's recipe on the bad machine\
+          \n*This step help to eliminate suspected recipe setup issue*"
+
+  utter_replace_vision_ini:
+  - text: "Replace the bad machine's vision INI file with the good machine's vision INI\
+          \n*This step help to eliminate suspected INI file issue*"
+
+  utter_verify_specific:
+  - text: "Verify is the conversion or any specific vision engine causing the high test time.\
+          \nTest Time Verification Step\
+          \n1. Turn on the following INI key under the related vision INI:\
+          \n[Debug]\
+          \nLogtime = 1\
+          \n2. Run offline test with the saved unit's image\
+          \n3. Check DebugTimeLog_VsXXX.txt file created inside V4/Log file after offline test
+          \n4. Read the file and verify which is the cause of the high cycle time\
+          \n*The image below shows you how to read the DebugTimeLog.*"
+    image: https://imgur.com/IQe7ZU3
+
+  utter_check_recipe:
+  - text: Please proceed to the guideline - Recipe Setup Section
+
+  utter_check_ini:
+  - text: Please proceed to the guideline - INI Section
+
+# ~~~~Storage Time~~~~ #
+  utter_issue_storage_time:
+  - buttons:
+    - payload: hard_disk_yes
+      title: Yes, it's hard disk issue.
+    - payload: hard_disk_no
+      title: No, it's not.
+    text: Is it hard disk issue?
+
+  utter_hard_disk_no:
+  - text: "Please follow the following steps:\
+          \n1. Increase value of the INI key below:\
+          \n[Settings]\
+          \nImgPoolSize= (5 or above)\
+          \n2. Reduce the number of Save First Pass/Fail Image number in 'Execution option'"
+
+  utter_storage_time_feedback:
+    - buttons:
+      - payload: storage_time_reduce_yes
+        title: Yes, storage time is reduced.
+      - payload: storage_time_reduce_no
+        title: No, storage time does not reduce.
+      text: Does the storage time reduced?
+
+# Ask user to send EMAIL to JIRA Owner
+  utter_cycle_time_issue_request:
+  - text: "Kindly provide JIRA owner with the following info by email.\
+            \n\nInfo to Collect:\
+            \n- Is there any memory leak? (Y/N)\
+            \n- *Here is the link to the guide of checking memory leak: -Insert link-*\
+            \n- Is it caused by hard disk issue? (Y/N)\
+            \n- Does this issue happened after recent update? (Y/N)\
+            \n- Any new inspection added recently? (Y/N)\
+            \n- Any action done before cycle time issue? (If Yes, please describe.)\
+            \n\nItem to Collect:\
+            \n- Backup Software\
+            \n- Export Info/Lot Image"
+
+# *****Cycle Time Improvement Path***** #
+# Ask which time is too high(Test/Grab/Storage)
+  utter_cycle_time_improvement:
+  - buttons:
+    - payload: test_time
+      title: Test Time
+    - payload: storage_time
+      title: Storage Time
+    text: Test Time or Storage Time High?
+
+  utter_improvement_grab_time:
+  - text: "Please try to enable the INI key below\
+          \n[GrabSettings]\
+          \nEnableBinning = 1"
+          
+# Ask user to REQUEST for hardware changes/upgrade when there is no improvement after the actions taken
+  utter_hardware_change_request:
+  - text: Send an email to JIRA owner and BD to request for hardware changes/upgrade
+
+# *****Usable for both Path***** #
+# Ask if the test time REDUCED
+  utter_test_time_feedback:
+  - buttons:
+    - payload: test_time_reduce_yes
+      title: Yes, test time is reduced.
+    - payload: test_time_reduce_no
+      title: No, test time does not reduce.
+    text: Does the test time reduced?
+
+# Ask if the cycle time REDUCED
+  utter_cycle_time_feedback:
+  - buttons:
+    - payload: test_time_reduce_yes
+      title: Yes, test time is reduced.
+    - payload: test_time_reduce_no
+      title: No, test time does not reduce.
+    text: Does the test time reduced?
+
+# provide cycle time GUIDELINE 
+  utter_cycle_time_guideline:
+  - buttons:
+    - payload: cycle_time_reduce_yes
+      title: Yes, the issue solved.
+    - payload: cycle_time_reduce_no
+      title: No, it doesn't help.
+    text: "Here is the guideline to improve the cycle time.\
+          \nCycle Time Guideline:*Link*\
+          \nDoes the cycle time issue solved?"
 
 # ------------------Other------------------ #
+# Ask whether there is any SIMILAR GOOD MACHINE ONSITE
+  utter_crash_similar_machine: 
+  - buttons:
+    - payload: similar_yes
+      title: Yes, There is.
+    - payload: similar_no
+      title: No, Don't Have
+    text: Are there any similar good machine onsite?
+
+  utter_cycle_time_similar_machine: 
+  - buttons:
+    - payload: similar_yes
+      title: Yes, There is.
+    - payload: similar_no
+      title: No, Don't Have
+    text: Are there any similar good machine onsite?
 
   utter_feedback:
   - buttons:
-    - payload: solution_yes
-      title: Yes
-    - payload: solution_no
-      title: No
     - payload: solution_prompt_issue
-      title: No, I meant something else!
-    text: Is this solution correct? 😆
-  - buttons:
-    - payload: solution_yes
       title: Yes
-    - payload: solution_no
+    - payload: solution_no_issue
       title: No
-    - payload: solution_prompt_issue
-      title: No, I meant something else!
-    text: Did it helps? 😃
-  - buttons:
-    - payload: solution_yes
-      title: Yes
-    - payload: solution_no
-      title: No
-    - payload: solution_prompt_issue
-      title: No, I meant something else!
-    text: Does this guideline solve your problem? 😊
+    text: Does you still have any problem to ask? 😊
 
   utter_solution_another_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
@@ -341,13 +486,9 @@ responses:
            \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment]/\
            \n         3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head]/Overkill/Underkill/Cycle Time High)"
 
-  utter_solution_yes:
+  utter_solution_no_issue:
   - text: Great! Have a nice day😊
   - text: Nice!! Come again when you have problem~ 😁
-  - text: Glad we could help!! 😃
-
-  utter_solution_no:
-  - text: We are terribly sorry 😢. We will improve our system. Please contact JIRA Owner for further assistance. 
 
   utter_out_of_scope:
   - text: Sorry, I can't handle this.😢

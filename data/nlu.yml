@@ -511,6 +511,34 @@ nlu:
     - 3D pick up head
     - pickup head 3d
 
+# ------------------Cycle Time Solution Branches------------------ #
+
+- intent: cycle_time_issue_intent
+  examples: |
+    - cycle_time_issue
+    - Cycle Time Issue
+    - cycle time issue
+
+- intent: cycle_time_improvement_intent
+  examples: |
+    - cycle_time_improvement
+    - Cycle Time Improvement
+    - Improve cycle time
+
+- intent: test_time
+  examples: |
+    - test_time
+    - test time
+    - test time high
+    - test time very long
+
+- intent: storage_time
+  examples: |
+    - storage_time
+    - storage time
+    - storage time high
+    - storage time very long
+
 # ------------------Other------------------ #
 
 - intent: out_of_scope
@@ -569,7 +597,6 @@ nlu:
     - that sounds good
     - correct
     - ok
-    - solution_yes
     - simulate_yes
     - can simulate
     - able to simulate
@@ -586,6 +613,11 @@ nlu:
     - software version newer
     - it has new version
     - still_crash_yes
+    - hard_disk_yes
+    - storage_time_reduce_yes
+    - test_time_reduce_yes
+    - cycle_time_reduce_yes
+    - solution_prompt_issue
 
 - intent: deny
   examples: |
@@ -597,7 +629,7 @@ nlu:
     - no way
     - not really
     - the solution not working
-    - solution_no
+    - solution_no_issue
     - simulate_no
     - cannot simulate
     - cannot leh
@@ -615,13 +647,10 @@ nlu:
     - still_crash_no
     - oh no crash le
     - no le
-
-- intent: solution_another_issue
-  examples: |
-    - solution_prompt_issue
-    - No, I meant something else!
-    - I have other issue
-    - I have something else to ask
+    - hard_disk_no
+    - storage_time_reduce_no
+    - test_time_reduce_no
+    - cycle_time_reduce_no
 
 # ------------------Synonym------------------ #
 

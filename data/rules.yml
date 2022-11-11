@@ -39,7 +39,7 @@ rules:
 - rule: Check whether there is similar good machine onsite
   steps: 
   - intent: crash
-  - action: utter_general_crash
+  - action: utter_crash_similar_machine
 
 # Recipe can't load
 - rule: Give solution for recipe can't load
@@ -250,18 +250,24 @@ rules:
   - action: utter_feedback
 
 # Cycle Time
-- rule: Give solution for cycle time issue
+- rule: Check if it is cycle time issue or improvement
   steps:
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - action: utter_feedback
+
+# Cycle Time Issue
+- rule: Continue to the solution path of cycle time issue
+  steps:
+  - intent: cycle_time_issue_intent
+  - action: utter_cycle_time_issue
+
+# Cycle Time Improvement
+- rule: Continue to the solution path of cycle time improvement
+  steps:
+  - intent: cycle_time_improvement_intent
+  - action: utter_cycle_time_improvement
 
 ## ------------------Other------------------ ##
-
-- rule: Have more issue
-  steps:
-  - intent: solution_another_issue
-  - action: utter_solution_another_issue
 
 - rule: Not included/unwanted intents
   steps:
