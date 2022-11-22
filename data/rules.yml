@@ -48,6 +48,32 @@ rules:
   - action: utter_general_recipe_cant_load
   - action: utter_feedback
 
+# Database
+- rule: List all the database issue
+  steps:
+  - intent: database
+  - action: utter_general_database
+
+# Database Down/Offline
+- rule: Continue the solution path of database down/offline
+  steps: 
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+
+# Database High Storage
+- rule: Continue the solution path of database high storage
+  steps:
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+
+# Database Corrupted
+- rule: Continue the solution path of database corrupted
+  steps:
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+
 # Report 
 - rule: Give solution for report issue
   steps:
@@ -273,3 +299,9 @@ rules:
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
+
+- rule: Have more issue to ask
+  steps:
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_solution_another_issue

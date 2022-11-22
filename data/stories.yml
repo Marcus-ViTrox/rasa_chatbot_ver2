@@ -1989,6 +1989,1082 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
+# ------------------Conversation flow for database issue (Full conversation flow)------------------ #
+- story: Story from Trainer Conversation T000092 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000093 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000094 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000095 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000096 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000097 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000098 (Greet -> Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000099 (Greet -> Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000100 (Greet -> Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000101 (Greet -> Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000102 (Greet -> Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000103 (Greet -> Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for database issue (Direct Enter Software Issue)------------------ #
+- story: Story from Trainer Conversation T000104 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000105 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000106 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000107 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000108 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000109 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000110 (Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000111 (Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000112 (Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000113 (Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000114 (Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000115 (Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for database issue (Direct Enter General Issue)------------------ #
+- story: Story from Trainer Conversation T000116 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000117 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000118 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000119 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000120 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000121 (General -> Database -> Database Down -> Give Solution -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000122 (General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000123 (General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000124 (General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000125 (General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000126 (General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000127 (General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for database issue (Direct Enter Specific Issue(Database))------------------ #
+- story: Story from Trainer Conversation T000128 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000129 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000130 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000131 (Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000132 (Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000133 (Database -> Database Down -> Give Solution -> Issue Solved)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000134 (Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000135 (Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000136 (Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000137 (Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000138 (Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000139 (Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: database
+  - action: utter_general_database
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for database issue (Direct Enter Specific Issue(Database Specific))------------------ #
+- story: Story from Trainer Conversation T000140 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+  steps:
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000141 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+  steps:
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000142 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+  steps:
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: deny
+  - action: utter_database_down_repetitive_not_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000143 (Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+  steps:
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000144 (Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+  steps:
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_down_repetitive
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000145 (Database Down -> Give Solution -> Issue Solved)
+  steps:
+  - intent: issue_database_down
+  - action: utter_database_down
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000146 (Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000147 (Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: affirm
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000148 (Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+  steps:
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000149 (Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+  steps:
+  - intent: issue_database_high_storage
+  - action: utter_database_high_storage
+  - intent: deny
+  - action: utter_database_clear_storage
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000150 (Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+  steps:
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: affirm
+  - action: utter_database_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000151 (Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+  steps:
+  - intent: issue_database_corrupted
+  - action: utter_database_reinstall
+  - action: utter_database_feedback
+  - intent: deny
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
 ## ------------------Out-of-scope situation------------------ ##
 
 # ------------------Out-of-scope situation for full conversation flow------------------ #

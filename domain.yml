@@ -10,6 +10,10 @@ intents:
 - vision_issue
 - crash
 - recipe_cant_load
+- database
+- issue_database_down
+- issue_database_high_storage
+- issue_database_corrupted
 - report
 - ui_display
 - handshake
@@ -92,6 +96,8 @@ responses:
       title: Software Crash
     - payload: general_recipe_cant_load
       title: Recipe not able to load
+    - payload: general_database
+      title: Database
     - payload: general_report
       title: Report
     - payload: general_ui_display
@@ -117,14 +123,14 @@ responses:
       title: Cycle Time High
     text: Which vision issues are you facing?
   
-# ------------------Solution for General Issue------------------ #
+# ------------------Crash Solution------------------ #
 # If there is similar good machine, ask whether the VERSION is newer
   utter_similar_yes:
   - buttons:
     - payload: new_version_yes
-      title: Yes, it's newer
+      title: Yes, it's newer.
     - payload: new_version_no
-      title: No, version is the same
+      title: No, version is the same.
     text: Are the software version of the similar good machine newer?
 
 # If the version is newer, ask the user to patch the file and check whether it STILL CRASH or not
@@ -182,6 +188,89 @@ responses:
 
   utter_general_recipe_cant_load:
   - text: -Insert Server Link- (Recipe Can't Load)
+
+# ------------------Database Solution------------------ #
+# Ask which type of database issue the user faced
+  utter_general_database:
+  - buttons:
+    - payload: database_down
+      title: Database Down
+    - payload: database_high_storage
+      title: Database High Storage
+    - payload: database_corrupted
+      title: Database Corrupted
+    text: What kind of database issues are you facing?
+
+# ~~~~Database Down/Offline~~~~ #
+# Provide solution for database down (Start the service)
+  utter_database_down:
+  - text: "Kindly reactivate your postgresql service on your machine\
+          \nSteps:\
+          \n1. Search for services (Win + S for quick search).\
+          \n2. Search for postgresql in the services.\
+          \n*V4 - postgresql-9.3\
+          \n*V5 - postgresql-x64-10\
+          \n3. Start the service by doing the following action: Right Click > Start."
+
+# Ask user to check the storage if the database still down
+  utter_database_down_repetitive:
+  - buttons:
+    - payload: storage_high_yes
+      title: Yes, the storage is too high.
+    - payload: storage_high_no
+      title: No, it's just fine. 
+    text: "If the database still down after restarting the service, check if the database storage is too high.\
+          \nIs the storage too high?"
+
+# Ask user to exclude postgresql-related files and software from antivirus
+  utter_database_down_repetitive_not_storage:
+  - text: "If it's not storage issue, kindly proceed to the following step:\
+          \nMake sure all the postgresql-related files and software have been excluded from antivirus and anti-malware software\
+          \nPostgresql-related files are as below:\
+          \n*V4*\
+          \n- D:\\PostgreSQL\
+          \n- C:\\Program Files (x86)\\PostgreSQL\
+          \n- pgAdmin III\
+          \n*V5*\
+          \n- D:\\PostgreSQL\
+          \n- C:\\Program Files\\PostgreSQL\
+          \n- pgAdmin 4"
+
+# ~~~~Database High Storage~~~~ #
+# Ask if the storage is higher than 200GB
+  utter_database_high_storage:
+  - buttons:
+    - payload: storage_high_yes
+      title: Yes, the storage is more than 200GB.
+    - payload: storage_high_no
+      title: No, it's not.
+    text: Is the storage higher than 200GB?
+
+# Provide Guideline to clear the database storage
+  utter_database_clear_storage:
+  - text: "Please proceed to clear the database storage\
+          \n-Link to PostgreSQL Installation Guide-\
+          \n*TAKE NOTE!! Without proper deletion, it might cause the PostgreSQL files to be corrupted."
+
+# ~~~~Database Solution~~~~ #
+# Provide Guideline to reinstall PostgreSQL
+  utter_database_reinstall:
+  - text: "Please proceed to reinstall the PostgreSQL\
+          \n-Link to PostgreSQL Installation Guide-"
+  
+  utter_database_jira:
+  - text: "Please send an email to JIRA owner with the following info:\
+          \n- Describe issue faced through email.\
+          \n- Plan and setup a VCare session."
+
+# Ask whether the database issue still persist (Database)
+  utter_database_feedback:
+  - buttons:
+    - payload: issue_persist_yes
+      title: Yes, the issue still persist.
+    - payload: issue_persist_no
+      title: No, the issue solved.
+    text: Does the issue still persist?
 
   utter_general_report:
   - text: -Insert Server Link- (Report)
@@ -384,26 +473,26 @@ responses:
           \n2. Reduce the number of Save First Pass/Fail Image number in 'Execution option'"
 
   utter_storage_time_feedback:
-    - buttons:
-      - payload: storage_time_reduce_yes
-        title: Yes, storage time is reduced.
-      - payload: storage_time_reduce_no
-        title: No, storage time does not reduce.
-      text: Does the storage time reduced?
+  - buttons:
+    - payload: storage_time_reduce_yes
+      title: Yes, storage time is reduced.
+    - payload: storage_time_reduce_no
+      title: No, storage time does not reduce.
+    text: Does the storage time reduced?
 
 # Ask user to send EMAIL to JIRA Owner
   utter_cycle_time_issue_request:
   - text: "Kindly provide JIRA owner with the following info by email.\
-            \n\nInfo to Collect:\
-            \n- Is there any memory leak? (Y/N)\
-            \n- *Here is the link to the guide of checking memory leak: -Insert link-*\
-            \n- Is it caused by hard disk issue? (Y/N)\
-            \n- Does this issue happened after recent update? (Y/N)\
-            \n- Any new inspection added recently? (Y/N)\
-            \n- Any action done before cycle time issue? (If Yes, please describe.)\
-            \n\nItem to Collect:\
-            \n- Backup Software\
-            \n- Export Info/Lot Image"
+          \n\nInfo to Collect:\
+          \n- Is there any memory leak? (Y/N)\
+          \n- *Here is the link to the guide of checking memory leak: -Insert link-*\
+          \n- Is it caused by hard disk issue? (Y/N)\
+          \n- Does this issue happened after recent update? (Y/N)\
+          \n- Any new inspection added recently? (Y/N)\
+          \n- Any action done before cycle time issue? (If Yes, please describe.)\
+          \n\nItem to Collect:\
+          \n- Backup Software\
+          \n- Export Info/Lot Image"
 
 # *****Cycle Time Improvement Path***** #
 # Ask which time is too high(Test/Grab/Storage)
@@ -416,13 +505,13 @@ responses:
     text: Test Time or Storage Time High?
 
   utter_improvement_grab_time:
-  - text: "Please try to enable the INI key below\
+  - text: "Please try to enable the INI key below.\
           \n[GrabSettings]\
           \nEnableBinning = 1"
           
 # Ask user to REQUEST for hardware changes/upgrade when there is no improvement after the actions taken
   utter_hardware_change_request:
-  - text: Send an email to JIRA owner and BD to request for hardware changes/upgrade
+  - text: Please send an email to JIRA owner and BD to request for hardware changes/upgrade.
 
 # *****Usable for both Path***** #
 # Ask if the test time REDUCED
@@ -455,7 +544,7 @@ responses:
           \nDoes the cycle time issue solved?"
 
 # ------------------Other------------------ #
-# Ask whether there is any SIMILAR GOOD MACHINE ONSITE
+# Ask whether there is any SIMILAR GOOD MACHINE ONSITE (Crash)
   utter_crash_similar_machine: 
   - buttons:
     - payload: similar_yes
@@ -464,6 +553,7 @@ responses:
       title: No, Don't Have
     text: Are there any similar good machine onsite?
 
+# Ask whether there is any SIMILAR GOOD MACHINE ONSITE (Cycle Time High)
   utter_cycle_time_similar_machine: 
   - buttons:
     - payload: similar_yes
@@ -472,13 +562,14 @@ responses:
       title: No, Don't Have
     text: Are there any similar good machine onsite?
 
+# Ask whether the user still face other issue
   utter_feedback:
   - buttons:
     - payload: solution_prompt_issue
       title: Yes
     - payload: solution_no_issue
       title: No
-    text: Does you still have any problem to ask? 😊
+    text: Do you still have any problem to ask? 😊
 
   utter_solution_another_issue:
   - text: "Please describe the issue/problem you are facing. 😃\

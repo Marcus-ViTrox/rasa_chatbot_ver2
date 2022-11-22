@@ -199,14 +199,44 @@ nlu:
     - recipe load fail
     - I cannot use the recipe
 
+# ------------------Database Solution Branches------------------ #
+- intent: database
+  examples: |
+    - general_database
+    - postgre
+    - database
+    - database have issue
+    - postgre not working
+    - postgresql
+    - PostgreSQL
+
+- intent: issue_database_down
+  examples: |
+    - database_down
+    - Database is down
+    - Database offline
+
+- intent: issue_database_high_storage
+  examples: |
+    - database_high_storage
+    - High Storage database
+    - Database full
+    - database storage is high
+    - database storage high
+    - database high storage
+
+- intent: issue_database_corrupted
+  examples: |
+    - database_corrupted
+    - Database is corrupted
+    - Database corrupted
+
 - intent: report
   examples: |
     - general_report
     - report can't generate
     - report
     - Report
-    - postgres
-    - database
     - the report data not tally
     - crash during report generate
     - software crash when generating the report
@@ -618,6 +648,8 @@ nlu:
     - test_time_reduce_yes
     - cycle_time_reduce_yes
     - solution_prompt_issue
+    - issue_persist_yes
+    - storage_high_yes
 
 - intent: deny
   examples: |
@@ -651,6 +683,8 @@ nlu:
     - storage_time_reduce_no
     - test_time_reduce_no
     - cycle_time_reduce_no
+    - issue_persist_no
+    - storage_high_no
 
 # ------------------Synonym------------------ #
 
