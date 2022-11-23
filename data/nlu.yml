@@ -231,15 +231,49 @@ nlu:
     - Database is corrupted
     - Database corrupted
 
+# ------------------Report Solution Branches------------------ #
 - intent: report
   examples: |
     - general_report
     - report can't generate
     - report
     - Report
-    - the report data not tally
-    - crash during report generate
-    - software crash when generating the report
+    - report issue
+
+- intent: issue_report_error_message
+  examples: |
+    - report_error_message
+    - "Error Message:\"No report data available\""
+    - No report data available
+    - report error message prompted
+    - there is an error message prompted while exporting the report
+
+- intent: issue_report_cant_export_xls
+  examples: |
+    - report_cant_export_xls
+    - Unable to export report in .xls format
+    - Not able to export report in .xls format
+    - Can't export in xls format
+    - Cannot export in xls leh
+    - cannot export as xls file eh
+
+- intent: report_xlsgen_specific_version
+  examples: |
+    - xlsgen_specific_version
+    - 1.9.0.4
+
+- intent: report_xlsgen_other_version
+  examples: |
+    - xlsgen_other_version
+    - Version > 3.0
+    - higher than 3.0
+
+- intent: issue_report_export_crash
+  examples: |
+    - report_export_crash
+    - Crash while exporting report
+    - Report Crash when trying to export
+    - I export report then crash le
 
 - intent: ui_display
   examples: |
@@ -650,6 +684,7 @@ nlu:
     - solution_prompt_issue
     - issue_persist_yes
     - storage_high_yes
+    - issue_solve_yes
 
 - intent: deny
   examples: |
@@ -685,6 +720,7 @@ nlu:
     - cycle_time_reduce_no
     - issue_persist_no
     - storage_high_no
+    - issue_solve_no
 
 # ------------------Synonym------------------ #
 

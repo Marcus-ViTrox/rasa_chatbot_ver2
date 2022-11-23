@@ -52,24 +52,8 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-# Report Issue -> Solved -> End
-- story: Story from Trainer Conversation T000003 (Greet -> Software Issue -> General -> Report -> Solved)
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_issueType
-  - intent: software_issue
-  - action: utter_software_issue
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: report
-  - action: utter_general_report
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no_issue
-
 # 2D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000004 (Greet -> Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
+- story: Story from Trainer Conversation T000003 (Greet -> Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -87,7 +71,7 @@ stories:
   - action: utter_solution_no_issue
 
 # 3D Pad -> Solved -> End
-- story: Story from Trainer Conversation T000005 (Greet -> Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
+- story: Story from Trainer Conversation T000004 (Greet -> Software Issue -> Vision -> 3D -> 3D Pad -> Unsolved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -105,7 +89,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Overkill -> Solved -> End
-- story: Story from Trainer Conversation T000006 (Greet -> Software Issue -> Vision -> Overkill -> Solved)
+- story: Story from Trainer Conversation T000005 (Greet -> Software Issue -> Vision -> Overkill -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -123,7 +107,7 @@ stories:
 # ------------------Conversation flow with 2 issues (Full conversation flow)------------------ #
 
 # Crash(Simulatable) -> Another Issue -> Crash(Not Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000007 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
+- story: Story from Trainer Conversation T000006 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -160,7 +144,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Crash(Simulatable) -> Another Issue -> Recipe Can't Load -> Solved -> End
-- story: Story from Trainer Conversation T000008 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
+- story: Story from Trainer Conversation T000007 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -189,7 +173,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Crash(Simulatable) -> Another Issue -> UI/Display -> Solved -> End
-- story: Story from Trainer Conversation T000009 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+- story: Story from Trainer Conversation T000008 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -220,7 +204,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Crash(Simulatable) -> Another Issue -> Handshake -> Solved -> End
-- story: Story from Trainer Conversation T000010 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+- story: Story from Trainer Conversation T000009 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -253,7 +237,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Crash(Simulatable) -> Another Issue -> 2D Package -> Solved -> End
-- story: Story from Trainer Conversation T000011 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+- story: Story from Trainer Conversation T000010 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -288,7 +272,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Crash(Simulatable) -> Another Issue -> 2D Mark -> Solved -> End
-- story: Story from Trainer Conversation T000012 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+- story: Story from Trainer Conversation T000011 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -321,7 +305,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Crash(Simulatable) -> Another Issue -> 3D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000013 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+- story: Story from Trainer Conversation T000012 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -352,7 +336,7 @@ stories:
   - action: utter_solution_no_issue
 
 # Crash(Simulatable) -> Another Issue -> Underkill -> Solved -> End
-- story: Story from Trainer Conversation T000014 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+- story: Story from Trainer Conversation T000013 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -383,7 +367,7 @@ stories:
 # ------------------Conversation flow with only 1 issue (No greeting)------------------ #
 
 # *Direct enter software issue* Crash(Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000015 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000014 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -404,7 +388,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Not Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000016 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
+- story: Story from Trainer Conversation T000015 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -425,7 +409,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Report Issue -> Solved -> End
-- story: Story from Trainer Conversation T000017 (Software Issue -> General -> Report -> Solved)
+- story: Story from Trainer Conversation T000016 (Software Issue -> General -> Report -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -433,12 +417,16 @@ stories:
   - action: utter_software_general
   - intent: report
   - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* 2D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000018 (Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
+- story: Story from Trainer Conversation T000017 (Software Issue -> Vision -> 2D -> 2D Lead -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -453,7 +441,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* 3D Pad -> Solved -> End
-- story: Story from Trainer Conversation T000019 (Software Issue -> Vision -> 3D -> 3D Pad -> Solved)
+- story: Story from Trainer Conversation T000018 (Software Issue -> Vision -> 3D -> 3D Pad -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -468,7 +456,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Overkill -> Solved -> End
-- story: Story from Trainer Conversation T000020 (Software Issue -> Vision -> Overkill -> Solved)
+- story: Story from Trainer Conversation T000019 (Software Issue -> Vision -> Overkill -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -483,7 +471,7 @@ stories:
 # ------------------Conversation flow with 2 issues (No greeting)------------------ #
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> Crash(Not Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000021 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
+- story: Story from Trainer Conversation T000020 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -517,7 +505,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> Recipe Can't Load -> Solved -> End
-- story: Story from Trainer Conversation T000022 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
+- story: Story from Trainer Conversation T000021 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -543,7 +531,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> UI/Display -> Solved -> End
-- story: Story from Trainer Conversation T000023 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+- story: Story from Trainer Conversation T000022 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -571,7 +559,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> Handshake -> Solved -> End
-- story: Story from Trainer Conversation T000024 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+- story: Story from Trainer Conversation T000023 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -601,7 +589,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> 2D Package -> Solved -> End
-- story: Story from Trainer Conversation T000025 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+- story: Story from Trainer Conversation T000024 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -633,7 +621,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> 2D Mark -> Solved -> End
-- story: Story from Trainer Conversation T000026 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+- story: Story from Trainer Conversation T000025 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -663,7 +651,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> 3D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000027 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+- story: Story from Trainer Conversation T000026 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -691,7 +679,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter software issue* Crash(Simulatable) -> Another Issue -> Underkill -> Solved -> End
-- story: Story from Trainer Conversation T000028 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+- story: Story from Trainer Conversation T000027 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -718,7 +706,7 @@ stories:
 
 # ------------------Conversation flow with only 1 issue (Directly enter General Issue)------------------ #
 # *Direct enter general issue* Crash(Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000029 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000028 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -737,7 +725,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Not Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000030 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
+- story: Story from Trainer Conversation T000029 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -755,20 +743,9 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-# *Direct enter general issue* Report Issue -> Solved -> End
-- story: Story from Trainer Conversation T000031 (General -> Report -> Solved)
-  steps:
-  - intent: general_issue
-  - action: utter_software_general
-  - intent: report
-  - action: utter_general_report
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no_issue
-
 # ------------------Conversation flow with only 1 issue (Directly enter Vision Issue)------------------ #
 # *Direct enter vision issue* 2D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000032 (Vision -> 2D -> 2D Lead -> Solved)
+- story: Story from Trainer Conversation T000030 (Vision -> 2D -> 2D Lead -> Solved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -781,7 +758,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter vision issue* 3D Pad -> Solved -> End
-- story: Story from Trainer Conversation T000033 (Vision -> 3D -> 3D Pad -> Solved)
+- story: Story from Trainer Conversation T000031 (Vision -> 3D -> 3D Pad -> Solved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -794,7 +771,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter vision issue* Overkill -> Solved -> End
-- story: Story from Trainer Conversation T000034 (Vision -> Overkill -> Solved)
+- story: Story from Trainer Conversation T000032 (Vision -> Overkill -> Solved)
   steps:
   - intent: vision_issue
   - action: utter_software_vision
@@ -806,7 +783,7 @@ stories:
 
 # ------------------Conversation flow with 2 issues (Directly enter General Issue)------------------ #
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue -> Crash(Not Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000035 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
+- story: Story from Trainer Conversation T000033 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -838,7 +815,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue -> Recipe Can't Load -> Solved -> End
-- story: Story from Trainer Conversation T000036 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
+- story: Story from Trainer Conversation T000034 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -862,7 +839,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue -> UI/Display -> Solved -> End
-- story: Story from Trainer Conversation T000037 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+- story: Story from Trainer Conversation T000035 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -888,7 +865,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue -> Handshake -> Solved -> End
-- story: Story from Trainer Conversation T000038 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+- story: Story from Trainer Conversation T000036 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -916,7 +893,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue -> 2D Package -> Solved -> End
-- story: Story from Trainer Conversation T000039 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+- story: Story from Trainer Conversation T000037 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -946,7 +923,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue -> 2D Mark -> Solved -> End
-- story: Story from Trainer Conversation T000040 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+- story: Story from Trainer Conversation T000038 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -974,7 +951,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue 3D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000041 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+- story: Story from Trainer Conversation T000039 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1000,7 +977,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter general issue* Crash(Simulatable) -> Another Issue -> Underkill -> Solved -> End
-- story: Story from Trainer Conversation T000042 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+- story: Story from Trainer Conversation T000040 (General -> Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1025,7 +1002,7 @@ stories:
 
 # ------------------Conversation flow with only 1 issue (Directly enter specific issue(general))------------------ #
 # *Direct enter the specific issue* Crash(Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000043 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000041 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1042,7 +1019,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Not Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000044 (Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
+- story: Story from Trainer Conversation T000042 (Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1058,18 +1035,9 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-# *Direct enter the specific issue* Report Issue -> Solved -> End
-- story: Story from Trainer Conversation T000045 (Report -> Solved)
-  steps:
-  - intent: report
-  - action: utter_general_report
-  - action: utter_feedback
-  - intent: deny
-  - action: utter_solution_no_issue
-
 # ------------------Conversation flow with only 1 issue (Directly enter 2D/3D)------------------ #
 # *Direct enter the 2D* 2D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000046 (2D -> 2D Lead -> Solved)
+- story: Story from Trainer Conversation T000043 (2D -> 2D Lead -> Solved)
   steps:
   - intent: 2d_vision
   - action: utter_vision_2D
@@ -1080,7 +1048,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the 3D* 3D Pad -> Solved -> End
-- story: Story from Trainer Conversation T000047 (3D -> 3D Pad -> Solved)
+- story: Story from Trainer Conversation T000044 (3D -> 3D Pad -> Solved)
   steps:
   - intent: 3d_vision
   - action: utter_vision_3D
@@ -1092,7 +1060,7 @@ stories:
 
 # ------------------Conversation flow with only 1 issue (Directly enter specific issue(vision))------------------ #
 # *Direct enter the specific issue* Overkill -> Solved -> End
-- story: Story from Trainer Conversation T000048 (Overkill -> Solved)
+- story: Story from Trainer Conversation T000045 (Overkill -> Solved)
   steps:
   - intent: overkill
   - action: utter_vision_overkill
@@ -1102,7 +1070,7 @@ stories:
 
 # ------------------Conversation flow with 2 issues (Directly enter specific issue)------------------ #
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> Crash(Not Simulatable) -> Solved -> End
-- story: Story from Trainer Conversation T000049 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
+- story: Story from Trainer Conversation T000046 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Crash -> Have Similar -> Version Newer -> Still Crash -> Not simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1132,7 +1100,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> Recipe Can't Load -> Solved -> End
-- story: Story from Trainer Conversation T000050 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
+- story: Story from Trainer Conversation T000047 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Recipe Can't Load -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1154,7 +1122,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> UI/Display -> Solved -> End
-- story: Story from Trainer Conversation T00051 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
+- story: Story from Trainer Conversation T00048 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> General -> UI -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1178,7 +1146,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> Handshake -> Solved -> End
-- story: Story from Trainer Conversation T000052 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
+- story: Story from Trainer Conversation T000049 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> General -> Handshake -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1204,7 +1172,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> 2D Package -> Solved -> End
-- story: Story from Trainer Conversation T000053 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
+- story: Story from Trainer Conversation T000050 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Software -> Vision -> 2D -> Package -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1232,7 +1200,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> 2D Mark -> Solved -> End
-- story: Story from Trainer Conversation T000054 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
+- story: Story from Trainer Conversation T000051 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Vision -> 2D -> Mark -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1258,7 +1226,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> 3D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000055 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
+- story: Story from Trainer Conversation T000052 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> 3D -> Lead -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1282,7 +1250,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* Crash(Simulatable) -> Another Issue -> Underkill -> Solved -> End
-- story: Story from Trainer Conversation T000056 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
+- story: Story from Trainer Conversation T000053 (Crash -> Have Similar -> Version Newer -> Still Crash -> Simulatable -> Next issue -> Underkill -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1305,7 +1273,7 @@ stories:
 
 # ------------------Conversation flow with only 1 issue (Directly enter specific issue for 2D/3D)------------------ #
 # *Direct enter the specific issue* 2D Lead -> Solved -> End
-- story: Story from Trainer Conversation T000057 (2D Lead -> Solved)
+- story: Story from Trainer Conversation T000054 (2D Lead -> Solved)
   steps:
   - intent: lead_2d
   - action: utter_2d_lead
@@ -1314,7 +1282,7 @@ stories:
   - action: utter_solution_no_issue
 
 # *Direct enter the specific issue* 3D Pad -> Solved -> End
-- story: Story from Trainer Conversation T000058 (3D Pad -> Solved)
+- story: Story from Trainer Conversation T000055 (3D Pad -> Solved)
   steps:
   - intent: pad_3d
   - action: utter_3d_pad
@@ -1323,7 +1291,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for software crash (Full different conversation flow)------------------ #
-- story: Story from Trainer Conversation T000059 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+- story: Story from Trainer Conversation T000056 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1343,7 +1311,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000060 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000057 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1364,7 +1332,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000061 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000058 (Greet -> Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1385,7 +1353,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000062 (Greet -> Software Issue -> General -> Crash -> No Similar -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000059 (Greet -> Software Issue -> General -> Crash -> No Similar -> Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1404,7 +1372,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000063 (Greet -> Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000060 (Greet -> Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1424,7 +1392,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for software crash (Enter software issue)------------------ #
-- story: Story from Trainer Conversation T000064 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+- story: Story from Trainer Conversation T000061 (Software Issue -> General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1441,7 +1409,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000065 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000062 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1459,7 +1427,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000066 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000063 (Software Issue -> General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1477,7 +1445,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000067 (Software Issue -> General -> Crash -> No Similar -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000064 (Software Issue -> General -> Crash -> No Similar -> Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1493,7 +1461,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000068 (Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000065 (Software Issue -> General -> Crash -> No Similar -> Not Simulatable -> Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -1510,7 +1478,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for software crash (Enter general issue)------------------ #
-- story: Story from Trainer Conversation T000069 (General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+- story: Story from Trainer Conversation T000066 (General -> Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1525,7 +1493,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000070 (General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000067 (General -> Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1541,7 +1509,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000071 (General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000068 (General -> Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1557,7 +1525,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000072 (General -> Crash -> No Similar -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000069 (General -> Crash -> No Similar -> Simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1571,7 +1539,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000073 (General -> Crash -> No Similar -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000070 (General -> Crash -> No Similar -> Not Simulatable -> Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -1586,7 +1554,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for software crash (Direct enter crash)------------------ #
-- story: Story from Trainer Conversation T000074 (Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
+- story: Story from Trainer Conversation T000071 (Crash -> Have Similar -> Version Newer -> No Crash -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1599,7 +1567,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000075 (Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000072 (Crash -> Have Similar -> Version Same -> Simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1613,7 +1581,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000076 (Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000073 (Crash -> Have Similar -> Version Same -> Not Simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1627,7 +1595,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000077 (Crash -> No Similar -> Simulatable -> Solved)
+- story: Story from Trainer Conversation T000074 (Crash -> No Similar -> Simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1639,7 +1607,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000078 (Crash -> No Similar -> Not Simulatable -> Solved)
+- story: Story from Trainer Conversation T000075 (Crash -> No Similar -> Not Simulatable -> Solved)
   steps:
   - intent: crash
   - action: utter_crash_similar_machine
@@ -1652,7 +1620,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for cycle time high (Full conversation flow)------------------ #
-- story: Story from Trainer Conversation T000079 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Reduced -> Check INI in Guideline -> Provide Guideline Link -> Cycle Time Not Reduced -> Provide Info to JIRA -> Solved)
+- story: Story from Trainer Conversation T000076 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Reduced -> Check INI in Guideline -> Provide Guideline Link -> Cycle Time Not Reduced -> Provide Info to JIRA -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1685,7 +1653,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000080 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Reduced -> Check INI in Guideline -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
+- story: Story from Trainer Conversation T000077 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Reduced -> Check INI in Guideline -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1717,7 +1685,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000081 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Not Reduced -> Verify Specific Reason -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
+- story: Story from Trainer Conversation T000078 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Not Reduced -> Verify Specific Reason -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1749,7 +1717,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000082 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Not Reduced -> Verify Specific Reason -> Provide Guideline Link -> Cycle Time Not Reduced -> Provide Info to JIRA -> Solved)
+- story: Story from Trainer Conversation T000079 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Not Reduced -> Replace Vision INI -> Test Time Not Reduced -> Verify Specific Reason -> Provide Guideline Link -> Cycle Time Not Reduced -> Provide Info to JIRA -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1782,7 +1750,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000083 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Reduced -> Verify Specific Reason -> Check Recipe -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
+- story: Story from Trainer Conversation T000080 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Have Similar Machine -> Replace Recipe -> Test Time Reduced -> Verify Specific Reason -> Check Recipe -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1812,7 +1780,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000084 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Don't Have Similar Machine -> Verify Specific Reason -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
+- story: Story from Trainer Conversation T000081 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Not Reduced -> Don't Have Similar Machine -> Verify Specific Reason -> Provide Guideline Link -> Cycle Time Reduced -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1838,7 +1806,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000085 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Reduced -> Solved)
+- story: Story from Trainer Conversation T000082 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Test Time -> Test Time Reduced -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1859,7 +1827,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000086 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Storage Time -> Not Hard Disk Issue -> Provide solution -> Storage Time Not Reduced -> Request Hardware Change -> Solved)
+- story: Story from Trainer Conversation T000083 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Storage Time -> Not Hard Disk Issue -> Provide solution -> Storage Time Not Reduced -> Request Hardware Change -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1883,7 +1851,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000087 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Storage Time -> Not Hard Disk Issue -> Provide solution -> Storage Time Reduced -> Solved)
+- story: Story from Trainer Conversation T000084 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Storage Time -> Not Hard Disk Issue -> Provide solution -> Storage Time Reduced -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1906,7 +1874,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000088 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Storage Time -> Hard Disk Issue -> Request Hardware Change -> Solved)
+- story: Story from Trainer Conversation T000085 (Greet -> Software Issue -> Vision -> Cycle Time -> Issue -> Storage Time -> Hard Disk Issue -> Request Hardware Change -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1927,7 +1895,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000089 (Greet -> Software Issue -> Vision -> Cycle Time -> Improvement -> Test Time -> Provide Guideline Link -> Test Time Not Reduced -> Request Hardware Change -> Solved)
+- story: Story from Trainer Conversation T000086 (Greet -> Software Issue -> Vision -> Cycle Time -> Improvement -> Test Time -> Provide Guideline Link -> Test Time Not Reduced -> Request Hardware Change -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1949,7 +1917,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000090 (Greet -> Software Issue -> Vision -> Cycle Time -> Improvement -> Test Time -> Provide Guideline Link -> Test Time Reduced -> Solved)
+- story: Story from Trainer Conversation T000087 (Greet -> Software Issue -> Vision -> Cycle Time -> Improvement -> Test Time -> Provide Guideline Link -> Test Time Reduced -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1970,7 +1938,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000091 (Greet -> Software Issue -> Vision -> Cycle Time -> Improvement -> Storage Time -> Request Hardware Change -> Solved)
+- story: Story from Trainer Conversation T000088 (Greet -> Software Issue -> Vision -> Cycle Time -> Improvement -> Storage Time -> Request Hardware Change -> Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -1990,7 +1958,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for database issue (Full conversation flow)------------------ #
-- story: Story from Trainer Conversation T000092 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000089 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2018,7 +1986,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000093 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+- story: Story from Trainer Conversation T000090 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2045,7 +2013,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000094 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+- story: Story from Trainer Conversation T000091 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2069,7 +2037,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000095 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000092 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2094,7 +2062,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000096 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+- story: Story from Trainer Conversation T000093 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2118,7 +2086,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000097 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Solved)
+- story: Story from Trainer Conversation T000094 (Greet -> Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2137,7 +2105,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000098 (Greet -> Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000095 (Greet -> Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2159,7 +2127,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000099 (Greet -> Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000096 (Greet -> Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2180,7 +2148,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000100 (Greet -> Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000097 (Greet -> Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2202,7 +2170,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000101 (Greet -> Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+- story: Story from Trainer Conversation T000098 (Greet -> Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2223,7 +2191,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000102 (Greet -> Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000099 (Greet -> Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2243,7 +2211,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000103 (Greet -> Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000100 (Greet -> Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: greet
   - action: utter_greet
@@ -2263,7 +2231,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for database issue (Direct Enter Software Issue)------------------ #
-- story: Story from Trainer Conversation T000104 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000101 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2288,7 +2256,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000105 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+- story: Story from Trainer Conversation T000102 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2312,7 +2280,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000106 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+- story: Story from Trainer Conversation T000103 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2333,7 +2301,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000107 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000104 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2355,7 +2323,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000108 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+- story: Story from Trainer Conversation T000105 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2376,7 +2344,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000109 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Solved)
+- story: Story from Trainer Conversation T000106 (Software Issue -> General -> Database -> Database Down -> Give Solution -> Issue Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2392,7 +2360,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000110 (Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000107 (Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2411,7 +2379,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000111 (Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000108 (Software Issue -> General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2429,7 +2397,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000112 (Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000109 (Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2448,7 +2416,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000113 (Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+- story: Story from Trainer Conversation T000110 (Software Issue -> General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2466,7 +2434,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000114 (Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000111 (Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2483,7 +2451,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000115 (Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000112 (Software Issue -> General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: software_issue
   - action: utter_software_issue
@@ -2500,7 +2468,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for database issue (Direct Enter General Issue)------------------ #
-- story: Story from Trainer Conversation T000116 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000113 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2523,7 +2491,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000117 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+- story: Story from Trainer Conversation T000114 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2545,7 +2513,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000118 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+- story: Story from Trainer Conversation T000115 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2564,7 +2532,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000119 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000116 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2584,7 +2552,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000120 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+- story: Story from Trainer Conversation T000117 (General -> Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2603,7 +2571,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000121 (General -> Database -> Database Down -> Give Solution -> Issue Solved)
+- story: Story from Trainer Conversation T000118 (General -> Database -> Database Down -> Give Solution -> Issue Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2617,7 +2585,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000122 (General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000119 (General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2634,7 +2602,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000123 (General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000120 (General -> Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2650,7 +2618,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000124 (General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000121 (General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2667,7 +2635,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000125 (General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+- story: Story from Trainer Conversation T000122 (General -> Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2683,7 +2651,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000126 (General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000123 (General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2698,7 +2666,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000127 (General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000124 (General -> Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: general_issue
   - action: utter_software_general
@@ -2713,7 +2681,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for database issue (Direct Enter Specific Issue(Database))------------------ #
-- story: Story from Trainer Conversation T000128 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000125 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2734,7 +2702,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000129 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+- story: Story from Trainer Conversation T000126 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2754,7 +2722,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000130 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+- story: Story from Trainer Conversation T000127 (Database -> Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2771,7 +2739,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000131 (Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000128 (Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2789,7 +2757,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000132 (Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+- story: Story from Trainer Conversation T000129 (Database -> Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2806,7 +2774,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000133 (Database -> Database Down -> Give Solution -> Issue Solved)
+- story: Story from Trainer Conversation T000130 (Database -> Database Down -> Give Solution -> Issue Solved)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2818,7 +2786,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000134 (Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000131 (Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2833,7 +2801,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000135 (Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000132 (Database -> Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2847,7 +2815,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000136 (Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000133 (Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2862,7 +2830,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000137 (Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+- story: Story from Trainer Conversation T000134 (Database -> Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2876,7 +2844,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000138 (Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000135 (Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2889,7 +2857,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000139 (Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000136 (Database -> Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: database
   - action: utter_general_database
@@ -2902,7 +2870,7 @@ stories:
   - action: utter_solution_no_issue
 
 # ------------------Conversation flow for database issue (Direct Enter Specific Issue(Database Specific))------------------ #
-- story: Story from Trainer Conversation T000140 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000137 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Persist -> JIRA)
   steps:
   - intent: issue_database_down
   - action: utter_database_down
@@ -2921,7 +2889,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000141 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
+- story: Story from Trainer Conversation T000138 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Persist -> Reinstall -> Issue Solved)
   steps:
   - intent: issue_database_down
   - action: utter_database_down
@@ -2939,7 +2907,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000142 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
+- story: Story from Trainer Conversation T000139 (Database Down -> Give Solution -> Issue Persist -> Not Storage -> Issue Solved)
   steps:
   - intent: issue_database_down
   - action: utter_database_down
@@ -2954,7 +2922,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000143 (Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000140 (Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Persist -> JIRA)
   steps:
   - intent: issue_database_down
   - action: utter_database_down
@@ -2970,7 +2938,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000144 (Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
+- story: Story from Trainer Conversation T000141 (Database Down -> Give Solution -> Issue Persist -> Storage Issue -> Issue Solved)
   steps:
   - intent: issue_database_down
   - action: utter_database_down
@@ -2985,7 +2953,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000145 (Database Down -> Give Solution -> Issue Solved)
+- story: Story from Trainer Conversation T000142 (Database Down -> Give Solution -> Issue Solved)
   steps:
   - intent: issue_database_down
   - action: utter_database_down
@@ -2995,7 +2963,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000146 (Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000143 (Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: issue_database_high_storage
   - action: utter_database_high_storage
@@ -3008,7 +2976,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000147 (Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000144 (Database High Storage -> >200GB -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: issue_database_high_storage
   - action: utter_database_high_storage
@@ -3020,7 +2988,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000148 (Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000145 (Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Persist -> JIRA)
   steps:
   - intent: issue_database_high_storage
   - action: utter_database_high_storage
@@ -3033,7 +3001,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000149 (Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
+- story: Story from Trainer Conversation T000146 (Database High Storage -> <200GB -> Give Solution(Clear Storage) -> Issue Solved)
   steps:
   - intent: issue_database_high_storage
   - action: utter_database_high_storage
@@ -3045,7 +3013,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000150 (Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
+- story: Story from Trainer Conversation T000147 (Database Corrupted -> Give Solution(Reinstall) -> Issue Persist -> JIRA)
   steps:
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
@@ -3056,7 +3024,7 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
-- story: Story from Trainer Conversation T000151 (Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
+- story: Story from Trainer Conversation T000148 (Database Corrupted -> Give Solution(Reinstall) -> Issue Solved)
   steps:
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
@@ -3065,6 +3033,640 @@ stories:
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
+
+# ------------------Conversation flow for report issue (Full conversation flow)------------------ #
+- story: Story from Trainer Conversation T000149 (Greet -> Software Issue -> General -> Report -> Error Message -> Give Solution(Restart database service) -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000150 (Greet -> Software Issue -> General -> Report -> Error Message -> Give Solution(Restart database service) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000151 (Greet -> Software Issue -> General -> Report -> Cant Export in xls format -> Specific version -> Give Solution(Copy files and folders) -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000152 (Greet -> Software Issue -> General -> Report -> Cant Export in xls format -> Specific Version -> Give Solution(Copy files and folders) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000153 (Greet -> Software Issue -> General -> Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000154 (Greet -> Software Issue -> General -> Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000155 (Greet -> Software Issue -> General -> Report -> Export Crash -> Give Solution(update files) -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000156 (Greet -> Software Issue -> General -> Report -> Export Crash -> Give Solution(update files) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for report issue (Direct enter software issue)------------------ #
+- story: Story from Trainer Conversation T000157 (Software Issue -> General -> Report -> Error Message -> Give Solution(Restart database service) -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000158 (Software Issue -> General -> Report -> Error Message -> Give Solution(Restart database service) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000159 (Software Issue -> General -> Report -> Cant Export in xls format -> Specific version -> Give Solution(Copy files and folders) -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000160 (Software Issue -> General -> Report -> Cant Export in xls format -> Specific Version -> Give Solution(Copy files and folders) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000161 (Software Issue -> General -> Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000162 (Software Issue -> General -> Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000163 (Software Issue -> General -> Report -> Export Crash -> Give Solution(update files) -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000164 (Software Issue -> General -> Report -> Export Crash -> Give Solution(update files) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for report issue (Direct enter software general issue)------------------ #
+- story: Story from Trainer Conversation T000165 (General -> Report -> Error Message -> Give Solution(Restart database service) -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000166 (General -> Report -> Error Message -> Give Solution(Restart database service) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000167 (General -> Report -> Cant Export in xls format -> Specific version -> Give Solution(Copy files and folders) -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000168 (General -> Report -> Cant Export in xls format -> Specific Version -> Give Solution(Copy files and folders) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000169 (General -> Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000170 (General -> Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000171 (General -> Report -> Export Crash -> Give Solution(update files) -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000172 (General -> Report -> Export Crash -> Give Solution(update files) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for report issue (Direct enter report issue)------------------ #
+- story: Story from Trainer Conversation T000173 (Report -> Error Message -> Give Solution(Restart database service) -> Issue Solved)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000174 (Report -> Error Message -> Give Solution(Restart database service) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000175 (Report -> Cant Export in xls format -> Specific version -> Give Solution(Copy files and folders) -> Issue Solved)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000176 (Report -> Cant Export in xls format -> Specific Version -> Give Solution(Copy files and folders) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000177 (Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue Solved)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000178 (Report -> Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000179 (Report -> Export Crash -> Give Solution(update files) -> Issue Solved)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000180 (Report -> Export Crash -> Give Solution(update files) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: report
+  - action: utter_general_report
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for report issue (Direct enter specific report issue)------------------ #
+- story: Story from Trainer Conversation T000181 (Error Message -> Give Solution(Restart database service) -> Issue Solved)
+  steps:
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000182 (Error Message -> Give Solution(Restart database service) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000183 (Cant Export in xls format -> Specific version -> Give Solution(Copy files and folders) -> Issue Solved)
+  steps:
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000184 (Cant Export in xls format -> Specific Version -> Give Solution(Copy files and folders) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_specific_version
+  - action: utter_xlsgen_specific_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000185 (Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue Solved)
+  steps:
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000186 (Cant Export in xls format -> Other Version -> Give Solution(reinstall xlsgen) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+  - intent: report_xlsgen_other_version
+  - action: utter_xlsgen_other_version
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000187 (Export Crash -> Give Solution(update files) -> Issue Solved)
+  steps:
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000188 (Export Crash -> Give Solution(update files) -> Issue unsolved -> JIRA)
+  steps:
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
+  - intent: deny
+  - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
 ## ------------------Out-of-scope situation------------------ ##
 
 # ------------------Out-of-scope situation for full conversation flow------------------ #

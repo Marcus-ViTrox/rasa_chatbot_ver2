@@ -15,6 +15,11 @@ intents:
 - issue_database_high_storage
 - issue_database_corrupted
 - report
+- issue_report_error_message
+- issue_report_cant_export_xls
+- report_xlsgen_specific_version
+- report_xlsgen_other_version
+- issue_report_export_crash
 - ui_display
 - handshake
 - counter
@@ -272,9 +277,79 @@ responses:
       title: No, the issue solved.
     text: Does the issue still persist?
 
+# ------------------Report Solution------------------ #
+# Ask which type of report issue the user faced
   utter_general_report:
-  - text: -Insert Server Link- (Report)
+  - buttons:
+    - payload: report_error_message
+      title: "Error Message:\"No report data available\" prompted."
+    - payload: report_cant_export_xls
+      title: Unable to export report in .xls format.
+    - payload: report_export_crash
+      title: Crash while exporting report.
+    text: Which type of report issue are you facing?
 
+# ~~~~Report Error Message~~~~ #
+# Ask the user to start the postgresql service when error message is prompted
+  utter_report_error_message:
+  - text: "Kindly reactivate your postgresql service on your machine\
+          \nSteps:\
+          \n1. Search for services (Win + S for quick search).\
+          \n2. Search for postgresql in the services.\
+          \n*V4 - postgresql-9.3\
+          \n*V5 - postgresql-x64-10\
+          \n3. Start the service by doing the following action: Right Click > Start.\
+          \n*Make sure postgresql service did not turn off after service start running."
+
+# ~~~~Report Can't Export in xls format~~~~ #
+# Ask the user to check the xlsgen version
+  utter_report_cant_export_xls:
+  - buttons:
+    - payload: xlsgen_specific_version
+      title: "1.9.0.4"
+    - payload: xlsgen_other_version
+      title: Version > 3.0
+    text: "Kindly check your xlsgen version.\
+          \n*You can check it in 'C:\\Windows\\SysWOW64'\
+          \nWhich version are your xlsgen version?"
+
+# Action to be taken when the xlsgen version is 1.9.0.4
+  utter_xlsgen_specific_version:
+  - text: "Kindly follow the steps below.\
+          \nDebug step\
+          \n1. Copy 'xlsgen.dll[1.9.0.4]' and 'xlsgen.license.lic' from good machine.\
+          \n*You can find the file in 'C:\\Windows\\SysWOW64'\
+          \n2. Copy xlsgen folder from 'C:\\Program Files(x86)'\
+          \n3. Copy xlsgen folder from 'C:\\Program Files'\
+          \n4. Paste all the files and folders above to their respective directories in the bad machine."
+
+# Action to be taken when the xlsgen is any other version
+  utter_xlsgen_other_version:
+  - text: "Please reinstall the latest version of xlsgen.dll."
+
+# ~~~~Report Crash when export~~~~ #
+# Action to be taken when report crash while exporting
+  utter_report_export_crash:
+  - text: "Please update the following items to its latest version based on your situation.\
+          \n'ViTroxReportDynamicLib-vc9.dll'(V4)\
+          \n'ViTroxReportDynamicLib-v140.dll'(V5)"
+
+# ~~~~Report Solution~~~~ #
+# Ask whether the database issue still persist (Database)
+  utter_report_feedback:
+  - buttons:
+    - payload: issue_solve_yes
+      title: Yes, Issue solved.
+    - payload: issue_solve_no
+      title: No, not solved.
+    text: Does the issue solved after the action taken?
+
+  utter_report_jira:
+  - text: "Please send an email to JIRA owner with the following info:\
+          \n- Backup database (If possible)\
+          \n- Backup software\
+          \n- Export Info/Lot Image"
+  
   utter_general_ui_display:
   - text: -Insert Server Link- (UI/Display)
 
@@ -571,11 +646,13 @@ responses:
       title: No
     text: Do you still have any problem to ask? 😊
 
+# Ask user to describe the problem he/she faced 
   utter_solution_another_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
-           \nSoftware:\n General (Software Crash/Recipe Can't Load/Report/UI/Handshake/Counter)\
+           \nSoftware:\n General (Software Crash/Recipe Can't Load/Database/Report/UI/Handshake/Counter)\
            \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment]/\
            \n         3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head]/Overkill/Underkill/Cycle Time High)"
+
 
   utter_solution_no_issue:
   - text: Great! Have a nice day😊

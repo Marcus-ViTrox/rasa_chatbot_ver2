@@ -79,7 +79,26 @@ rules:
   steps:
   - intent: report
   - action: utter_general_report
-  - action: utter_feedback
+
+# Report Error Message
+- rule: Give solution for report error message
+  steps:
+  - intent: issue_report_error_message
+  - action: utter_report_error_message
+  - action: utter_report_feedback
+
+# Report Can't Export in xls format
+- rule: Give solution for report can't export in .xls format
+  steps:
+  - intent: issue_report_cant_export_xls
+  - action: utter_report_cant_export_xls
+
+# Report Export Crash
+- rule: Give solution for report export crash
+  steps:
+  - intent: issue_report_export_crash
+  - action: utter_report_export_crash
+  - action: utter_report_feedback
 
 # UI/Display
 - rule: Give solution for UI/Display issue
