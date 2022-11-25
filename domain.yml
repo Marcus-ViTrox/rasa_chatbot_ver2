@@ -20,6 +20,7 @@ intents:
 - report_xlsgen_specific_version
 - report_xlsgen_other_version
 - issue_report_export_crash
+- inspection_auto_turn_on
 - ui_display
 - handshake
 - counter
@@ -56,7 +57,6 @@ intents:
 - storage_time
 
 responses:
-
 # ------------------Greeting/Bot Challenge------------------ #
   utter_greet:
   - text: Hi there! 😊 I am JIRA bot and Im here to rescue the day!
@@ -105,6 +105,8 @@ responses:
       title: Database
     - payload: general_report
       title: Report
+    - payload: general_inspection_option_auto_on
+      title: Auto Turn On Inspection Option Issue
     - payload: general_ui_display
       title: UI/Display
     - payload: general_handshake
@@ -129,6 +131,15 @@ responses:
     text: Which vision issues are you facing?
   
 # ------------------Crash Solution------------------ #
+# Ask whether there is any SIMILAR GOOD MACHINE ONSITE (Crash)
+  utter_crash_similar_machine: 
+  - buttons:
+    - payload: similar_yes
+      title: Yes, There is.
+    - payload: similar_no
+      title: No, Don't Have
+    text: Are there any similar good machine onsite?
+
 # If there is similar good machine, ask whether the VERSION is newer
   utter_similar_yes:
   - buttons:
@@ -265,6 +276,7 @@ responses:
   
   utter_database_jira:
   - text: "Please send an email to JIRA owner with the following info:\
+          \nInfo to Collect:\
           \n- Describe issue faced through email.\
           \n- Plan and setup a VCare session."
 
@@ -335,17 +347,9 @@ responses:
           \n'ViTroxReportDynamicLib-v140.dll'(V5)"
 
 # ~~~~Report Solution~~~~ #
-# Ask whether the database issue still persist (Database)
-  utter_report_feedback:
-  - buttons:
-    - payload: issue_solve_yes
-      title: Yes, Issue solved.
-    - payload: issue_solve_no
-      title: No, not solved.
-    text: Does the issue solved after the action taken?
-
   utter_report_jira:
   - text: "Please send an email to JIRA owner with the following info:\
+          \nItem to Collect:\
           \n- Backup database (If possible)\
           \n- Backup software\
           \n- Export Info/Lot Image"
@@ -358,6 +362,44 @@ responses:
 
   utter_general_counter:
   - text: -Insert Server Link- (Counter)
+
+# ------------------Auto Turn On Inspection Option Issue Solution------------------ #
+# Provide action to take when the inspection option auto turn on
+  utter_general_inspection_auto_turn_on:
+  - text: "Please follow the steps below to troubleshoot the problem.\
+          \nError Code Verification Step:\
+          \n1. Add the INI key below into the 'VsXXX.ini' file.\
+          \n  [System]\
+          \n  GenerateInspectionList=1\
+          \n2. Restart software.\
+          \n3. Find the 'InspectionList' folder in the V4 folder.\
+          \n*By default, the folder is in 'D:\\ViTrox\\V4\\InspectionList'\
+          \n4. In the 'InspectionList' folder, open specific 'VsXXX.xml' file.\
+          \n5. Check whether the 'ErrorCodeHi' and 'ErrorCodeLo' value(except 0) conflict(occurs more than once in the file) with any other inspection."
+    image: https://imgur.com/a/TAyfWvt
+
+# Ask whether there is conflict in the error code
+  utter_error_code_conflict:
+  - buttons:
+    - payload: error_code_conflict_yes
+      title: Yes, the code conflicts
+    - payload: error_code_conflict_no
+      title: No, the code doesn't conflict
+    text: Is there any conflict in the error code?
+
+# When there is conflict, provide error code conflict guideline
+  utter_error_code_conflict_guideline:
+  - text: "Please proceed to the guideline below:\
+          \n-Insert Guideline Link-"
+
+# roceed to send email to JIRA owner if the issue not solved
+  utter_inspection_auto_turn_on_jira:
+  - text: "Please send an email to JIRA owner with the following info:\
+          \nInfo to Collect:\
+          \n- Does the issue happened after software update?\
+          \nItem to Collect:\
+          \n- Backup Software\
+          \n- Export Info"
 
 # ------------------Solution for Vision Issue------------------ #
 # List all 2D vision(Lead/Mark/Package/Lens/Package Edge/OCR/Matrix Code/Pin 1/Orient/Measure/Unit Alignment)
@@ -589,6 +631,15 @@ responses:
   - text: Please send an email to JIRA owner and BD to request for hardware changes/upgrade.
 
 # *****Usable for both Path***** #
+# Ask whether there is any SIMILAR GOOD MACHINE ONSITE (Cycle Time High)
+  utter_cycle_time_similar_machine: 
+  - buttons:
+    - payload: similar_yes
+      title: Yes, There is.
+    - payload: similar_no
+      title: No, Don't Have
+    text: Are there any similar good machine onsite?
+
 # Ask if the test time REDUCED
   utter_test_time_feedback:
   - buttons:
@@ -619,23 +670,14 @@ responses:
           \nDoes the cycle time issue solved?"
 
 # ------------------Other------------------ #
-# Ask whether there is any SIMILAR GOOD MACHINE ONSITE (Crash)
-  utter_crash_similar_machine: 
+# Ask whether the issue is solved
+  utter_issue_solved:
   - buttons:
-    - payload: similar_yes
-      title: Yes, There is.
-    - payload: similar_no
-      title: No, Don't Have
-    text: Are there any similar good machine onsite?
-
-# Ask whether there is any SIMILAR GOOD MACHINE ONSITE (Cycle Time High)
-  utter_cycle_time_similar_machine: 
-  - buttons:
-    - payload: similar_yes
-      title: Yes, There is.
-    - payload: similar_no
-      title: No, Don't Have
-    text: Are there any similar good machine onsite?
+    - payload: issue_solve_yes
+      title: Yes, Issue solved.
+    - payload: issue_solve_no
+      title: No, not solved.
+    text: Is the issue solved?
 
 # Ask whether the user still face other issue
   utter_feedback:

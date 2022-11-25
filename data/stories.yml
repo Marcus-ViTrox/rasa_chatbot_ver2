@@ -419,7 +419,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3048,7 +3048,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3067,7 +3067,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3089,7 +3089,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3110,7 +3110,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3132,7 +3132,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3153,7 +3153,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3173,7 +3173,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3192,7 +3192,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3210,7 +3210,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3226,7 +3226,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3245,7 +3245,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3263,7 +3263,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3282,7 +3282,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3300,7 +3300,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3317,7 +3317,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3333,7 +3333,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3349,7 +3349,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3363,7 +3363,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3380,7 +3380,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3396,7 +3396,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3413,7 +3413,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3429,7 +3429,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3444,7 +3444,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3458,7 +3458,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3472,7 +3472,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3484,7 +3484,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3499,7 +3499,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3513,7 +3513,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3528,7 +3528,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3542,7 +3542,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3555,7 +3555,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3567,7 +3567,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3579,7 +3579,7 @@ stories:
   steps:
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3589,7 +3589,7 @@ stories:
   steps:
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3602,7 +3602,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3614,7 +3614,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_specific_version
   - action: utter_xlsgen_specific_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3627,7 +3627,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3639,7 +3639,7 @@ stories:
   - action: utter_report_cant_export_xls
   - intent: report_xlsgen_other_version
   - action: utter_xlsgen_other_version
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
   - action: utter_feedback
@@ -3650,7 +3650,7 @@ stories:
   steps:
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: affirm
   - action: utter_feedback
   - intent: deny
@@ -3660,9 +3660,204 @@ stories:
   steps:
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
   - intent: deny
   - action: utter_report_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for Auto Turn on Inspection Option Issue (Full conversation flow)------------------ #
+- story: Story from Trainer Conversation T000189 (Greet -> Software Issue -> General -> Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue unsolved -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000190 (Greet -> Software Issue -> General -> Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000191 (Greet -> Software Issue -> General -> Auto Turn On Inspection Option Issue -> Error Code No Conflict -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for Auto Turn on Inspection Option Issue (Direct Enter Software Issue)------------------ #
+- story: Story from Trainer Conversation T000192 (Software Issue -> General -> Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue unsolved -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000193 (Software Issue -> General -> Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000194 (Software Issue -> General -> Auto Turn On Inspection Option Issue -> Error Code No Conflict -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for Auto Turn on Inspection Option Issue (Direct Enter General Issue)------------------ #
+- story: Story from Trainer Conversation T000195 (General -> Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue unsolved -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000196 (General -> Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000197 (General -> Auto Turn On Inspection Option Issue -> Error Code No Conflict -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for Auto Turn on Inspection Option Issue (Direct Enter Specific Issue(Auto Turn On Inspection Option))------------------ #
+- story: Story from Trainer Conversation T000198 (Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue unsolved -> JIRA)
+  steps:
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000199 (Auto Turn On Inspection Option Issue -> Error Code Conflict -> Provide Guide -> Issue Solved)
+  steps:
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: affirm
+  - action: utter_error_code_conflict_guideline
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000200 (Auto Turn On Inspection Option Issue -> Error Code No Conflict -> JIRA)
+  steps:
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  - intent: deny
+  - action: utter_inspection_auto_turn_on_jira
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue

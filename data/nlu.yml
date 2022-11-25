@@ -275,6 +275,14 @@ nlu:
     - Report Crash when trying to export
     - I export report then crash le
 
+# ------------------Auto Turn On Inspection Option Issue Solution Branches------------------ #
+- intent: inspection_auto_turn_on
+  examples: |
+    - general_inspection_auto_turn_on
+    - Auto Turn On Inspection Option Issue
+    - inspection option auto turn on
+    - another inspection option auto turn on
+    
 - intent: ui_display
   examples: |
     - general_ui_display
@@ -685,6 +693,7 @@ nlu:
     - issue_persist_yes
     - storage_high_yes
     - issue_solve_yes
+    - error_code_conflict_yes
 
 - intent: deny
   examples: |
@@ -721,6 +730,7 @@ nlu:
     - issue_persist_no
     - storage_high_no
     - issue_solve_no
+    - error_code_conflict_no
 
 # ------------------Synonym------------------ #
 

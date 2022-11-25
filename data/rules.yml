@@ -85,7 +85,7 @@ rules:
   steps:
   - intent: issue_report_error_message
   - action: utter_report_error_message
-  - action: utter_report_feedback
+  - action: utter_issue_solved
 
 # Report Can't Export in xls format
 - rule: Give solution for report can't export in .xls format
@@ -98,8 +98,15 @@ rules:
   steps:
   - intent: issue_report_export_crash
   - action: utter_report_export_crash
-  - action: utter_report_feedback
+  - action: utter_issue_solved
 
+# Auto Turn On Inspection Option Issue
+- rule: Give solution for Auto On Inspection Issue
+  steps:
+  - intent: inspection_auto_turn_on
+  - action: utter_general_inspection_auto_turn_on
+  - action: utter_error_code_conflict
+  
 # UI/Display
 - rule: Give solution for UI/Display issue
   steps:
