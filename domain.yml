@@ -22,6 +22,8 @@ intents:
 - issue_report_export_crash
 - inspection_auto_turn_on
 - ui_display
+- issue_ui_button_out_of_screen
+- issue_ui_dialog_incomplete
 - handshake
 - counter
 - 2d_vision
@@ -130,7 +132,7 @@ responses:
       title: Cycle Time High
     text: Which vision issues are you facing?
   
-# ------------------Crash Solution------------------ #
+# ------------------Crash Section------------------ #
 # Ask whether there is any SIMILAR GOOD MACHINE ONSITE (Crash)
   utter_crash_similar_machine: 
   - buttons:
@@ -185,11 +187,11 @@ responses:
   utter_simulate_no:
   - text: "Please follow the steps below:\
           \n1. Check if there is memory leak using Process Explorer\
-          \nGuideline: -Insert Link- (Guide to check memory leak)\
+          \n* Check Memory Leak Guide: https://docs.google.com/document/d/10sFAzbWCUrL2ZLYlbkBdcdHsCt9oX6YsWd2rlxMsbnE/edit?usp=share_link *\
           \n2. Verify whether it's caused by any possible hard disk issue.\
           \n3. Prompt customer for simulation step.\
           \n(Optional) Record customer action with Automatic Screenshotter.\
-          \nGuideline: -Insert Link- (Guide to use Automatic Screenshotter)\
+          \n* Automatic ScreenShotter Guide: https://docs.google.com/document/d/10sFAzbWCUrL2ZLYlbkBdcdHsCt9oX6YsWd2rlxMsbnE/edit?usp=share_link *\
           \nAfter you have done the steps above, kindly provide JIRA owner with the following info by email.\
           \n\nInfo to Collect:\
           \n- Memory Leak? (Y/N)
@@ -205,7 +207,7 @@ responses:
   utter_general_recipe_cant_load:
   - text: -Insert Server Link- (Recipe Can't Load)
 
-# ------------------Database Solution------------------ #
+# ------------------Database Section------------------ #
 # Ask which type of database issue the user faced
   utter_general_database:
   - buttons:
@@ -289,7 +291,7 @@ responses:
       title: No, the issue solved.
     text: Does the issue still persist?
 
-# ------------------Report Solution------------------ #
+# ------------------Report Section------------------ #
 # Ask which type of report issue the user faced
   utter_general_report:
   - buttons:
@@ -351,11 +353,37 @@ responses:
   - text: "Please send an email to JIRA owner with the following info:\
           \nItem to Collect:\
           \n- Backup database (If possible)\
+          \n* Backup Database Guide: https://docs.google.com/document/d/1kiHWIEk8Amvk9YuYjp_uot6s1EU_XFDOH_lEK9rmfng/edit?usp=share_link *\
           \n- Backup software\
           \n- Export Info/Lot Image"
-  
+
+# ------------------UI/Display Section------------------ #
+# Ask which type of UI issue faced
   utter_general_ui_display:
-  - text: -Insert Server Link- (UI/Display)
+  - buttons:
+    - payload: ui_button_out_of_screen
+      title: Button in dialog out of Screen
+    - payload: ui_dialog_incomplete
+      title: Dialog object missing/incomplete
+      image: 
+    text: Which type of UI/Display issue are you facing?
+
+# ~~~~UI button out of display screen~~~~ #
+# Provide solution for button out of screen
+  utter_ui_button_out_of_screen:
+  - text: Please change the resolution of the screen to the highest resolution.
+
+# ~~~~UI dialog object missing/incomplete~~~~ #
+# Provide solution for dialog object missing/incomplete
+  utter_ui_dialog_incomplete:
+  - text: Please run the 'ActiveXPatcher' (Request this from JIRA owner)
+
+# ~~~~UI Solution~~~~ #
+  utter_ui_jira:
+  - text: "Please send an email to JIRA owner with the following info:\
+          \nInfo to Collect:\
+          \n- Does the software crash happened after software update? (Y/N)\
+          \n- Plan and setup a VCare session."
 
   utter_general_handshake:
   - text: -Insert Server Link- (Handshake)
@@ -513,6 +541,7 @@ responses:
   utter_vision_underkill:
   - text: -Insert Server Link- (Underkill)
 
+# ------------------Cycle Time Section------------------ #
 # Ask if the customer is facing ISSUE or want an IMPROVEMENT on CYCLE TIME
   utter_vision_cycle_time:
   - buttons:
@@ -525,7 +554,6 @@ responses:
           \nIssue - Current machine cycle time did not achieve what committed to customer\
           \nImprovement - Current machine cycle time achieve what committed to customer but customer wanted further improvement"
 
-# ------------------Cycle Time Solution------------------ #
 # Ask which time is too high(Test/Storage)
   utter_cycle_time_issue:
   - buttons:
@@ -539,6 +567,7 @@ responses:
 
 # ~~~~Test Time~~~~ #
 # Tell the user to TURN OFF all the DEBUG INI key, and ask does it SOLVE the problem.
+# Provide action to be taken when they face issue in cycle time
   utter_issue_test_time:
   - text: "Make sure all the Debug INI is turn OFF\
           \n-> Go to Vision INI File\
@@ -547,14 +576,17 @@ responses:
           \n[Any Other Section]\
           \n*Turn off any INI key with 'debug' or 'logtime' word in it*"
 
+# Action to be taken if there are similar good machine
   utter_cycle_time_similar_machine_yes:
   - text: "Use the good machine's recipe on the bad machine\
           \n*This step help to eliminate suspected recipe setup issue*"
 
+# Ask user to replace vision INI file
   utter_replace_vision_ini:
   - text: "Replace the bad machine's vision INI file with the good machine's vision INI\
           \n*This step help to eliminate suspected INI file issue*"
 
+# Check if the high cycle time is due to specific engine
   utter_verify_specific:
   - text: "Verify is the conversion or any specific vision engine causing the high test time.\
           \nTest Time Verification Step\
@@ -567,13 +599,16 @@ responses:
           \n*The image below shows you how to read the DebugTimeLog.*"
     image: https://imgur.com/IQe7ZU3
 
+# Proceed to check the guideline if it's recipe issue
   utter_check_recipe:
   - text: Please proceed to the guideline - Recipe Setup Section
 
+# Proceed to check the guideline if it's INI file issue
   utter_check_ini:
   - text: Please proceed to the guideline - INI Section
 
 # ~~~~Storage Time~~~~ #
+# Ask if it's hard disk issue
   utter_issue_storage_time:
   - buttons:
     - payload: hard_disk_yes
@@ -582,6 +617,7 @@ responses:
       title: No, it's not.
     text: Is it hard disk issue?
 
+# Provide action to be taken if not hard disk issue
   utter_hard_disk_no:
   - text: "Please follow the following steps:\
           \n1. Increase value of the INI key below:\
@@ -589,6 +625,7 @@ responses:
           \nImgPoolSize= (5 or above)\
           \n2. Reduce the number of Save First Pass/Fail Image number in 'Execution option'"
 
+# Ask if the storage time reduced
   utter_storage_time_feedback:
   - buttons:
     - payload: storage_time_reduce_yes
@@ -621,6 +658,7 @@ responses:
       title: Storage Time
     text: Test Time or Storage Time High?
 
+# Enable the following INI key to reduce grab time
   utter_improvement_grab_time:
   - text: "Please try to enable the INI key below.\
           \n[GrabSettings]\
@@ -691,7 +729,7 @@ responses:
 # Ask user to describe the problem he/she faced 
   utter_solution_another_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
-           \nSoftware:\n General (Software Crash/Recipe Can't Load/Database/Report/UI/Handshake/Counter)\
+           \nSoftware:\n General (Software Crash/Recipe Can't Load/Database/Report/Auto Turn On Inspection Option/UI/Handshake/Counter)\
            \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment]/\
            \n         3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head]/Overkill/Underkill/Cycle Time High)"
 

@@ -112,7 +112,6 @@ rules:
   steps:
   - intent: ui_display
   - action: utter_general_ui_display
-  - action: utter_feedback
 
 # Handshake
 - rule: Give solution for Handshake issue

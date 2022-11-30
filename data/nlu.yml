@@ -283,12 +283,29 @@ nlu:
     - inspection option auto turn on
     - another inspection option auto turn on
     
+# ------------------UI/Display Issue Solution Branches------------------ #    
 - intent: ui_display
   examples: |
     - general_ui_display
     - UI have problem
     - Display got problem
     - Not displaying correctly
+
+- intent: issue_ui_button_out_of_screen
+  examples: |
+    - ui_button_out_of_screen
+    - Button out of screen
+    - Button cannot click because it display at out of the screen
+    - eh the button at bottom cannot click eh
+
+- intent: issue_ui_dialog_incomplete
+  examples: |
+    - ui_dialog_incomplete
+    - the dialog object missing
+    - dialog object disappear
+    - the dialog object shown is incomplete
+    - some of the object in the dialog not showing up
+    - dialog object is not displayed
 
 - intent: handshake
   examples: |
