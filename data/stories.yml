@@ -4186,6 +4186,193 @@ stories:
   - intent: deny
   - action: utter_solution_no_issue
 
+# ------------------Conversation flow for Software Slow Startup Issue (Full Conversation Flow)------------------ #
+
+- story: Story from Trainer Conversation T000221 (Greet -> Software Issue -> General -> Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue unsolved -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000222 (Greet -> Software Issue -> General -> Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue Solved)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000223 (Greet -> Software Issue -> General -> Software Slow Startup Issue -> Matrix Code Doesn't Exist -> JIRA)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_issueType
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for Software Slow Startup Issue (Direct Enter Software Issue)------------------ #
+
+- story: Story from Trainer Conversation T000224 (Software Issue -> General -> Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue unsolved -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000225 (Software Issue -> General -> Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue Solved)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000226 (Software Issue -> General -> Software Slow Startup Issue -> Matrix Code Doesn't Exist -> JIRA)
+  steps:
+  - intent: software_issue
+  - action: utter_software_issue
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for Software Slow Startup Issue (Direct Enter General Issue)------------------ #
+
+- story: Story from Trainer Conversation T000227 (General -> Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue unsolved -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000228 (General -> Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue Solved)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000229 (General -> Software Slow Startup Issue -> Matrix Code Doesn't Exist -> JIRA)
+  steps:
+  - intent: general_issue
+  - action: utter_software_general
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+# ------------------Conversation flow for Software Slow Startup Issue (Direct Enter Specific Issue(Slow startup))------------------ #
+
+- story: Story from Trainer Conversation T000230 (Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue unsolved -> JIRA)
+  steps:
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000231 (Software Slow Startup Issue -> Matrix Code Exist -> Provide Guideline -> Issue Solved)
+  steps:
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: affirm
+  - action: utter_clear_cache_guide
+  - action: utter_issue_solved
+  - intent: affirm
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
+- story: Story from Trainer Conversation T000232 (Software Slow Startup Issue -> Matrix Code Doesn't Exist -> JIRA)
+  steps:
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
+  - intent: deny
+  - action: utter_software_slow_startup_jira
+  - action: utter_feedback
+  - intent: deny
+  - action: utter_solution_no_issue
+
 ## ------------------Out-of-scope situation------------------ ##
 
 # ------------------Out-of-scope situation for full conversation flow------------------ #

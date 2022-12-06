@@ -20,10 +20,11 @@ intents:
 - report_xlsgen_specific_version
 - report_xlsgen_other_version
 - issue_report_export_crash
-- inspection_auto_turn_on
 - ui_display
 - issue_ui_button_out_of_screen
 - issue_ui_dialog_incomplete
+- inspection_auto_turn_on
+- software_slow_startup
 - handshake
 - counter
 - 2d_vision
@@ -107,10 +108,12 @@ responses:
       title: Database
     - payload: general_report
       title: Report
-    - payload: general_inspection_option_auto_on
-      title: Auto Turn On Inspection Option Issue
     - payload: general_ui_display
       title: UI/Display
+    - payload: general_inspection_option_auto_on
+      title: Auto Turn On Inspection Option Issue
+    - payload: general_software_slow_startup
+      title: Software takes long time to launch
     - payload: general_handshake
       title: Handshake
     - payload: general_counter
@@ -420,7 +423,7 @@ responses:
   - text: "Please proceed to the guideline below:\
           \n-Insert Guideline Link-"
 
-# roceed to send email to JIRA owner if the issue not solved
+# Proceed to send email to JIRA owner if the issue not solved
   utter_inspection_auto_turn_on_jira:
   - text: "Please send an email to JIRA owner with the following info:\
           \nInfo to Collect:\
@@ -428,6 +431,29 @@ responses:
           \nItem to Collect:\
           \n- Backup Software\
           \n- Export Info"
+
+# ------------------Software Slow Startup Issue Solution------------------ #
+# Provide action to take when the software startup slow
+  utter_general_software_slow_startup:
+  - buttons:
+    - payload: matrix_code_yes
+      title: Yes, there is matrix code in the script
+    - payload: matrix_code_no
+      title: No, don't have matrix code
+    text: "Check the specific vision script in 'VVS' folder\
+          \nDoes it contain Matrix Code?"
+  
+  utter_clear_cache_guide:
+  - text: "Please proceed to the guideline below:\
+          \n* Clear License Cache Guide: https://drive.google.com/file/d/1_tWApSV8PgriLcnL9ZtnkFoAbuxM_Y8Y/view?usp=share_link *"
+
+  utter_software_slow_startup_jira:
+  - text: "Please send an email to JIRA owner with the following info:\
+          \nInfo to Collect:\
+          \n- Does the issue happened after software update?\
+          \nItem to Collect:\
+          \n- Plan and setup a VCare session\
+          \n- Backup Software"
 
 # ------------------Solution for Vision Issue------------------ #
 # List all 2D vision(Lead/Mark/Package/Lens/Package Edge/OCR/Matrix Code/Pin 1/Orient/Measure/Unit Alignment)

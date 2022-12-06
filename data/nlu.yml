@@ -275,14 +275,6 @@ nlu:
     - Report Crash when trying to export
     - I export report then crash le
 
-# ------------------Auto Turn On Inspection Option Issue Solution Branches------------------ #
-- intent: inspection_auto_turn_on
-  examples: |
-    - general_inspection_auto_turn_on
-    - Auto Turn On Inspection Option Issue
-    - inspection option auto turn on
-    - another inspection option auto turn on
-    
 # ------------------UI/Display Issue Solution Branches------------------ #    
 - intent: ui_display
   examples: |
@@ -306,6 +298,27 @@ nlu:
     - the dialog object shown is incomplete
     - some of the object in the dialog not showing up
     - dialog object is not displayed
+
+# ------------------Auto Turn On Inspection Option Issue Solution Branches------------------ #
+- intent: inspection_auto_turn_on
+  examples: |
+    - general_inspection_auto_turn_on
+    - Auto Turn On Inspection Option Issue
+    - inspection option auto turn on
+    - another inspection option auto turn on
+
+# ------------------Software Slow Startup Issue Solution Branches------------------ #
+- intent: software_slow_startup
+  examples: |
+    - general_software_slow_startup
+    - Software slow startup
+    - software startup slow
+    - software spend too much time to open
+    - software launch time ver long
+    - software open very long
+    - spend long time to open the software
+    - software wait so long still not launch
+    - software took long time to launch
 
 - intent: handshake
   examples: |
@@ -711,6 +724,7 @@ nlu:
     - storage_high_yes
     - issue_solve_yes
     - error_code_conflict_yes
+    - matrix_code_yes
 
 - intent: deny
   examples: |
@@ -748,6 +762,7 @@ nlu:
     - storage_high_no
     - issue_solve_no
     - error_code_conflict_no
+    - matrix_code_no
 
 # ------------------Synonym------------------ #
 
