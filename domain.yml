@@ -368,7 +368,7 @@ responses:
       title: Button in dialog out of Screen
     - payload: ui_dialog_incomplete
       title: Dialog object missing/incomplete
-      image: 
+      image: https://drive.google.com/file/d/1tPHcafR-cuhQDDdN--D5p5J7lt6twld8/view?usp=share_link
     text: Which type of UI/Display issue are you facing?
 
 # ~~~~UI button out of display screen~~~~ #
@@ -407,7 +407,7 @@ responses:
           \n*By default, the folder is in 'D:\\ViTrox\\V4\\InspectionList'\
           \n4. In the 'InspectionList' folder, open specific 'VsXXX.xml' file.\
           \n5. Check whether the 'ErrorCodeHi' and 'ErrorCodeLo' value(except 0) conflict(occurs more than once in the file) with any other inspection."
-    image: https://imgur.com/a/TAyfWvt
+    image: https://drive.google.com/file/d/12h5pxfh9cR3iZwgWui7BsId2iZji5NV0/view?usp=share_link
 
 # Ask whether there is conflict in the error code
   utter_error_code_conflict:
@@ -440,7 +440,7 @@ responses:
       title: Yes, there is matrix code in the script
     - payload: matrix_code_no
       title: No, don't have matrix code
-    text: "Check the specific vision script in 'VVS' folder\
+    text: "Check the specific vision script(VsXXX.script) in 'VVS' folder\
           \nDoes it contain Matrix Code?"
   
   utter_clear_cache_guide:
@@ -623,7 +623,7 @@ responses:
           \n3. Check DebugTimeLog_VsXXX.txt file created inside V4/Log file after offline test
           \n4. Read the file and verify which is the cause of the high cycle time\
           \n*The image below shows you how to read the DebugTimeLog.*"
-    image: https://imgur.com/IQe7ZU3
+    image: https://drive.google.com/file/d/1F0ciE029T8kF4xHTVVHPjAmppFaZSpcZ/view?usp=share_link
 
 # Proceed to check the guideline if it's recipe issue
   utter_check_recipe:

@@ -108,7 +108,6 @@ nlu:
     - softwares
     - Software problem
     - I met some problems in my software
-    - platform
     - I have some software issue 
 
 - intent: feature
@@ -155,7 +154,7 @@ nlu:
 - intent: crash
   examples: |
     - last night electric got cut off, software crash after reopen
-    - pc crash suddenly
+    - crash suddenly
     - when opening software, laptop crashes
     - software suddenly crashes
     - app crash
