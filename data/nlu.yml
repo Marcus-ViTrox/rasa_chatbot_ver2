@@ -238,6 +238,8 @@ nlu:
     - report
     - Report
     - report issue
+    - report crash
+    - report fail to load
 
 - intent: issue_report_error_message
   examples: |
@@ -266,6 +268,7 @@ nlu:
     - xlsgen_other_version
     - Version > 3.0
     - higher than 3.0
+    - no xlsgen
 
 - intent: issue_report_export_crash
   examples: |
@@ -281,6 +284,12 @@ nlu:
     - UI have problem
     - Display got problem
     - Not displaying correctly
+    - ui problem
+    - ui error
+    - display error
+    - display issue
+    - ui
+    - display
 
 - intent: issue_ui_button_out_of_screen
   examples: |

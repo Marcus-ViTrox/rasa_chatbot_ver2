@@ -102,7 +102,7 @@ responses:
   - buttons:
     - payload: general_crash
       title: Software Crash
-    - payload: general_recipe_cant_load
+    - payload: general_recipe_cant_load (Not Implement Yet)
       title: Recipe not able to load
     - payload: general_database
       title: Database
@@ -115,22 +115,22 @@ responses:
     - payload: general_software_slow_startup
       title: Software takes long time to launch
     - payload: general_handshake
-      title: Handshake
+      title: Handshake (Not Implement Yet)
     - payload: general_counter
-      title: Counter
+      title: Counter (Not Implement Yet)
     text: Which general issues are you facing?
 
 # Ask the type of vision issues(2D/3D/Overkill/Underkill/Cycle Time)
   utter_software_vision:
   - buttons:
     - payload: vision_2D
-      title: 2D Vision
+      title: 2D Vision (Not Implement Yet)
     - payload: vision_3D
-      title: 3D Vision
+      title: 3D Vision (Not Implement Yet)
     - payload: vision_overkill
-      title: Overkill
+      title: Overkill (Not Implement Yet)
     - payload: vision_underkill
-      title: Underkill
+      title: Underkill (Not Implement Yet)
     - payload: vision_cycle_time
       title: Cycle Time High
     text: Which vision issues are you facing?
@@ -208,7 +208,7 @@ responses:
           \n- Export Info/Lot Image"
 
   utter_general_recipe_cant_load:
-  - text: -Insert Server Link- (Recipe Can't Load)
+  - text: Sorry, this solution is not implemented yet (Recipe Can't Load)
 
 # ------------------Database Section------------------ #
 # Ask which type of database issue the user faced
@@ -325,7 +325,7 @@ responses:
     - payload: xlsgen_specific_version
       title: "1.9.0.4"
     - payload: xlsgen_other_version
-      title: Version > 3.0
+      title: Any other version/No xlsgen
     text: "Kindly check your xlsgen version.\
           \n*You can check it in 'C:\\Windows\\SysWOW64'\
           \nWhich version are your xlsgen version?"
@@ -389,10 +389,10 @@ responses:
           \n- Plan and setup a VCare session."
 
   utter_general_handshake:
-  - text: -Insert Server Link- (Handshake)
+  - text: Sorry, this solution is not implemented yet (Handshake)
 
   utter_general_counter:
-  - text: -Insert Server Link- (Counter)
+  - text: Sorry, this solution is not implemented yet (Counter)
 
 # ------------------Auto Turn On Inspection Option Issue Solution------------------ #
 # Provide action to take when the inspection option auto turn on
@@ -460,112 +460,112 @@ responses:
   utter_vision_2D:
   - buttons:
     - payload: 2d_lead
-      title: Lead
+      title: Lead (Not Implement Yet)
     - payload: 2d_mark
-      title: Mark
+      title: Mark (Not Implement Yet)
     - payload: 2d_package
-      title: Package
+      title: Package (Not Implement Yet)
     - payload: 2d_lens
-      title: Lens
+      title: Lens (Not Implement Yet)
     - payload: 2d_pacakage_edge
-      title: Package Edge
+      title: Package Edge (Not Implement Yet)
     - payload: 2d_ocr
-      title: OCR
+      title: OCR (Not Implement Yet)
     - payload: 2d_matrix_code
-      title: Matrix Code
+      title: Matrix Code (Not Implement Yet)
     - payload: 2d_pin_1
-      title: Pin 1
+      title: Pin 1 (Not Implement Yet)
     - payload: 2d_orient
-      title: Orient
+      title: Orient (Not Implement Yet)
     - payload: 2d_measure
-      title: Measure
+      title: Measure (Not Implement Yet)
     - payload: 2d_unit_alignment
-      title: Unit Alignment
+      title: Unit Alignment (Not Implement Yet)
     text: Which 2D engine are you facing problem in?
 
   utter_2d_lead:
-  - text: -Insert Server Link- (2D Lead Issue)
+  - text: Sorry, this solution is not implemented yet(2D Lead Issue)
 
   utter_2d_mark:
-  - text: -Insert Server Link- (2D Mark Issue)
+  - text: Sorry, this solution is not implemented yet (2D Mark Issue)
 
   utter_2d_package:
-  - text: -Insert Server Link- (2D Package Issue)
+  - text: Sorry, this solution is not implemented yet (2D Package Issue)
 
   utter_2d_lens:
-  - text: -Insert Server Link- (2D Lens Issue)
+  - text: Sorry, this solution is not implemented yet (2D Lens Issue)
 
   utter_2d_package_edge:
-  - text: -Insert Server Link- (2D Package Edge Issue)
+  - text: Sorry, this solution is not implemented yet (2D Package Edge Issue)
 
   utter_2d_ocr:
-  - text: -Insert Server Link- (2D OCR Issue)
+  - text: Sorry, this solution is not implemented yet (2D OCR Issue)
 
   utter_2d_matrix_code:
-  - text: -Insert Server Link- (2D Matrix Code Issue)
+  - text: Sorry, this solution is not implemented yet (2D Matrix Code Issue)
 
   utter_2d_pin_1:
-  - text: -Insert Server Link- (2D Pin 1 Issue)
+  - text: Sorry, this solution is not implemented yet (2D Pin 1 Issue)
 
   utter_2d_orient:
-  - text: -Insert Server Link- (2D Orient Issue)
+  - text: Sorry, this solution is not implemented yet (2D Orient Issue)
 
   utter_2d_measure:
-  - text: -Insert Server Link- (2D Measure Issue)
+  - text: Sorry, this solution is not implemented yet (2D Measure Issue)
 
   utter_2d_unit_alignment:
-  - text: -Insert Server Link- (2D Unit Alignment Issue)
+  - text: Sorry, this solution is not implemented yet (2D Unit Alignment Issue)
 
 # List all 3D vision(Pad/Lead/Package/Package Edge/BGA/Measure/Unit Alignment/Pickup Head)
   utter_vision_3D:
   - buttons:
     - payload: 3d_pad
-      title: Pad
+      title: Pad (Not Implement Yet)
     - payload: 3d_lead
-      title: 3DLi
+      title: 3DLi (Not Implement Yet)
     - payload: 3d_package
-      title: Package
+      title: Package (Not Implement Yet)
     - payload: 3d_edge
-      title: Package Edge
+      title: Package Edge (Not Implement Yet)
     - payload: 3d_bga
-      title: BGA
+      title: BGA (Not Implement Yet)
     - payload: 3d_measure
-      title: Measure
+      title: Measure (Not Implement Yet)
     - payload: 3d_unit_alignment
-      title: Unit Alignment
+      title: Unit Alignment (Not Implement Yet)
     - payload: 3d_pickup_head
-      title: Pickup Head
+      title: Pickup Head (Not Implement Yet)
     text: Which 3D engine are you facing problem in?
 
   utter_3d_pad:
-  - text: -Insert Server Link- (3D Pad Issue)
+  - text: Sorry, this solution is not implemented yet (3D Pad Issue)
 
   utter_3d_lead:
-  - text: -Insert Server Link- (3D Lead Issue)
+  - text: Sorry, this solution is not implemented yet (3D Lead Issue)
 
   utter_3d_package:
-  - text: -Insert Server Link- (3D Package Issue)
+  - text: Sorry, this solution is not implemented yet (3D Package Issue)
 
   utter_3d_package_edge:
-  - text: -Insert Server Link- (3D Package Edge Issue)
+  - text: Sorry, this solution is not implemented yet (3D Package Edge Issue)
 
   utter_3d_bga:
-  - text: -Insert Server Link- (3D BGA Issue)
+  - text: Sorry, this solution is not implemented yet (3D BGA Issue)
 
   utter_3d_measure:
-  - text: -Insert Server Link- (3D Measure Issue)
+  - text: Sorry, this solution is not implemented yet (3D Measure Issue)
 
   utter_3d_unit_alignment:
-  - text: -Insert Server Link- (3D Unit Alignment Issue)
+  - text: Sorry, this solution is not implemented yet (3D Unit Alignment Issue)
 
   utter_3d_pickup_head:
-  - text: -Insert Server Link- (3D Pickup Head Issue)
+  - text: Sorry, this solution is not implemented yet (3D Pickup Head Issue)
   
   utter_vision_overkill:
-  - text: -Insert Server Link- (Overkill)
+  - text: Sorry, this solution is not implemented yet (Overkill)
 
   utter_vision_underkill:
-  - text: -Insert Server Link- (Underkill)
+  - text: Sorry, this solution is not implemented yet (Underkill)
 
 # ------------------Cycle Time Section------------------ #
 # Ask if the customer is facing ISSUE or want an IMPROVEMENT on CYCLE TIME
@@ -755,7 +755,7 @@ responses:
 # Ask user to describe the problem he/she faced 
   utter_solution_another_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
-           \nSoftware:\n General (Software Crash/Recipe Can't Load/Database/Report/Auto Turn On Inspection Option/UI/Handshake/Counter)\
+           \nSoftware:\n General (Software Crash/Recipe Can't Load/Database/Report/UI/Auto Turn On Inspection Option/Software Slow Startup/Handshake/Counter)\
            \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment]/\
            \n         3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head]/Overkill/Underkill/Cycle Time High)"
 
