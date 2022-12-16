@@ -102,7 +102,7 @@ responses:
   - buttons:
     - payload: general_crash
       title: Software Crash
-    - payload: general_recipe_cant_load (Not Implement Yet)
+    - payload: general_recipe_cant_load
       title: Recipe not able to load
     - payload: general_database
       title: Database
@@ -115,22 +115,22 @@ responses:
     - payload: general_software_slow_startup
       title: Software takes long time to launch
     - payload: general_handshake
-      title: Handshake (Not Implement Yet)
+      title: Handshake (Currently Unavailable)
     - payload: general_counter
-      title: Counter (Not Implement Yet)
+      title: Counter (Currently Unavailable)
     text: Which general issues are you facing?
 
 # Ask the type of vision issues(2D/3D/Overkill/Underkill/Cycle Time)
   utter_software_vision:
   - buttons:
     - payload: vision_2D
-      title: 2D Vision (Not Implement Yet)
+      title: 2D Vision (Currently Unavailable)
     - payload: vision_3D
-      title: 3D Vision (Not Implement Yet)
+      title: 3D Vision (Currently Unavailable)
     - payload: vision_overkill
-      title: Overkill (Not Implement Yet)
+      title: Overkill (Currently Unavailable)
     - payload: vision_underkill
-      title: Underkill (Not Implement Yet)
+      title: Underkill (Currently Unavailable)
     - payload: vision_cycle_time
       title: Cycle Time High
     text: Which vision issues are you facing?
@@ -460,27 +460,27 @@ responses:
   utter_vision_2D:
   - buttons:
     - payload: 2d_lead
-      title: Lead (Not Implement Yet)
+      title: Lead (Currently Unavailable)
     - payload: 2d_mark
-      title: Mark (Not Implement Yet)
+      title: Mark (Currently Unavailable)
     - payload: 2d_package
-      title: Package (Not Implement Yet)
+      title: Package (Currently Unavailable)
     - payload: 2d_lens
-      title: Lens (Not Implement Yet)
+      title: Lens (Currently Unavailable)
     - payload: 2d_pacakage_edge
-      title: Package Edge (Not Implement Yet)
+      title: Package Edge (Currently Unavailable)
     - payload: 2d_ocr
-      title: OCR (Not Implement Yet)
+      title: OCR (Currently Unavailable)
     - payload: 2d_matrix_code
-      title: Matrix Code (Not Implement Yet)
+      title: Matrix Code (Currently Unavailable)
     - payload: 2d_pin_1
-      title: Pin 1 (Not Implement Yet)
+      title: Pin 1 (Currently Unavailable)
     - payload: 2d_orient
-      title: Orient (Not Implement Yet)
+      title: Orient (Currently Unavailable)
     - payload: 2d_measure
-      title: Measure (Not Implement Yet)
+      title: Measure (Currently Unavailable)
     - payload: 2d_unit_alignment
-      title: Unit Alignment (Not Implement Yet)
+      title: Unit Alignment (Currently Unavailable)
     text: Which 2D engine are you facing problem in?
 
   utter_2d_lead:
@@ -520,21 +520,21 @@ responses:
   utter_vision_3D:
   - buttons:
     - payload: 3d_pad
-      title: Pad (Not Implement Yet)
+      title: Pad (Currently Unavailable)
     - payload: 3d_lead
-      title: 3DLi (Not Implement Yet)
+      title: 3DLi (Currently Unavailable)
     - payload: 3d_package
-      title: Package (Not Implement Yet)
+      title: Package (Currently Unavailable)
     - payload: 3d_edge
-      title: Package Edge (Not Implement Yet)
+      title: Package Edge (Currently Unavailable)
     - payload: 3d_bga
-      title: BGA (Not Implement Yet)
+      title: BGA (Currently Unavailable)
     - payload: 3d_measure
-      title: Measure (Not Implement Yet)
+      title: Measure (Currently Unavailable)
     - payload: 3d_unit_alignment
-      title: Unit Alignment (Not Implement Yet)
+      title: Unit Alignment (Currently Unavailable)
     - payload: 3d_pickup_head
-      title: Pickup Head (Not Implement Yet)
+      title: Pickup Head (Currently Unavailable)
     text: Which 3D engine are you facing problem in?
 
   utter_3d_pad:
