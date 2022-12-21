@@ -102,8 +102,6 @@ responses:
   - buttons:
     - payload: general_crash
       title: Software Crash
-    - payload: general_recipe_cant_load
-      title: Recipe not able to load
     - payload: general_database
       title: Database
     - payload: general_report
@@ -114,6 +112,8 @@ responses:
       title: Auto Turn On Inspection Option Issue
     - payload: general_software_slow_startup
       title: Software takes long time to launch
+    - payload: general_recipe_cant_load
+      title: Recipe not able to load (Currently Unavailable)
     - payload: general_handshake
       title: Handshake (Currently Unavailable)
     - payload: general_counter
@@ -284,15 +284,6 @@ responses:
           \nInfo to Collect:\
           \n- Describe issue faced through email.\
           \n- Plan and setup a VCare session."
-
-# Ask whether the database issue still persist (Database)
-  utter_database_feedback:
-  - buttons:
-    - payload: issue_persist_yes
-      title: Yes, the issue still persist.
-    - payload: issue_persist_no
-      title: No, the issue solved.
-    text: Does the issue still persist?
 
 # ------------------Report Section------------------ #
 # Ask which type of report issue the user faced

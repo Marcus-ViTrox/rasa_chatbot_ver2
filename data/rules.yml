@@ -59,7 +59,7 @@ rules:
   steps: 
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
+  - action: utter_issue_solved
 
 # Database High Storage
 - rule: Continue the solution path of database high storage
@@ -72,7 +72,7 @@ rules:
   steps:
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
+  - action: utter_issue_solved
 
 # Report 
 - rule: Give solution for report issue

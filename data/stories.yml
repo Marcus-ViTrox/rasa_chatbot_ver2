@@ -1991,16 +1991,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2019,16 +2019,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
-  - action: utter_database_reinstall
-  - action: utter_database_feedback
+  - action: utter_issue_solved
   - intent: deny
+  - action: utter_database_reinstall
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2046,13 +2046,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2070,13 +2070,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2095,13 +2095,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2119,8 +2119,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2140,8 +2140,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2162,8 +2162,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2183,8 +2183,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2205,8 +2205,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2224,8 +2224,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2244,8 +2244,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2261,16 +2261,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2286,16 +2286,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
-  - action: utter_database_reinstall
-  - action: utter_database_feedback
+  - action: utter_issue_solved
   - intent: deny
+  - action: utter_database_reinstall
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2310,13 +2310,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2331,13 +2331,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2353,13 +2353,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2374,8 +2374,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2392,8 +2392,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2411,8 +2411,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2429,8 +2429,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2448,8 +2448,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2464,8 +2464,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2481,8 +2481,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2496,16 +2496,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2519,16 +2519,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
-  - action: utter_database_reinstall
-  - action: utter_database_feedback
+  - action: utter_issue_solved
   - intent: deny
+  - action: utter_database_reinstall
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2541,13 +2541,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2560,13 +2560,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2580,13 +2580,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2599,8 +2599,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2615,8 +2615,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2632,8 +2632,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2648,8 +2648,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2665,8 +2665,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2679,8 +2679,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2694,8 +2694,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2707,16 +2707,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2728,16 +2728,16 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
-  - action: utter_database_reinstall
-  - action: utter_database_feedback
+  - action: utter_issue_solved
   - intent: deny
+  - action: utter_database_reinstall
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2748,13 +2748,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2765,13 +2765,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2783,13 +2783,13 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2800,8 +2800,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2814,8 +2814,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2829,8 +2829,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2843,8 +2843,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2858,8 +2858,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2870,8 +2870,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2883,8 +2883,8 @@ stories:
   - action: utter_general_database
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2894,16 +2894,16 @@ stories:
   steps:
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2913,16 +2913,16 @@ stories:
   steps:
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: affirm
-  - action: utter_database_reinstall
-  - action: utter_database_feedback
+  - action: utter_issue_solved
   - intent: deny
+  - action: utter_database_reinstall
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2931,13 +2931,13 @@ stories:
   steps:
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: deny
   - action: utter_database_down_repetitive_not_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2946,13 +2946,13 @@ stories:
   steps:
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -2962,13 +2962,13 @@ stories:
   steps:
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_down_repetitive
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2977,8 +2977,8 @@ stories:
   steps:
   - intent: issue_database_down
   - action: utter_database_down
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -2989,8 +2989,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -3002,8 +3002,8 @@ stories:
   - action: utter_database_high_storage
   - intent: affirm
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -3014,8 +3014,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -3027,8 +3027,8 @@ stories:
   - action: utter_database_high_storage
   - intent: deny
   - action: utter_database_clear_storage
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue
@@ -3037,8 +3037,8 @@ stories:
   steps:
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: affirm
+  - action: utter_issue_solved
+  - intent: deny
   - action: utter_database_jira
   - action: utter_feedback
   - intent: deny
@@ -3048,8 +3048,8 @@ stories:
   steps:
   - intent: issue_database_corrupted
   - action: utter_database_reinstall
-  - action: utter_database_feedback
-  - intent: deny
+  - action: utter_issue_solved
+  - intent: affirm
   - action: utter_feedback
   - intent: deny
   - action: utter_solution_no_issue

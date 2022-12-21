@@ -728,7 +728,6 @@ nlu:
     - test_time_reduce_yes
     - cycle_time_reduce_yes
     - solution_prompt_issue
-    - issue_persist_yes
     - storage_high_yes
     - issue_solve_yes
     - error_code_conflict_yes
@@ -766,7 +765,6 @@ nlu:
     - storage_time_reduce_no
     - test_time_reduce_no
     - cycle_time_reduce_no
-    - issue_persist_no
     - storage_high_no
     - issue_solve_no
     - error_code_conflict_no
