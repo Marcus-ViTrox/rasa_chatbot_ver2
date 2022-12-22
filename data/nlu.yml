@@ -258,7 +258,7 @@ nlu:
     - Cannot export in xls leh
     - cannot export as xls file eh
 
-- intent: report_xlsgen_specific_version
+- intent: report_xlsgen_specific_version_1
   examples: |
     - xlsgen_specific_version
     - 1.9.0.4
@@ -623,7 +623,7 @@ nlu:
 
 # ------------------Cycle Time Solution Branches------------------ #
 
-- intent: cycle_time_issue_intent
+- intent: cycle_time_issue
   examples: |
     - cycle_time_issue
     - Cycle Time Issue

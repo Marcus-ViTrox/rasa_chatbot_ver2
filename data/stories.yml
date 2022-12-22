@@ -1651,7 +1651,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: test_time
   - action: utter_issue_test_time
@@ -1684,7 +1684,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: test_time
   - action: utter_issue_test_time
@@ -1716,7 +1716,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: test_time
   - action: utter_issue_test_time
@@ -1748,7 +1748,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: test_time
   - action: utter_issue_test_time
@@ -1781,7 +1781,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: test_time
   - action: utter_issue_test_time
@@ -1811,7 +1811,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: test_time
   - action: utter_issue_test_time
@@ -1837,7 +1837,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: test_time
   - action: utter_issue_test_time
@@ -1858,7 +1858,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: storage_time
   - action: utter_issue_storage_time
@@ -1882,7 +1882,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: storage_time
   - action: utter_issue_storage_time
@@ -1905,7 +1905,7 @@ stories:
   - action: utter_software_vision
   - intent: cycle_time
   - action: utter_vision_cycle_time
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
   - intent: storage_time
   - action: utter_issue_storage_time
@@ -3107,7 +3107,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: affirm
@@ -3128,7 +3128,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: deny
@@ -3263,7 +3263,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: affirm
@@ -3281,7 +3281,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: deny
@@ -3398,7 +3398,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: affirm
@@ -3414,7 +3414,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: deny
@@ -3517,7 +3517,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: affirm
@@ -3531,7 +3531,7 @@ stories:
   - action: utter_general_report
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: deny
@@ -3620,7 +3620,7 @@ stories:
   steps:
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: affirm
@@ -3632,7 +3632,7 @@ stories:
   steps:
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
-  - intent: report_xlsgen_specific_version
+  - intent: report_xlsgen_specific_version_1
   - action: utter_xlsgen_specific_version
   - action: utter_issue_solved
   - intent: deny

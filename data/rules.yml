@@ -93,6 +93,13 @@ rules:
   - intent: issue_report_cant_export_xls
   - action: utter_report_cant_export_xls
 
+# xlsgen is specific version
+- rule: xlsgen specific version 
+  steps:
+  - intent: report_xlsgen_specific_version_1
+  - action: utter_xlsgen_specific_version
+  - action: utter_issue_solved
+
 # Report Export Crash
 - rule: Give solution for report export crash
   steps:
@@ -112,6 +119,12 @@ rules:
   steps:
   - intent: ui_display
   - action: utter_general_ui_display
+
+# Software Slow Startup
+- rule: Give solution for Software slow startup
+  steps:
+  - intent: software_slow_startup
+  - action: utter_general_software_slow_startup
 
 # Handshake
 - rule: Give solution for Handshake issue
@@ -309,7 +322,7 @@ rules:
 # Cycle Time Issue
 - rule: Continue to the solution path of cycle time issue
   steps:
-  - intent: cycle_time_issue_intent
+  - intent: cycle_time_issue
   - action: utter_cycle_time_issue
 
 # Cycle Time Improvement

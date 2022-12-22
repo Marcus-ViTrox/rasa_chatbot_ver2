@@ -17,7 +17,7 @@ intents:
 - report
 - issue_report_error_message
 - issue_report_cant_export_xls
-- report_xlsgen_specific_version
+- report_xlsgen_specific_version_1
 - report_xlsgen_other_version
 - issue_report_export_crash
 - ui_display
@@ -54,7 +54,7 @@ intents:
 - out_of_scope
 - affirm
 - deny
-- cycle_time_issue_intent
+- cycle_time_issue
 - cycle_time_improvement_intent
 - test_time
 - storage_time
