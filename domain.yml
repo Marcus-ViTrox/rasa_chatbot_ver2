@@ -265,7 +265,7 @@ responses:
       title: Yes, the storage is more than 200GB.
     - payload: storage_high_no
       title: No, it's not.
-    text: Is the storage higher than 200GB?
+    text: Does the storage space still have more than 200GB?
 
 # Provide Guideline to clear the database storage
   utter_database_clear_storage:
