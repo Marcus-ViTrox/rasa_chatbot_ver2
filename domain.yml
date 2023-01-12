@@ -190,11 +190,11 @@ responses:
   utter_simulate_no:
   - text: "Please follow the steps below:\
           \n1. Check if there is memory leak using Process Explorer\
-          \n* Check Memory Leak Guide: https://docs.google.com/document/d/10sFAzbWCUrL2ZLYlbkBdcdHsCt9oX6YsWd2rlxMsbnE/edit?usp=share_link *\
+          \n* Check Memory Leak Guide:* https://docs.google.com/document/d/1Y3QvHejo4KHm6JXZAa9Db9SmgbVzmkfS/edit?usp=share_link&ouid=100461910690595791823&rtpof=true&sd=true *\
           \n2. Verify whether it's caused by any possible hard disk issue.\
           \n3. Prompt customer for simulation step.\
           \n(Optional) Record customer action with Automatic Screenshotter.\
-          \n* Automatic ScreenShotter Guide: https://docs.google.com/document/d/10sFAzbWCUrL2ZLYlbkBdcdHsCt9oX6YsWd2rlxMsbnE/edit?usp=share_link *\
+          \n* Automatic ScreenShotter Guide:* https://docs.google.com/document/d/1m5bM-jdPWx3XMCJgEbPa6SJoVxHJrM3h/edit?usp=share_link&ouid=100461910690595791823&rtpof=true&sd=true *\
           \nAfter you have done the steps above, kindly provide JIRA owner with the following info by email.\
           \n\nInfo to Collect:\
           \n- Memory Leak? (Y/N)
@@ -270,14 +270,15 @@ responses:
 # Provide Guideline to clear the database storage
   utter_database_clear_storage:
   - text: "Please proceed to clear the database storage\
-          \n-Link to PostgreSQL Installation Guide-\
+          \nDatabase Storage Clear Guide: https://drive.google.com/file/d/1oihGPuxFl54wpCuIEt8GqJ1SOVkB7QY3/view?usp=share_link\
           \n*TAKE NOTE!! Without proper deletion, it might cause the PostgreSQL files to be corrupted."
 
 # ~~~~Database Solution~~~~ #
 # Provide Guideline to reinstall PostgreSQL
   utter_database_reinstall:
   - text: "Please proceed to reinstall the PostgreSQL\
-          \n-Link to PostgreSQL Installation Guide-"
+          \nPostgreSQL 9.3 Installation Guide: https://drive.google.com/file/d/14a7s_nGpFEIn9JQhNq5YUxd_XS9f1C_l/view?usp=share_link\
+          \nPostgreSQL 10 Installation Guide: https://drive.google.com/file/d/1efEXArXGGSCUPslsiuyNq58KaabeuWxS/view?usp=share_link"
   
   utter_database_jira:
   - text: "Please send an email to JIRA owner with the following info:\
@@ -347,7 +348,7 @@ responses:
   - text: "Please send an email to JIRA owner with the following info:\
           \nItem to Collect:\
           \n- Backup database (If possible)\
-          \n* Backup Database Guide: https://docs.google.com/document/d/1kiHWIEk8Amvk9YuYjp_uot6s1EU_XFDOH_lEK9rmfng/edit?usp=share_link *\
+          \n* Backup Database Guide:* https://docs.google.com/document/d/1_RznnKkAfcZbsOsR8Mcuxv1Suo6IAg5O/edit?usp=share_link&ouid=100461910690595791823&rtpof=true&sd=true *\
           \n- Backup software\
           \n- Export Info/Lot Image"
 
@@ -359,7 +360,7 @@ responses:
       title: Button in dialog out of Screen
     - payload: ui_dialog_incomplete
       title: Dialog object missing/incomplete
-      image: https://drive.google.com/file/d/1tPHcafR-cuhQDDdN--D5p5J7lt6twld8/view?usp=share_link
+      image: https://drive.google.com/file/d/1odrA7g7_qeE1ZY7ZuU3G7luQ65SR6Wui/view?usp=share_link
     text: Which type of UI/Display issue are you facing?
 
 # ~~~~UI button out of display screen~~~~ #
@@ -398,7 +399,7 @@ responses:
           \n*By default, the folder is in 'D:\\ViTrox\\V4\\InspectionList'\
           \n4. In the 'InspectionList' folder, open specific 'VsXXX.xml' file.\
           \n5. Check whether the 'ErrorCodeHi' and 'ErrorCodeLo' value(except 0) conflict(occurs more than once in the file) with any other inspection."
-    image: https://drive.google.com/file/d/12h5pxfh9cR3iZwgWui7BsId2iZji5NV0/view?usp=share_link
+    image: https://drive.google.com/file/d/1Ho5tyF3mk13uIiykH3Olb8qsWzmRw4zA/view?usp=share_link
 
 # Ask whether there is conflict in the error code
   utter_error_code_conflict:
@@ -436,7 +437,7 @@ responses:
   
   utter_clear_cache_guide:
   - text: "Please proceed to the guideline below:\
-          \n* Clear License Cache Guide: https://drive.google.com/file/d/1_tWApSV8PgriLcnL9ZtnkFoAbuxM_Y8Y/view?usp=share_link *"
+          \n* Clear License Cache Guide: https://drive.google.com/file/d/1xYa5HPP-PoChRppBiyF3Wa-yxD9aKlV5/view?usp=share_link *"
 
   utter_software_slow_startup_jira:
   - text: "Please send an email to JIRA owner with the following info:\
@@ -614,7 +615,7 @@ responses:
           \n3. Check DebugTimeLog_VsXXX.txt file created inside V4/Log file after offline test
           \n4. Read the file and verify which is the cause of the high cycle time\
           \n*The image below shows you how to read the DebugTimeLog.*"
-    image: https://drive.google.com/file/d/1F0ciE029T8kF4xHTVVHPjAmppFaZSpcZ/view?usp=share_link
+    image: https://drive.google.com/file/d/1JVLAQF31giuOOtTHer5OcWUxmAqUr2GD/view?usp=share_link
 
 # Proceed to check the guideline if it's recipe issue
   utter_check_recipe:
@@ -666,7 +667,7 @@ responses:
           \n- Export Info/Lot Image"
 
 # *****Cycle Time Improvement Path***** #
-# Ask which time is too high(Test/Grab/Storage)
+# Ask which time is too high(Test/Storage)
   utter_cycle_time_improvement:
   - buttons:
     - payload: test_time
@@ -674,12 +675,6 @@ responses:
     - payload: storage_time
       title: Storage Time
     text: Test Time or Storage Time High?
-
-# Enable the following INI key to reduce grab time
-  utter_improvement_grab_time:
-  - text: "Please try to enable the INI key below.\
-          \n[GrabSettings]\
-          \nEnableBinning = 1"
           
 # Ask user to REQUEST for hardware changes/upgrade when there is no improvement after the actions taken
   utter_hardware_change_request:
@@ -746,7 +741,7 @@ responses:
 # Ask user to describe the problem he/she faced 
   utter_solution_another_issue:
   - text: "Please describe the issue/problem you are facing. 😃\
-           \nSoftware:\n General (Software Crash/Recipe Can't Load/Database/Report/UI/Auto Turn On Inspection Option/Software Slow Startup/Handshake/Counter)\
+           \nSoftware:\n General (Software Crash/Database/Report/UI/Auto Turn On Inspection Option/Software Slow Startup/Recipe Can't Load/Handshake/Counter)\
            \n Vision (2D [2D Lead/2D Mark/2D Package/2D Lens/2D Package Edge/2D OCR/2D Matrix Code/2D Pin 1/2D Orient/2D Measure/2D Unit Alignment]/\
            \n         3D [3D Pad/3D Lead/3D Package/3D Package Edge/3D BGA/3D Measure/3D Unit Alignment/3D Pickup Head]/Overkill/Underkill/Cycle Time High)"
 
