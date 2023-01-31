@@ -360,7 +360,7 @@ responses:
       title: Button in dialog out of Screen
     - payload: ui_dialog_incomplete
       title: Dialog object missing/incomplete
-      image: https://drive.google.com/file/d/1odrA7g7_qeE1ZY7ZuU3G7luQ65SR6Wui/view?usp=share_link
+    image: https://drive.google.com/file/d/1odrA7g7_qeE1ZY7ZuU3G7luQ65SR6Wui/view?usp=share_link
     text: Which type of UI/Display issue are you facing?
 
 # ~~~~UI button out of display screen~~~~ #
